@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { CurrencyProvider } from '@/hooks/useCurrency';
 
 export const metadata: Metadata = {
   title: 'FOMUS Premium - Artisan Hinoki Craft × VIP Experience',
@@ -60,20 +61,30 @@ export default async function RootLayout({
   try {
     messages = (await import(`@/messages/${locale}.json`)).default;
   } catch (error) {
-    notFound();
+    console.error(`Failed to load messages for locale: ${locale}`, error);
+    // フォールバックとして英語メッセージを使用
+    try {
+      messages = (await import(`@/messages/en.json`)).default;
+    } catch (fallbackError) {
+      console.error('Failed to load fallback messages', fallbackError);
+      // 最小限のメッセージで処理を継続
+      messages = { common: { loading: "Loading...", error: "Error" } };
+    }
   }
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body className="font-body bg-cream text-obsidian">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </div>
+          <CurrencyProvider>
+            <div className="min-h-screen flex flex-col">
+              <Navbar />
+              <main className="flex-grow">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </CurrencyProvider>
         </NextIntlClientProvider>
       </body>
     </html>

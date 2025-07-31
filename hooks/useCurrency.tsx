@@ -59,7 +59,14 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
 export function useCurrency() {
   const context = useContext(CurrencyContext);
   if (context === undefined) {
-    throw new Error('useCurrency must be used within a CurrencyProvider');
+    console.error('useCurrency must be used within a CurrencyProvider');
+    // フォールバックとしてデフォルト値を返す
+    return {
+      currency: 'USD' as const,
+      setCurrency: () => {},
+      exchangeRates: { USD: 1, AED: 3.67, EUR: 0.85 },
+      isLoading: false,
+    };
   }
   return context;
 }
