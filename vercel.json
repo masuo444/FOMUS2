@@ -2,25 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "functions": {
-    "app/api/**/*.ts": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "env": {
-    "NEXT_PUBLIC_APP_URL": "@fomus-app-url",
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": "@stripe-publishable-key",
-    "STRIPE_SECRET_KEY": "@stripe-secret-key",
-    "STRIPE_WEBHOOK_SECRET": "@stripe-webhook-secret",
-    "CONTENTFUL_SPACE_ID": "@contentful-space-id",
-    "CONTENTFUL_ACCESS_TOKEN": "@contentful-access-token",
-    "GOOGLE_CALENDAR_CLIENT_EMAIL": "@google-calendar-client-email",
-    "GOOGLE_CALENDAR_PRIVATE_KEY": "@google-calendar-private-key",
-    "GOOGLE_CALENDAR_CALENDAR_ID": "@google-calendar-id",
-    "NEXTAUTH_SECRET": "@nextauth-secret",
-    "NEXTAUTH_URL": "@nextauth-url",
-    "ALCHEMY_API_KEY": "@alchemy-api-key"
-  },
   "headers": [
     {
       "source": "/(.*)",

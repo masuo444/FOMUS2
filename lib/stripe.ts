@@ -98,13 +98,6 @@ export async function createCheckoutSession({
           },
         },
       }),
-      // NFT Passport発行用のWebhook設定
-      webhook_endpoints: [
-        {
-          url: `${process.env.NEXT_PUBLIC_APP_URL}/api/webhooks/stripe`,
-          enabled_events: ['checkout.session.completed'],
-        },
-      ],
     };
 
     const session = await stripe.checkout.sessions.create(sessionParams);
