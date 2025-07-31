@@ -1,0 +1,15 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/api/webhooks/stripe/route": "app/api/webhooks/stripe/route.js",
+  "/api/stripe/create-checkout-session/route": "app/api/stripe/create-checkout-session/route.js",
+  "/api/stripe/session/[sessionId]/route": "app/api/stripe/session/[sessionId]/route.js",
+  "/[locale]/life/page": "app/[locale]/life/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/dashboard/page": "app/[locale]/dashboard/page.js",
+  "/[locale]/entertainment/page": "app/[locale]/entertainment/page.js",
+  "/[locale]/passport/standard/page": "app/[locale]/passport/standard/page.js",
+  "/[locale]/passport/vip/page": "app/[locale]/passport/vip/page.js",
+  "/[locale]/success/page": "app/[locale]/success/page.js",
+  "/[locale]/cancel/page": "app/[locale]/cancel/page.js",
+  "/[locale]/craft/page": "app/[locale]/craft/page.js"
+}

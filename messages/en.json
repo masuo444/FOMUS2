@@ -1,0 +1,80 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "currency": {
+      "usd": "USD",
+      "aed": "AED", 
+      "eur": "EUR"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "craft": "Craft",
+    "life": "Life",
+    "entertainment": "Entertainment", 
+    "passport": "Passport",
+    "about": "About",
+    "journal": "Journal",
+    "contact": "Contact",
+    "dashboard": "Dashboard"
+  },
+  "home": {
+    "hero": {
+      "title": "FOMUS Premium",
+      "subtitle": "Artisan Hinoki Craft × VIP Experience × KUKU IP",
+      "description": "Exclusive Japanese craftsmanship for discerning collectors worldwide"
+    },
+    "collections": {
+      "craft": {
+        "title": "Craft Collection",
+        "subtitle": "Masu-Kame Artisan Pieces",
+        "price": "from ¥500,000",
+        "description": "Hand-carved hinoki masterpieces with traditional lacquer and gold leaf finishing"
+      },
+      "life": {
+        "title": "Life Collection", 
+        "subtitle": "Premium Tea Subscription",
+        "price": "from ¥3,000/mo",
+        "description": "Curated selection of premium matcha and sencha from historic tea gardens"
+      },
+      "entertainment": {
+        "title": "Entertainment Collection",
+        "subtitle": "KUKU NFT Ecosystem", 
+        "price": "Join Whitelist",
+        "description": "Exclusive digital collectibles and art toy collaborations"
+      }
+    }
+  },
+  "passport": {
+    "vip": {
+      "title": "VIP Passport",
+      "price": "USD 10,000",
+      "lifetime": "Lifetime Access",
+      "perks": {
+        "geisha": "Private Geisha Experience (4 guests, 60-day notice)",
+        "craft": "Masu-Kame Priority Access (2 pieces/month)",
+        "gifts": "Hinoki Bath Collection (10 pieces/year)",
+        "nft": "Gold Background NFT Passport",
+        "airdrop": "Future KUKU Founder's NFT Airdrop"
+      }
+    },
+    "standard": {
+      "title": "Standard Passport",
+      "enrollment": "USD 1,200",
+      "annual": "USD 500/year",
+      "perks": {
+        "geisha": "Geisha Experience (1 guest, fixed dates + USD 1,000)",
+        "craft": "Masu-Kame Lottery Access (3 pieces/month)",
+        "gifts": "Premium Gift Collection (5 pieces/year)",
+        "nft": "Silver Background NFT Passport"
+      }
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome to FOMUS Premium",
+    "nft_status": "NFT Passport Status",
+    "benefits": "Your Benefits",
+    "bookings": "Upcoming Bookings"
+  }
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building the Future of Japanese Culture — With You. | FOMUS メンバーシップ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+        .btn-primary {
+            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+        }
+        .btn-secondary {
+            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-gradient-fomus {
+            background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+        }
+        .wood-texture {
+            background-image: linear-gradient(45deg, #d0c5b1 25%, transparent 25%), 
+                              linear-gradient(-45deg, #d0c5b1 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #d0c5b1 75%), 
+                              linear-gradient(-45deg, transparent 75%, #d0c5b1 75%);
+            background-size: 30px 30px;
+            background-position: 0 0, 0 15px, 15px -15px, -15px 0px;
+        }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- ヘッダー -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- ロゴ -->
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                
+                <!-- ナビゲーション -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="preview-global-ja.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">ホーム</a>
+                    <a href="preview-global-ja.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">工芸</a>
+                    <a href="preview-global-ja.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">ライフスタイル</a>
+                    <a href="preview-global-ja.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">エンターテインメント</a>
+                    <a href="preview-global-ja.html#membership" class="text-gold font-medium">メンバーシップ</a>
+                    <a href="preview-global-ja.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section class="relative h-screen w-full overflow-hidden bg-gradient-to-br from-emerald-900 via-slate-800 to-emerald-800">
+        <!-- 背景要素 -->
+        <div class="absolute inset-0">
+            <!-- 和紙風テクスチャ -->
+            <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 20%, rgba(208, 197, 177, 0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(199, 162, 83, 0.1) 0%, transparent 50%), radial-gradient(circle at 20% 70%, rgba(208, 197, 177, 0.08) 0%, transparent 50%);"></div>
+            
+            <!-- 墨の滲み風装飾 -->
+            <div class="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-slate-600/20 to-emerald-700/30 rounded-full blur-xl"></div>
+            <div class="absolute bottom-32 left-16 w-48 h-48 bg-gradient-to-br from-emerald-600/15 to-slate-700/20 rounded-full blur-2xl"></div>
+            
+            <!-- 枡の装飾要素 -->
+            <div class="absolute top-1/3 right-1/4 w-16 h-16 border border-gold/25 rotate-45 opacity-30"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-12 h-12 border border-emerald-400/20 rotate-12 opacity-25"></div>
+        </div>
+        
+        <!-- ヒーローコンテンツ -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="max-w-7xl mx-auto px-4 text-center text-cream">
+                <nav class="text-sm mb-8">
+                    <a href="preview-global-ja.html" class="text-cream/60 hover:text-gold">ホーム</a>
+                    <span class="mx-3 text-cream/40">/</span>
+                    <span class="text-cream">FOMUS メンバーシップ</span>
+                </nav>
+                
+                <h1 class="font-heading text-3xl md:text-5xl lg:text-6xl font-light mb-8 leading-normal">
+                    <span class="block text-gradient-gold mb-6 pb-2">Building the Future</span>
+                    <span class="block text-2xl md:text-4xl lg:text-5xl mb-6 pb-2">of Japanese Culture</span>
+                    <span class="block text-2xl md:text-4xl lg:text-5xl pb-2">— With You.</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl lg:text-3xl font-heading font-light mb-12 text-emerald-100/90 max-w-4xl mx-auto">
+                    伝統の継承と革新を、FOMUSメンバーとともに。<br>
+                    日本文化の未来を世界へ。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#membership-levels" class="bg-gold text-obsidian px-8 py-4 font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                        会員特典を見る
+                    </a>
+                    <a href="#membership-levels" class="bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                        Join Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOMUSメンバーシップとは -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">FOMUS Membershipとは？</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- 画像 -->
+                <div class="order-2 lg:order-1">
+                    <div class="aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
+                        <img src="職人の手元.jpg" alt="FOMUS 職人の手元" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- テキスト -->
+                <div class="max-w-xl mx-auto text-center lg:text-left order-1 lg:order-2">
+                    <p class="text-xl md:text-2xl text-obsidian/80 font-light leading-relaxed mb-8">
+                        日本の伝統工芸の魅力を、現代と世界へ。
+                    </p>
+                    <p class="text-lg md:text-xl text-obsidian/70 font-light leading-relaxed mb-8">
+                        FOMUSは、枡をはじめとする伝統工芸の未来を担うブランドです。<br>
+                        メンバーシップはその志に共感する方とともに、文化を支え、創るための架け橋となります。
+                    </p>
+                    <p class="text-lg text-obsidian/70 font-light leading-relaxed">
+                        単なる会員制度ではなく、日本文化の継承者として、<br>
+                        共に新しい伝統を築く仲間となっていただきます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- NFCカードセクション -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-heading text-4xl font-light text-obsidian mb-8">メンバーシップカード</h2>
+                    <p class="text-lg text-obsidian/80 mb-6 leading-relaxed">
+                        各会員には物理カード（NFC付き）が発行されます。
+                    </p>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        このカードは「FOMUSメンバーの証」として、製品購入・限定参加・優先案内などに活用されます。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">💳</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">NFC機能搭載</h3>
+                                <p class="text-sm text-obsidian/70">スマートな認証とアクセス管理</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">🏮</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">日本デザイン</h3>
+                                <p class="text-sm text-obsidian/70">伝統的な美意識を反映した特別デザイン</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">⭐</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">会員限定特典</h3>
+                                <p class="text-sm text-obsidian/70">カード提示による特別サービス</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center">
+                    <img src="カードイラスト.png" alt="FOMUSメンバーシップカード" class="w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOMUSから購入するメリット -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">FOMUSならではの価値</h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto">
+                    なぜFOMUSメンバーシップが特別なのか
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- メリット1 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🤝</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">職人との直接繋がり</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        日本の職人と直接繋がる機会を提供。伝統技術の継承をサポートします。
+                    </p>
+                </div>
+                
+                <!-- メリット2 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🗾</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">現地キーパーソン</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        現地を知るキーパーソンとのアクセス。真の日本文化体験を提供します。
+                    </p>
+                </div>
+                
+                <!-- メリット3 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🎋</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">最優先アクセス</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        日本文化や限定商品への最優先アクセス。希少な体験をお約束します。
+                    </p>
+                </div>
+                
+                <!-- メリット4 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🦉</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">KUKU制作参加</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        KUKUの制作過程への参加・支援。新しい神話づくりの仲間になります。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KUKUとの連携セクション -->
+    <section class="py-20 bg-gradient-to-br from-gold/10 to-gold/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">応援の輪</h2>
+                <p class="text-xl text-obsidian/70 max-w-3xl mx-auto">
+                    あなたのメンバーシップが、未来の文化創造を支えます
+                </p>
+            </div>
+            
+            <div class="text-center max-w-4xl mx-auto">
+                <h3 class="font-heading text-3xl font-semibold text-obsidian mb-6">会員＝クリエイティブ活動の共創者</h3>
+                <p class="text-lg text-obsidian/80 mb-6 leading-relaxed">
+                    会員売上の一部は、KUKUの制作費用、MASUKAMEやライフ事業の拡充に使われます。
+                </p>
+                <p class="text-lg text-obsidian/80 mb-12 leading-relaxed">
+                    あなたは単なる顧客ではなく、日本文化の未来を共に創る「共創者」として、<br>
+                    新しい伝統の創造に参加していただきます。
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🦉</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">KUKU制作支援</h4>
+                        <p class="text-sm text-obsidian/70">神話の物語づくりとメディア展開</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🐢</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">MASUKAME拡充</h4>
+                        <p class="text-sm text-obsidian/70">限定版傑作シリーズの開発</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🍃</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">ライフ事業発展</h4>
+                        <p class="text-sm text-obsidian/70">抹茶とアロマシリーズの充実</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- メンバーシップ選択セクション -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 text-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-cream mb-8">メンバーシップ</h2>
+                <p class="text-lg text-cream/70 max-w-3xl mx-auto">
+                    あなたのスタイルに合わせた3つのメンバーシップをご用意しています。
+                </p>
+            </div>
+            
+            <!-- 会員種別テーブル -->
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gradient-to-r from-obsidian to-obsidian/90 text-cream">
+                            <tr>
+                                <th class="px-6 py-6 text-left font-heading text-xl">会員種別</th>
+                                <th class="px-6 py-6 text-left font-heading text-xl">年会費（税込）</th>
+                                <th class="px-6 py-6 text-left font-heading text-xl">特典概要</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-hinoki/20">
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">Standard 会員</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">100,000円</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">オンライン限定コンテンツ、素体購入権（年3体まで）</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">VIP 会員</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">1,000,000円</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">特別商品購入枠、企画参加権、素体購入権（年5体まで）、日本人でも特別な日本文化体験</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">VVIP 会員</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">10,000,000円</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">オーダーサポート、職人連携、素体購入権（年5体まで）、日本人でも特別な日本文化体験、日本サポートなど</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- 購入ボタン -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mt-12">
+                <button onclick="purchaseMembership('standard')" class="bg-gold text-obsidian px-8 py-4 font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                    Standard 会員になる
+                </button>
+                <button onclick="purchaseMembership('vip')" class="bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                    VIP 会員になる
+                </button>
+                <button onclick="purchaseMembership('vvip')" class="bg-transparent text-emerald-400 px-8 py-4 font-semibold border-2 border-emerald-400 hover:bg-emerald-400 hover:text-obsidian transition-all duration-300 rounded-lg">
+                    VVIP 会員になる
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 参加の流れ -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">参加の流れ</h2>
+                <p class="text-lg text-obsidian/70">How to Join</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">プランを選択</h3>
+                    <p class="text-obsidian/70">3つのメンバーシップから、あなたに最適なプランをお選びください。</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">専用フォーム送信</h3>
+                    <p class="text-obsidian/70">お申し込みフォームに必要事項をご記入いただき、決済手続きを行います。</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">FOMUSからご案内</h3>
+                    <p class="text-obsidian/70">ご入会確認後、詳細なメンバー特典のご案内をお送りし、特典サービスが開始されます。</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">4</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">会員証受け取り</h3>
+                    <p class="text-obsidian/70">NFC搭載のFOMUS会員証をお届けします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- お問い合わせ/CTA -->
+    <section class="py-20 bg-gradient-to-br from-emerald-800 to-slate-800 text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-cream mb-8">日本文化の未来を、ともに</h2>
+                <p class="text-xl text-emerald-100/90 max-w-3xl mx-auto mb-12">
+                    あなたの参加をお待ちしています。<br>
+                    ご質問やご相談がございましたら、お気軽にお問い合わせください。
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#membership-levels" class="bg-gold text-obsidian px-12 py-4 text-lg font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                    参加を申し込む
+                </a>
+                <a href="preview-global-ja.html#contact" class="bg-transparent text-gold px-12 py-4 text-lg font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                    今すぐ相談する
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-emerald-100/70 mb-4">直接お問い合わせをご希望の場合</p>
+                <p class="text-gold font-semibold">membership@fomus.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 重要事項セクション -->
+    <section class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-light text-cream mb-8">重要事項</h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 会員権についてのご案内 -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">会員権についてのご案内</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            本会員権は、FOMUS Global FZ-LLC（ドバイ法人）によって提供されるNFCカード形式の「会員証」の販売です。
+                        </p>
+                        <p>
+                            本会員権は、投資・リターンを目的とした金融商品ではなく、FOMUSの活動を支援し、共に文化を育てるための"参加証"です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- サービス提供についてのご案内 -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">サービス提供についてのご案内</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            会員は、FOMUSの文化的活動や限定商品に優先的にアクセスできるほか、稀に、日本各地に精通したFOMUSのメンバーから、一見様お断りの特別な場所や体験へのお誘いを受けることがあります。
+                        </p>
+                        <p class="text-cream/70 text-sm bg-cream/5 p-4 rounded-lg border-l-4 border-gold">
+                            ※これはFOMUS JAPANが提供するサービスではなく、あくまで個人メンバー間のご縁による非営利的な案内です。
+                        </p>
+                        <p>
+                            なお、FOMUSの日本法人は、旅行・手配・ガイドサービスを行っておりません。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 法的注意事項 -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">法的注意事項</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            本会員証（NFCカード）は、物理商品の所有権を示すものであり、サービス提供契約ではありません。
+                        </p>
+                        <p>
+                            FOMUS Global FZ-LLC（ドバイ法人）は本カードの販売のみを行い、各種サービスの提供・サポート・企画運営等は日本法人である FOMUS JAPAN にて行われます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+                </div>
+                <p class="text-cream/60 text-sm">© 2024 FOMUS. 全著作権所有。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

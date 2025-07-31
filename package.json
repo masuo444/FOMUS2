@@ -1,0 +1,40 @@
+{
+  "name": "fomus-premium",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.17.4",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "@stripe/stripe-js": "^2.1.11",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.33",
+    "@types/react-dom": "18.2.14",
+    "autoprefixer": "10.4.16",
+    "contentful": "^10.6.8",
+    "eslint": "8.52.0",
+    "eslint-config-next": "14.0.1",
+    "framer-motion": "^10.16.4",
+    "googleapis": "^128.0.0",
+    "next": "14.0.1",
+    "next-intl": "^3.0.0",
+    "postcss": "8.4.31",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "stripe": "^14.2.0",
+    "tailwindcss": "3.3.5",
+    "typescript": "5.2.2",
+    "viem": "^1.18.1",
+    "wagmi": "^1.4.6"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.54.8"
+  }
+}
