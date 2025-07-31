@@ -98,4 +98,28 @@
     transform: translateZ(0);
     will-change: transform;
   }
+  
+  /* Japanese design styles from HTML */
+  .btn-primary {
+    @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-fomus {
+    background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+  }
+
+  .pillar-card {
+    @apply bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden;
+  }
 }
