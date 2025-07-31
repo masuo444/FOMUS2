@@ -6,7 +6,8 @@ import { motion } from 'framer-motion';
 import { ShoppingBagIcon, CreditCardIcon } from '@heroicons/react/24/outline';
 
 // Stripe公開キー（環境変数から取得）
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+const stripePublishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+const stripePromise = stripePublishableKey ? loadStripe(stripePublishableKey) : null;
 
 interface StripeCheckoutButtonProps {
   priceId: string;
@@ -24,6 +25,12 @@ export default function StripeCheckoutButton({
   const [isLoading, setIsLoading] = useState(false);
 
   const handleCheckout = async () => {
+    // Stripe が利用できない場合の処理
+    if (!stripePublishableKey) {
+      alert('決済機能は現在準備中です。しばらくお待ちください。');
+      return;
+    }
+
     setIsLoading(true);
     
     try {

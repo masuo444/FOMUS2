@@ -32,6 +32,9 @@ export default function SuccessPage() {
           console.error('Session fetch error:', error);
           setLoading(false);
         });
+    } else {
+      // sessionId がない場合は即座にローディング終了
+      setLoading(false);
     }
   }, [sessionId]);
 
