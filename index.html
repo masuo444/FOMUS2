@@ -1,27 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOMUS - More than a Product, It's a Cultural Experience</title>
+    <title>FOMUS - Select Your Language</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script>
-        // Check if user has a saved language preference
-        const savedLang = localStorage.getItem('preferredLanguage');
-        
-        if (savedLang) {
-            // Redirect to saved language
-            if (savedLang === 'ja') {
-                window.location.href = 'index-ja.html';
-            } else {
-                window.location.href = 'index-' + savedLang + '.html';
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans', 'Noto Sans JP', 'sans-serif'],
+                        arabic: ['Noto Sans Arabic', 'sans-serif'],
+                        chinese: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
             }
-        } else {
-            // First time visitor - redirect to language selector
-            window.location.href = 'language-selector.html';
         }
     </script>
+    <style>
+        body { 
+            font-family: 'Noto Sans', sans-serif; 
+            background: linear-gradient(135deg, #141414 0%, #1f1f1f 50%, #141414 100%);
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .language-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(199, 162, 83, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        .language-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(199, 162, 83, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .language-card:hover::before {
+            opacity: 1;
+        }
+        .language-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(199, 162, 83, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(199, 162, 83, 0.2);
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        @keyframes slideUp {
+            to { 
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .glow {
+            text-shadow: 0 0 20px rgba(199, 162, 83, 0.5);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 50%, #c7a253 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        /* Decorative elements */
+        .corner-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgba(199, 162, 83, 0.3);
+        }
+        .corner-decoration.top-left {
+            top: -50px;
+            left: -50px;
+            border-right: none;
+            border-bottom: none;
+            transform: rotate(45deg);
+        }
+        .corner-decoration.bottom-right {
+            bottom: -50px;
+            right: -50px;
+            border-left: none;
+            border-top: none;
+            transform: rotate(45deg);
+        }
+    </style>
 </head>
-<body>
-    <p>Redirecting...</p>
+<body class="bg-obsidian text-cream flex items-center justify-center min-h-screen">
+    <!-- Background decorations -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-20 w-64 h-64 border border-gold/10 rounded-full floating"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 border border-gold/10 rounded-full floating" style="animation-delay: 3s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-32 h-32 border border-hinoki/20 rounded-full floating" style="animation-delay: 1.5s;"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto px-4 py-12">
+        <!-- Logo -->
+        <div class="text-center mb-12 fade-in">
+            <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-24 md:h-32 mx-auto mb-8">
+            <h1 class="text-4xl md:text-6xl font-light mb-4">
+                <span class="gold-gradient glow">Select Your Language</span>
+            </h1>
+            <p class="text-lg md:text-xl text-cream/70 font-light">Experience Japanese culture in your preferred language</p>
+        </div>
+        
+        <!-- Language cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+            <!-- Japanese -->
+            <a href="index-ja.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.1s;">
+                <div class="corner-decoration top-left"></div>
+                <div class="corner-decoration bottom-right"></div>
+                <div class="text-5xl mb-4">🇯🇵</div>
+                <h2 class="text-2xl font-light mb-2 text-gold">日本語</h2>
+                <p class="text-cream/60 text-sm">Japanese</p>
+            </a>
+            
+            <!-- English -->
+            <a href="index-en.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.2s;">
+                <div class="corner-decoration top-left"></div>
+                <div class="corner-decoration bottom-right"></div>
+                <div class="text-5xl mb-4">🇬🇧</div>
+                <h2 class="text-2xl font-light mb-2 text-gold">English</h2>
+                <p class="text-cream/60 text-sm">英語</p>
+            </a>
+            
+            <!-- Arabic -->
+            <a href="index-ar.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.3s;">
+                <div class="corner-decoration top-left"></div>
+                <div class="corner-decoration bottom-right"></div>
+                <div class="text-5xl mb-4">🇦🇪</div>
+                <h2 class="text-2xl font-arabic font-light mb-2 text-gold">العربية</h2>
+                <p class="text-cream/60 text-sm">Arabic</p>
+            </a>
+            
+            <!-- Chinese -->
+            <a href="index-zh.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.4s;">
+                <div class="corner-decoration top-left"></div>
+                <div class="corner-decoration bottom-right"></div>
+                <div class="text-5xl mb-4">🇨🇳</div>
+                <h2 class="text-2xl font-chinese font-light mb-2 text-gold">中文</h2>
+                <p class="text-cream/60 text-sm">Chinese</p>
+            </a>
+            
+            <!-- French -->
+            <a href="index-fr.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.5s;">
+                <div class="corner-decoration top-left"></div>
+                <div class="corner-decoration bottom-right"></div>
+                <div class="text-5xl mb-4">🇫🇷</div>
+                <h2 class="text-2xl font-light mb-2 text-gold">Français</h2>
+                <p class="text-cream/60 text-sm">French</p>
+            </a>
+        </div>
+        
+        <!-- Footer message -->
+        <div class="text-center fade-in" style="animation-delay: 0.8s;">
+            <p class="text-cream/50 text-sm">
+                More than a Product, It's a Cultural Experience.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Save language preference
+        document.querySelectorAll('.language-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                const lang = href.replace('index-', '').replace('.html', '');
+                localStorage.setItem('preferredLanguage', lang === 'index' ? 'ja' : lang);
+            });
+        });
+        
+        // Auto-redirect based on browser language (optional)
+        // Uncomment if you want automatic language detection
+        /*
+        window.addEventListener('load', function() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const savedLang = localStorage.getItem('preferredLanguage');
+            
+            if (!savedLang) {
+                setTimeout(() => {
+                    if (browserLang.startsWith('ja')) {
+                        window.location.href = 'index.html';
+                    } else if (browserLang.startsWith('ar')) {
+                        window.location.href = 'index-ar.html';
+                    } else if (browserLang.startsWith('zh')) {
+                        window.location.href = 'index-zh.html';
+                    } else if (browserLang.startsWith('fr')) {
+                        window.location.href = 'index-fr.html';
+                    } else {
+                        window.location.href = 'index-en.html';
+                    }
+                }, 3000);
+            }
+        });
+        */
+    </script>
 </body>
 </html>
