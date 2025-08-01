@@ -1,0 +1,33 @@
+{
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "installCommand": "",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/en",
+      "destination": "/index-en.html"
+    },
+    {
+      "source": "/ja", 
+      "destination": "/index-ja.html"
+    },
+    {
+      "source": "/ar",
+      "destination": "/index-ar.html"
+    },
+    {
+      "source": "/zh",
+      "destination": "/index-zh.html"
+    },
+    {
+      "source": "/fr",
+      "destination": "/index-fr.html"
+    }
+  ],
+  "cleanUrls": true
+}
