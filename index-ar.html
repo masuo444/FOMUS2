@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUS - أكثر من مجرد منتج، إنها تجربة ثقافية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans Arabic', 'Noto Sans JP', 'sans-serif'],
+                        arabic: ['Noto Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        // معالجة دفع Stripe
+        async function purchaseMembership(tier) {
+            try {
+                const response = await fetch('/api/stripe/create-checkout-session', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        membershipTier: tier,
+                        successUrl: `${window.location.origin}/success?membership=${tier}`,
+                        cancelUrl: window.location.href
+                    }),
+                });
+                
+                const { url } = await response.json();
+                
+                if (url) {
+                    window.location.href = url;
+                } else {
+                    alert('حدث خطأ في معالجة الدفع. يرجى المحاولة مرة أخرى لاحقاً.');
+                }
+            } catch (error) {
+                console.error('Payment error:', error);
+                alert('حدث خطأ في معالجة الدفع. يرجى المحاولة مرة أخرى لاحقاً.');
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans Arabic', 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+        .font-arabic { font-family: 'Noto Sans Arabic', sans-serif; }
+        .btn-primary {
+            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+        }
+        .btn-secondary {
+            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-gradient-fomus {
+            background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+        }
+        .pillar-card {
+            @apply bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden;
+        }
+        /* RTL specific adjustments */
+        .rtl-flex-reverse {
+            flex-direction: row-reverse;
+        }
+    </style>
+    <script>
+        // معالجة اللغة
+        document.addEventListener('DOMContentLoaded', function() {
+            // تخزين اللغة الحالية
+            localStorage.setItem('preferredLanguage', 'ar');
+            
+            // دالة تحديث الروابط حسب اللغة
+            function updateLinksForLanguage(lang) {
+                const links = document.querySelectorAll('a[href*="membership.html"], a[href*="masu-collection.html"]');
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href.includes('.html')) {
+                        const baseName = href.replace('.html', '');
+                        link.setAttribute('href', baseName + '-' + lang + '.html');
+                    }
+                });
+            }
+            
+            // تحديث الروابط للعربية
+            updateLinksForLanguage('ar');
+        });
+    </script>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- الرأسية -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 rtl-flex-reverse">
+                <!-- الشعار -->
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                
+                <!-- التنقل -->
+                <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <a href="#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium font-arabic">الرئيسية</a>
+                    <a href="#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium font-arabic">الحرف</a>
+                    <a href="#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium font-arabic">نمط الحياة</a>
+                    <a href="#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium font-arabic">الترفيه</a>
+                    <a href="#membership" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium font-arabic">العضوية</a>
+                    <a href="#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium font-arabic">اتصل بنا</a>
+                </div>
+                
+                <!-- تبديل اللغة -->
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <a href="language-selector.html" class="text-sm text-obsidian/60 hover:text-gold transition-colors">AR</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم البطل -->
+    <section id="home" class="relative h-screen w-full overflow-hidden">
+        <!-- الخلفية -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-cream"></div>
+        </div>
+        
+        <!-- محتوى البطل -->
+        <div class="absolute inset-0 flex items-center justify-center px-4">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <!-- اليسار: الشعار -->
+                    <div class="flex justify-center lg:justify-center">
+                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-32 md:h-48 lg:h-64 xl:h-80 max-w-full">
+                    </div>
+                    
+                    <!-- اليمين: محتوى النص -->
+                    <div class="text-center lg:text-right">
+                        <!-- الشعار الرئيسي -->
+                        <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-6 text-obsidian leading-tight">
+                            <span class="block">أكثر من مجرد منتج،</span>
+                            <span class="block text-gold">إنها تجربة ثقافية.</span>
+                        </h1>
+                        
+                        <!-- الشعار الفرعي -->
+                        <p class="text-lg md:text-xl lg:text-2xl text-obsidian/80 font-light mb-12 font-arabic">
+                            التقاليد اليابانية، تجربة تُسمع حول العالم.<br>
+                            <span class="text-base md:text-lg text-obsidian/60">Japanese craftsmanship, curated for the world's most discerning collectors.</span>
+                        </p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- حول FOMUS -->
+    <section id="about" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- محتوى النص -->
+                <div class="order-2 lg:order-1">
+                    <div class="mb-8">
+                        <h2 class="font-heading text-sm text-gold mb-2">فلسفتنا</h2>
+                        <h3 class="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-obsidian">
+                            <span class="font-arabic">ما هو FOMUS</span><br>
+                            <span class="text-2xl md:text-3xl lg:text-4xl text-obsidian/70">Who We Are</span>
+                        </h3>
+                    </div>
+                    
+                    <div class="space-y-6 text-lg text-obsidian/80 leading-relaxed font-arabic text-right">
+                        <p>
+                            FOMUS هو علامة تجارية ثقافية تدمج التقاليد اليابانية مع الفن المعاصر،<br>
+                            وتقدم "تجارب لا تُنسى" للناس حول العالم.
+                        </p>
+                        <p>
+                            من خلال المنتجات التي تجمع بين الحرفية اليدوية والسرد والجماليات،<br>
+                            ننسج الروح والجماليات اليابانية للأجيال القادمة.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- المرئيات -->
+                <div class="relative order-1 lg:order-2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- FOMUS Masu -->
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img src="FOMUS枡.png" alt="FOMUS Masu" class="w-full h-full object-cover">
+                        </div>
+                        <!-- عملية إنتاج الفن -->
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img src="制作過程.png" alt="عملية الإنتاج" class="w-full h-full object-cover">
+                        </div>
+                        <!-- يدي الحرفي -->
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img src="職人の手元.JPG" alt="يدي الحرفي" class="w-full h-full object-cover">
+                        </div>
+                        <!-- جدار الماسو -->
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img src="枡ウォール.png" alt="جدار الماسو" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <!-- عناصر الديكور -->
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border border-gold/20 rounded-full"></div>
+                    <div class="absolute -bottom-4 -right-4 w-16 h-16 border border-hinoki/30 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 مجموعات -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8 font-arabic">أربع مجموعات</h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto font-arabic">
+                    اختبر العالم متعدد الأوجه للثقافة اليابانية من خلال مجموعات مختارة بعناية وبرامج خاصة.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- مجموعة الحرف -->
+                <div class="pillar-card">
+                    <div class="h-64 bg-gradient-to-br from-orange-400/30 to-orange-500/30 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <div class="w-20 h-20 bg-orange-400/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-orange-500/40 rounded"></div>
+                            </div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian">CRAFT</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-obsidian/70 mb-4 leading-relaxed font-arabic text-right">
+                            إعادة تفسير عصرية للحرف اليابانية التقليدية. من مجموعة MASU إلى أعمال الحرفيين المختارة.
+                        </p>
+                        <ul class="text-sm text-obsidian/60 space-y-1 mb-8 text-right font-arabic">
+                            <li>• MASU</li>
+                            <li>• FOMUS PARURE (مجوهرات)</li>
+                            <li>• MASUKAME</li>
+                        </ul>
+                        <div class="flex justify-end">
+                            <a href="masu-collection.html" class="inline-block bg-gold text-obsidian px-6 py-3 font-semibold hover:bg-obsidian hover:text-gold transition-colors rounded-lg border-2 border-gold font-arabic">
+                                اعرف المزيد
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- مجموعة نمط الحياة -->
+                <div class="pillar-card">
+                    <div class="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <div class="w-20 h-20 bg-green-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-green-500/40 rounded"></div>
+                            </div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian">LIFE</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-obsidian/70 mb-4 leading-relaxed font-arabic text-right">
+                            منتجات عالية الجودة تدمج التقاليد في الحياة اليومية. نمط حياة ياباني فاخر.
+                        </p>
+                        <ul class="text-sm text-obsidian/60 space-y-1 mb-8 text-right font-arabic">
+                            <li>• الماتشا والشاي الياباني</li>
+                            <li>• سلسلة العطريات</li>
+                            <li>• منتجات العافية</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- مجموعة الترفيه -->
+                <div class="pillar-card">
+                    <div class="h-64 bg-gradient-to-br from-purple-100 to-blue-200 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <div class="w-20 h-20 bg-purple-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-purple-500/40 rounded"></div>
+                            </div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian">ENTERTAINMENT</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-obsidian/70 mb-8 leading-relaxed font-arabic text-right">
+                            تطوير الملكية الفكرية الثقافية من خلال مشروع KUKU. الرسوم المتحركة والفن والمقتنيات الرقمية.
+                        </p>
+                        <div class="flex justify-end">
+                            <a href="#entertainment" class="inline-block bg-gold text-obsidian px-6 py-3 font-semibold hover:bg-obsidian hover:text-gold transition-colors rounded-lg border-2 border-gold font-arabic">
+                                اعرف المزيد
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- مجموعة العضوية -->
+                <div class="pillar-card">
+                    <div class="h-64 bg-gradient-to-br from-gold/30 to-gold/50 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <div class="w-20 h-20 bg-gold/30 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-gold/50 rounded"></div>
+                            </div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian">MEMBERSHIP</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-obsidian/70 mb-4 leading-relaxed font-arabic text-right">
+                            إلى ما وراء التقاليد والابتكار── انضم إلينا كعضو في FOMUS لنشكل المستقبل معاً. شارك في الحفاظ على الثقافة اليابانية وتطويرها.
+                        </p>
+                        <ul class="text-sm text-obsidian/60 space-y-1 mb-8 text-right font-arabic">
+                            <li>• عضوية VIP</li>
+                            <li>• دعم ثقافي</li>
+                            <li>• فعاليات حصرية</li>
+                        </ul>
+                        <div class="flex justify-end">
+                            <a href="membership.html" class="inline-block bg-gold text-obsidian px-6 py-3 font-semibold hover:bg-obsidian hover:text-gold transition-colors rounded-lg border-2 border-gold font-arabic">
+                                اعرف المزيد
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الحرف -->
+    <section id="craft" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-5xl md:text-7xl font-light text-obsidian mb-6">CRAFT</h2>
+                <p class="text-xl text-obsidian/70 max-w-3xl mx-auto font-arabic">
+                    المكان الذي تلتقي فيه التقنيات التي تمتد لقرون مع التصميم المعاصر. كل قطعة تحكي قصة الحرفية والابتكار.
+                </p>
+            </div>
+            
+            <!-- عرض مجموعة MASU -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <a href="masu-collection.html" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-cream to-hinoki/20">
+                        <img src="MASU collection.png" alt="مجموعة MASU" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-2">مجموعة MASU</h3>
+                        <p class="text-obsidian/70 font-arabic text-right">مقياس تاريخه 1300 عام</p>
+                    </div>
+                </a>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-cream to-gold/20">
+                        <img src="FOMUS PARURE.png" alt="FOMUS PARURE" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-2">FOMUS PARURE (مجوهرات ماسو)</h3>
+                        <p class="text-obsidian/70 font-arabic text-right">إكسسوارات دقيقة مستوحاة من الأشكال التقليدية</p>
+                    </div>
+                </div>
+                
+                <a href="https://masukame.fomus.jp/" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-cream to-obsidian/10">
+                        <img src="MASUKAME.jpg" alt="MASUKAME" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-2">MASUKAME</h3>
+                        <p class="text-obsidian/70 font-arabic text-right">عمل فني يدوي نهائي من FOMUS بشكل السلحفاة.</p>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- قسم نمط الحياة -->
+    <section id="life" class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-5xl md:text-7xl font-light text-obsidian mb-6">LIFE</h2>
+                <div class="bg-gold/20 rounded-lg p-6 mb-8 max-w-md mx-auto">
+                    <p class="text-gold font-semibold text-xl font-arabic">قيد التحضير</p>
+                    <p class="text-obsidian/70 text-sm mt-2 font-arabic">قريباً</p>
+                </div>
+                <p class="text-xl text-obsidian/70 max-w-3xl mx-auto font-arabic">
+                    مجموعة نمط حياة مختارة بعناية تحول اللحظات اليومية إلى طقوس جمالية.
+                </p>
+            </div>
+            
+            <!-- الماتشا والشاي الياباني -->
+            <div class="max-w-5xl mx-auto opacity-75">
+                <div class="bg-white rounded-lg shadow-lg p-8 relative">
+                    <div class="absolute top-4 left-4 bg-gold/20 text-gold px-3 py-1 rounded-full text-xs font-semibold font-arabic">
+                        قيد التحضير
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div class="order-2 lg:order-1">
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian mb-6 font-arabic text-right">الماتشا والشاي الياباني</h3>
+                            <p class="text-obsidian/70 mb-6 font-arabic text-right">
+                                ماتشا بدرجة الطقوس وأوراق شاي نادرة مصدرها حدائق شاي لها تاريخ يمتد لقرون.
+                                كل مزيج هو رحلة عبر تراث الشاي الياباني.
+                            </p>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="text-center p-4 bg-green-50 rounded">
+                                    <p class="text-2xl mb-1">🍵</p>
+                                    <p class="font-semibold text-obsidian font-arabic">ماتشا فاخر</p>
+                                </div>
+                                <div class="text-center p-4 bg-green-50 rounded">
+                                    <p class="text-2xl mb-1">🍃</p>
+                                    <p class="font-semibold text-obsidian font-arabic">سينشا نادر</p>
+                                </div>
+                            </div>
+                            <button class="btn-secondary w-full opacity-50 cursor-not-allowed font-arabic" disabled>عرض مجموعة الشاي</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الترفيه -->
+    <section id="entertainment" class="py-20 bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-900 text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-6xl md:text-8xl font-light text-cream mb-4">ENTERTAINMENT</h2>
+                <p class="text-lg md:text-xl font-light text-emerald-200/80 tracking-widest mb-8">
+                    – Nature's Mythology Reborn –
+                </p>
+                <div class="max-w-4xl mx-auto mb-8">
+                    <h3 class="font-heading text-4xl md:text-5xl font-light text-cream mb-4">
+                        KUKU
+                    </h3>
+                    <p class="text-2xl md:text-3xl font-heading font-light text-emerald-200 mb-6 font-arabic">
+                        مشروع يربط العالم بقوة الثقافة والقصص
+                    </p>
+                    <p class="text-lg md:text-xl text-cream/90 font-light leading-relaxed font-arabic text-center">
+                        KUKU هو مشروع ملكية فكرية عالمي تطوره FOMUS، يدمج الثقافة اليابانية التقليدية مع الإبداع المعاصر.<br>
+                        يمتد عبر الفن والحرف والرسوم المتحركة والكتب والتكنولوجيا، وينشئ منتجات وتجارب متنوعة حول القصص.
+                    </p>
+                </div>
+                <p class="text-xl text-cream/90 max-w-4xl mx-auto font-light leading-relaxed font-arabic">
+                    لا يقتصر هذا المشروع على إنتاج المحتوى فحسب، بل يهدف إلى كونه "مساحة إبداعية مفتوحة" حيث يمكن للناس حول العالم المشاركة والتشجيع وتنمية الثقافة معاً.
+                </p>
+            </div>
+            
+            <!-- KUKU المرئي الرئيسي -->
+            <div class="mb-16">
+                <div class="relative h-[70vh] rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/20">
+                    <img src="KUKU.jpg" alt="شخصيات KUKU" class="w-full h-full object-cover">
+                    <!-- زخرفة طبيعية -->
+                    <div class="absolute inset-0">
+                        <div class="absolute top-8 right-8 w-24 h-24 border border-emerald-400/30 rounded-full opacity-40"></div>
+                        <div class="absolute bottom-12 left-12 w-16 h-16 border border-emerald-300/20 rounded-full opacity-30"></div>
+                        <div class="absolute top-1/3 left-1/4 w-12 h-12 border border-emerald-500/25 rounded-full opacity-35"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- تفاصيل مشروع KUKU -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div class="bg-gradient-to-br from-emerald-800/20 to-green-800/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 order-2 lg:order-1">
+                    <h4 class="font-heading text-3xl font-light text-emerald-200 mb-8 font-arabic text-right">رؤية المشروع</h4>
+                    <div class="text-center mb-8">
+                        <p class="text-2xl md:text-3xl font-heading font-light text-emerald-200 mb-6 font-arabic">
+                            "إنشاء نظام بيئي ثقافي جديد يستمر لألف عام."
+                        </p>
+                    </div>
+                    
+                    <p class="text-cream/90 mb-6 text-lg leading-relaxed font-light font-arabic text-right">
+                        في قصة KUKU، يظهر "الماسو" الحرفة التقليدية اليابانية الرمزية كعنصر مهم.<br>
+                        هذا الماسو يرتبط مع خط الحرف في FOMUS، ويعمل كفن وكرمز ثقافي.
+                    </p>
+                    
+                    <p class="text-cream/80 mb-6 text-lg leading-relaxed font-light font-arabic text-right">
+                        نحن نحور حول هذه القصة،<br>
+                        – الروحانية والجماليات اليابانية<br>
+                        – الحرفية التي نفتخر بها في العالم<br>
+                        – التكنولوجيا المتطورة والوصول للسوق مع دبي كقاعدة
+                    </p>
+                    
+                    <p class="text-cream/80 mb-8 text-lg leading-relaxed font-light font-arabic text-right">
+                        ندمج هذه العناصر لننتشر في كتب الأطفال والرسوم المتحركة والذكاء الاصطناعي وNFT والبضائع والمحتوى التعليمي وأعمال التراخيص.<br>
+                        القصص والمنتجات تتداول مع بعضها، وننشئ نموذجاً مستداماً من الناحيتين الثقافية والاقتصادية.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-800/20 to-emerald-800/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 order-1 lg:order-2">
+                    <h4 class="font-heading text-3xl font-light text-emerald-200 mb-8 text-center font-arabic">وسائل التطوير</h4>
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- رواية -->
+                        <div class="relative bg-gradient-to-br from-emerald-500/10 via-emerald-600/15 to-emerald-700/20 rounded-xl p-6 text-center hover:from-emerald-400/15 hover:via-emerald-500/20 hover:to-emerald-600/25 transition-all duration-500 border border-emerald-400/30 hover:border-emerald-300/50 shadow-lg hover:shadow-emerald-500/20 transform hover:-translate-y-1">
+                            <div class="absolute top-2 left-2">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-400/30 to-emerald-600/40 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm border border-emerald-300/30">
+                                <span class="text-2xl">📚</span>
+                            </div>
+                            <h5 class="font-heading text-xl font-semibold text-cream mb-3 tracking-wide font-arabic">رواية</h5>
+                            <div class="inline-flex items-center px-3 py-1 bg-emerald-400/20 text-emerald-200 text-sm font-medium rounded-full border border-emerald-400/30">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full ml-2 animate-pulse"></div>
+                                <span class="font-arabic">منشور</span>
+                            </div>
+                        </div>
+                        
+                        <!-- كتاب مصور -->
+                        <div class="relative bg-gradient-to-br from-slate-500/10 via-slate-600/15 to-slate-700/20 rounded-xl p-6 text-center hover:from-slate-400/15 hover:via-slate-500/20 hover:to-slate-600/25 transition-all duration-500 border border-slate-400/20 hover:border-slate-300/30 shadow-lg transform hover:-translate-y-1">
+                            <div class="absolute top-2 left-2">
+                                <div class="w-3 h-3 bg-slate-400/50 rounded-full"></div>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-slate-400/20 to-slate-600/30 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm border border-slate-300/20">
+                                <span class="text-2xl">🎨</span>
+                            </div>
+                            <h5 class="font-heading text-xl font-semibold text-cream mb-3 tracking-wide font-arabic">كتاب مصور</h5>
+                            <div class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-sm font-medium rounded-full border border-slate-400/20">
+                                <div class="w-2 h-2 bg-slate-400 rounded-full ml-2"></div>
+                                <span class="font-arabic">قيد التحضير</span>
+                            </div>
+                        </div>
+                        
+                        <!-- مانجا -->
+                        <div class="relative bg-gradient-to-br from-slate-500/10 via-slate-600/15 to-slate-700/20 rounded-xl p-6 text-center hover:from-slate-400/15 hover:via-slate-500/20 hover:to-slate-600/25 transition-all duration-500 border border-slate-400/20 hover:border-slate-300/30 shadow-lg transform hover:-translate-y-1">
+                            <div class="absolute top-2 left-2">
+                                <div class="w-3 h-3 bg-slate-400/50 rounded-full"></div>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-slate-400/20 to-slate-600/30 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm border border-slate-300/20">
+                                <span class="text-2xl">📖</span>
+                            </div>
+                            <h5 class="font-heading text-xl font-semibold text-cream mb-3 tracking-wide font-arabic">مانجا</h5>
+                            <div class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-sm font-medium rounded-full border border-slate-400/20">
+                                <div class="w-2 h-2 bg-slate-400 rounded-full ml-2"></div>
+                                <span class="font-arabic">قيد التحضير</span>
+                            </div>
+                        </div>
+                        
+                        <!-- أنمي -->
+                        <div class="relative bg-gradient-to-br from-slate-500/10 via-slate-600/15 to-slate-700/20 rounded-xl p-6 text-center hover:from-slate-400/15 hover:via-slate-500/20 hover:to-slate-600/25 transition-all duration-500 border border-slate-400/20 hover:border-slate-300/30 shadow-lg transform hover:-translate-y-1">
+                            <div class="absolute top-2 left-2">
+                                <div class="w-3 h-3 bg-slate-400/50 rounded-full"></div>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-slate-400/20 to-slate-600/30 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm border border-slate-300/20">
+                                <span class="text-2xl">🎬</span>
+                            </div>
+                            <h5 class="font-heading text-xl font-semibold text-cream mb-3 tracking-wide font-arabic">أنمي</h5>
+                            <div class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-sm font-medium rounded-full border border-slate-400/20">
+                                <div class="w-2 h-2 bg-slate-400 rounded-full ml-2"></div>
+                                <span class="font-arabic">قيد التحضير</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- زر المشاركة في مشروع KUKU -->
+            <div class="text-center mt-16">
+                <button class="bg-emerald-600 text-cream px-16 py-5 font-semibold hover:bg-emerald-500 transition-all duration-300 rounded-lg border border-emerald-500/50 hover:border-emerald-400/70 text-lg font-arabic">
+                    انضم إلى مشروع KUKU
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم العضوية -->
+    <section id="membership" class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- العنوان + العنوان الفرعي -->
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-6xl md:text-8xl font-light text-cream mb-4">MEMBERSHIP</h2>
+                <p class="text-lg md:text-xl font-light text-gold/80 tracking-widest mb-8">
+                    – Experience the Essence of Japanese Culture –
+                </p>
+            </div>
+            
+            <!-- قسم صورة البطاقة -->
+            <div class="mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- اليسار: صورة البطاقة -->
+                    <div class="flex justify-center lg:justify-start order-2 lg:order-1">
+                        <img src="カードイラスト.png" alt="بطاقة عضوية FOMUS" class="w-full max-w-lg">
+                    </div>
+                    
+                    <!-- اليمين: النص -->
+                    <div class="text-center lg:text-right order-1 lg:order-2">
+                        <h3 class="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-cream mb-4 leading-tight">
+                            Become Part of a Legacy.
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl font-heading font-light text-gold mb-3 font-arabic">
+                            إلى ما وراء التقاليد والابتكار.
+                        </p>
+                        <p class="text-base md:text-lg text-cream/90 font-light font-arabic">
+                            تجربة ثقافية خاصة من أجلك.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- خطط العضوية -->
+            <div class="border-2 border-gold/30 rounded-2xl overflow-hidden bg-gradient-to-br from-cream/5 to-cream/10 backdrop-blur-sm">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gradient-to-r from-gold/20 to-gold/30 border-b border-gold/30">
+                            <tr>
+                                <th class="px-8 py-6 text-right font-heading text-xl text-cream font-arabic">الرتبة</th>
+                                <th class="px-8 py-6 text-right font-heading text-xl text-cream font-arabic">الرسوم السنوية</th>
+                                <th class="px-8 py-6 text-right font-heading text-xl text-cream font-arabic">المزايا</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gold/20">
+                            <tr class="hover:bg-cream/5 transition-colors" style="background-image: linear-gradient(45deg, rgba(199, 162, 83, 0.03) 25%, transparent 25%); background-size: 40px 40px;">
+                                <td class="px-8 py-6">
+                                    <div class="font-heading text-2xl font-light text-cream">Standard</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-gold font-light text-xl">€650</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-cream/90 font-light mb-4 font-arabic text-right">
+                                        • إصدار بطاقة NFC حصرية<br>
+                                        • حق شراء المجموعات المحدودة
+                                    </div>
+                                    <button onclick="purchaseMembership('standard')" class="bg-gold text-obsidian px-6 py-2 text-sm font-semibold hover:bg-cream transition-all duration-300 border border-gold hover:border-cream rounded font-arabic">
+                                        اشترك
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-cream/5 transition-colors" style="background-image: linear-gradient(45deg, rgba(199, 162, 83, 0.05) 25%, transparent 25%); background-size: 40px 40px;">
+                                <td class="px-8 py-6">
+                                    <div class="font-heading text-2xl font-light text-cream">VIP</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-gold font-light text-xl">€6,500</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-cream/90 font-light mb-4 font-arabic text-right">
+                                        • إصدار بطاقة NFC حصرية<br>
+                                        • حق شراء المجموعات المحدودة<br>
+                                        • حق إدراج الاسم المستعار في أعمال مشروع KUKU
+                                    </div>
+                                    <button onclick="purchaseMembership('vip')" class="bg-gold text-obsidian px-6 py-2 text-sm font-semibold hover:bg-cream transition-all duration-300 border border-gold hover:border-cream rounded font-arabic">
+                                        اشترك
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-cream/5 transition-colors" style="background-image: linear-gradient(45deg, rgba(199, 162, 83, 0.08) 25%, transparent 25%); background-size: 40px 40px;">
+                                <td class="px-8 py-6">
+                                    <div class="font-heading text-2xl font-light text-cream">VVIP</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-gold font-light text-xl">€65,000</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-cream/90 font-light mb-4 font-arabic text-right">
+                                        • إصدار بطاقة NFC حصرية<br>
+                                        • حق شراء المجموعات المحدودة<br>
+                                        • حق إدراج الاسم المستعار في أعمال مشروع KUKU<br>
+                                        • تقديم تجارب يابانية خاصة
+                                    </div>
+                                    <button onclick="purchaseMembership('vvip')" class="bg-gold text-obsidian px-6 py-2 text-sm font-semibold hover:bg-cream transition-all duration-300 border border-gold hover:border-cream rounded font-arabic">
+                                        اشترك
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- شرح إضافي -->
+            <div class="text-center mt-12">
+                <p class="text-lg text-cream/90 font-light max-w-4xl mx-auto leading-relaxed mb-6 font-arabic">
+                    جميع الأعضاء يحصلون على بطاقة خاصة مزودة بـ NFC.<br>
+                    تجارب للمس الجمال والتقنية اليابانية، دعوات خاصة، وأشياء حصرية.
+                </p>
+                <p class="text-cream/70 font-light mb-8 font-arabic">
+                    حسب المستوى، نوفر تجارب ثقافية FOMUS وحقوق المشاركة في مشاريع حصرية، واتصالات خاصة مع الحرفيين.
+                </p>
+                
+                <div class="text-center">
+                    <a href="membership.html" class="inline-block bg-gold text-obsidian px-12 py-4 font-semibold hover:bg-cream transition-all duration-300 border-2 border-gold hover:border-cream font-arabic">
+                        عرض التفاصيل
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-5xl md:text-7xl font-light text-cream mb-6 font-arabic">اتصل بنا</h2>
+                <p class="text-xl text-cream/80 max-w-3xl mx-auto font-arabic">
+                    الشراكات التجارية، استفسارات التصدير، العلاقات الإعلامية، وأسئلة أخرى، لا تتردد في التواصل معنا.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <form class="space-y-6" action="mailto:fomus.official@gmail.com" method="post" enctype="text/plain">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="الاسم" class="bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none text-right font-arabic">
+                        <input type="email" placeholder="البريد الإلكتروني" class="bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none text-right font-arabic">
+                    </div>
+                    <select class="w-full bg-cream/10 border border-cream/30 text-cream px-6 py-4 rounded-lg focus:border-gold focus:outline-none text-right font-arabic">
+                        <option value="">اختر نوع الاستفسار</option>
+                        <option value="business">شراكة تجارية</option>
+                        <option value="export">تصدير وتوزيع</option>
+                        <option value="media">علاقات إعلامية</option>
+                        <option value="membership">حول العضوية</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                    <textarea placeholder="الرسالة" rows="6" class="w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none text-right font-arabic"></textarea>
+                    <div class="text-center">
+                        <button type="submit" class="bg-gold text-obsidian px-12 py-4 font-semibold hover:bg-cream transition-colors font-arabic">
+                            إرسال
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- العلامة التجارية -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center justify-center mb-6">
+                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-12">
+                    </div>
+                    <div class="flex justify-center space-x-4 space-x-reverse">
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- روابط سريعة -->
+                <div>
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-gold font-arabic text-right">روابط سريعة</h3>
+                    <ul class="space-y-2 text-right">
+                        <li><a href="#craft" class="text-cream/80 hover:text-gold transition-colors text-sm font-arabic">الحرف</a></li>
+                        <li><a href="#life" class="text-cream/80 hover:text-gold transition-colors text-sm font-arabic">نمط الحياة</a></li>
+                        <li><a href="#entertainment" class="text-cream/80 hover:text-gold transition-colors text-sm font-arabic">الترفيه</a></li>
+                        <li><a href="#membership" class="text-cream/80 hover:text-gold transition-colors text-sm font-arabic">العضوية</a></li>
+                    </ul>
+                </div>
+                
+                <!-- الدعم والقانون -->
+                <div>
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-gold font-arabic text-right">الدعم والقانون</h3>
+                    <ul class="space-y-2 text-right">
+                        <li><a href="#contact" class="text-cream/80 hover:text-gold transition-colors text-sm font-arabic">اتصل بنا</a></li>
+                        <li><a href="#" class="text-cream/80 hover:text-gold transition-colors text-sm font-arabic">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-cream/80 hover:text-gold transition-colors text-sm font-arabic">شروط الاستخدام</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- الأسفل -->
+            <div class="border-t border-cream/20 pt-8 text-center">
+                <p class="text-cream/60 text-sm">© 2024 FOMUS Global FZ-LLC. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

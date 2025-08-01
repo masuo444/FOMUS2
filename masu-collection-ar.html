@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجموعة MASU - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Amiri', 'serif'],
+                        body: ['Noto Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            font-family: 'Noto Sans Arabic', sans-serif; 
+            direction: rtl;
+        }
+        .font-heading { font-family: 'Amiri', serif; }
+        .btn-primary {
+            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+        }
+        .btn-secondary {
+            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-gradient-fomus {
+            background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+        }
+        /* RTL specific adjustments */
+        .rtl-flex-reverse { flex-direction: row-reverse; }
+        .rtl-text-right { text-align: right; }
+        .rtl-space-x-reverse > * + * { margin-right: 2rem; margin-left: 0; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- Header -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 rtl-flex-reverse">
+                <!-- Navigation -->
+                <div class="hidden lg:flex items-center space-x-8 rtl-space-x-reverse">
+                    <a href="preview-global-ar.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الرئيسية</a>
+                    <a href="preview-global-ar.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الحرف</a>
+                    <a href="preview-global-ar.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">نمط الحياة</a>
+                    <a href="preview-global-ar.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الترفيه</a>
+                    <a href="preview-global-ar.html#membership" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">العضوية</a>
+                    <a href="preview-global-ar.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">اتصل بنا</a>
+                </div>
+                
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-obsidian via-obsidian/95 to-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <nav class="text-sm mb-8">
+                    <a href="preview-global-ar.html" class="text-cream/60 hover:text-gold">الرئيسية</a>
+                    <span class="mx-3 text-cream/40">/</span>
+                    <a href="preview-global-ar.html#craft" class="text-cream/60 hover:text-gold">الحرف</a>
+                    <span class="mx-3 text-cream/40">/</span>
+                    <span class="text-cream">مجموعة MASU</span>
+                </nav>
+                
+                <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-light mb-6">
+                    <span class="text-gradient-gold">MASU</span>
+                    <span class="block text-3xl md:text-5xl lg:text-6xl mt-4">مجموعة</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-cream/80 max-w-3xl mx-auto">
+                    الماسو الياباني بتاريخ 1300 عام.<br>
+                    شكله ووظيفته التقليدية معاد تفسيرها بجماليات معاصرة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Overview -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <h2 class="font-heading text-4xl font-light text-obsidian mb-8">إمكانيات جديدة للماسو</h2>
+                    <p class="text-lg text-obsidian/80 mb-6 leading-relaxed">
+                        الماسو محبوب في اليابان منذ العصور القديمة كأداة لقياس الحبوب وككوب ساكي للمناسبات الاحتفالية.
+                        شكله المربع المثالي، ونسب النسبة الذهبية، وعطر خشب الهينوكي - كل ذلك يجسد جوهر الثقافة اليابانية.
+                    </p>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        تعيد FOMUS بناء هذا الماسو التقليدي ليناسب أنماط الحياة المعاصرة.
+                        وراء وظيفته كمجرد إناء، نقترحه كقطعة فنية وجسر ثقافي ينقل الجماليات اليابانية إلى العالم.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 rtl-flex-reverse">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">اختيار هينوكي عمره قرن</h3>
+                                <p class="text-sm text-obsidian/70">استخدام خشب هينوكي عمره أكثر من 100 عام فقط</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 rtl-flex-reverse">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">الحرفية التقليدية</h3>
+                                <p class="text-sm text-obsidian/70">تقنيات الوصل الخشبي بدون مسامير</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 rtl-flex-reverse">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">لمسة نهائية معاصرة</h3>
+                                <p class="text-sm text-obsidian/70">زخارف متنوعة تشمل الورنيش وورق الذهب والبلاتين</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-hinoki/30 to-gold/30 rounded-lg p-8 h-96 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gold/20 rounded mx-auto mb-4"></div>
+                        <p class="text-obsidian/60 italic">صورة مجموعة MASU</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Lineup -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-obsidian text-center mb-16">تشكيلة المنتجات</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Traditional Masu -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-64 bg-gradient-to-br from-hinoki/20 to-hinoki/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-hinoki/40 rounded-lg"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">ماسو تقليدي</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
+                            سلسلة كلاسيكية تعيد إنتاج الأشكال التقليدية بأمانة. تصميم خالد يحمل 1300 عام من التاريخ إلى العصر الحديث.
+                        </p>
+                        
+                        <!-- Size Options -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">اختيار الحجم</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-hinoki/20 text-obsidian text-xs rounded hover:bg-hinoki/30 transition-colors">ماسو صغير</button>
+                                <button class="px-3 py-1 bg-hinoki/40 text-obsidian text-xs rounded font-semibold">ماسو أساسي</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Coating Options -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">الطلاء</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded font-semibold">مع</button>
+                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">بدون</button>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gold font-bold text-lg mb-4">¥50,000~</p>
+                        <button class="btn-primary w-full">تخصيص واطلب</button>
+                    </div>
+                </div>
+                
+                <!-- Custom Made Masu -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-64 bg-gradient-to-br from-gold/20 to-gold/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-gold/40 rounded-lg"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">ماسو مخصص</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
+                            إنتاج مخصص بالكامل مصمم حسب متطلبات العميل. جميع المواد والأحجام والزخارف مصنوعة حسب الطلب.
+                        </p>
+                        
+                        <!-- Size Options -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">اختيار الحجم</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded hover:bg-gold/30 transition-colors">ماسو صغير</button>
+                                <button class="px-3 py-1 bg-gold/40 text-obsidian text-xs rounded font-semibold">ماسو أساسي</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Coating Options -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">الطلاء</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded font-semibold">مع</button>
+                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">بدون</button>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gold font-bold text-lg mb-4">¥200,000~</p>
+                        <button class="btn-primary w-full">تخصيص واطلب</button>
+                    </div>
+                </div>
+                
+                <!-- FOMUS Original Design Masu -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-64 bg-gradient-to-br from-obsidian/20 to-obsidian/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-obsidian/40 rounded-lg"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">FOMUS الأصلي</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
+                            سلسلة تصميمات مبتكرة بتفسير معاصر. قطع فنية فريدة حيث تندمج التقاليد والابتكار.
+                        </p>
+                        
+                        <!-- Size Options -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">اختيار الحجم</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-obsidian/20 text-obsidian text-xs rounded hover:bg-obsidian/30 transition-colors">ماسو صغير</button>
+                                <button class="px-3 py-1 bg-obsidian/40 text-cream text-xs rounded font-semibold">ماسو أساسي</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Coating Options -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">الطلاء</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-obsidian/30 text-cream text-xs rounded font-semibold">مع</button>
+                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">بدون</button>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gold font-bold text-lg mb-4">¥300,000~</p>
+                        <button class="btn-primary w-full">تخصيص واطلب</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Brands -->
+    <section class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-center mb-16">العلامات التجارية ذات الصلة</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- FOMUS PARURE (Masu Jewelry) -->
+                <div class="bg-cream/10 rounded-lg p-8 hover:bg-cream/20 transition-all duration-500">
+                    <h3 class="font-heading text-3xl font-semibold text-gold mb-4">FOMUS PARURE (مجوهرات ماسو)</h3>
+                    <p class="text-cream/80 mb-6">
+                        مجموعة مجوهرات رائعة مستوحاة من الشكل التقليدي للماسو.
+                        شكل جديد من الفخامة حيث يمكن ارتداء الجماليات اليابانية.
+                    </p>
+                    <div class="flex items-center justify-between rtl-flex-reverse">
+                        <a href="https://masu-jewelry.com" target="_blank" class="text-gold hover:text-cream transition-colors">
+                            زيارة الموقع ←
+                        </a>
+                        <span class="text-cream/60">موقع علامة تجارية مستقل</span>
+                    </div>
+                </div>
+                
+                <!-- MASUKAME -->
+                <div class="bg-cream/10 rounded-lg p-8 hover:bg-cream/20 transition-all duration-500">
+                    <h3 class="font-heading text-3xl font-semibold text-gold mb-4">MASUKAME</h3>
+                    <p class="text-cream/80 mb-6">
+                        سلسلة تحف محدودة الإصدار تتميز بزخارف السلاحف.
+                        رموز طول العمر والازدهار مرتقية كفن معاصر.
+                    </p>
+                    <div class="flex items-center justify-between rtl-flex-reverse">
+                        <a href="https://masukame.com" target="_blank" class="text-gold hover:text-cream transition-colors">
+                            زيارة الموقع ←
+                        </a>
+                        <span class="text-cream/60">موقع علامة تجارية مستقل</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-gradient-to-br from-gold/10 to-gold/20 rounded-lg p-12 text-center">
+                <h2 class="font-heading text-4xl font-light text-obsidian mb-8">طلب مخصص</h2>
+                <p class="text-lg text-obsidian/80 max-w-3xl mx-auto mb-8">
+                    نقوم بإنشاء MASU فريد من نوعه مصمم خصيصاً حسب متطلباتك.
+                    يمكن تخصيص جميع العناصر بما في ذلك المواد والحجم والزخرفة والنقش.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white/50 rounded-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-2">اختيار المواد</h3>
+                        <p class="text-sm text-obsidian/70">أخشاب ثمينة متنوعة تشمل هينوكي وكافور وكرز</p>
+                    </div>
+                    <div class="bg-white/50 rounded-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-2">تقنيات الزخرفة</h3>
+                        <p class="text-sm text-obsidian/70">ورنيش، عرق اللؤلؤ، ورق الذهب، نحت</p>
+                    </div>
+                    <div class="bg-white/50 rounded-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-2">النقش والتخصيص</h3>
+                        <p class="text-sm text-obsidian/70">شعارات العائلة، الشعارات، الرسائل</p>
+                    </div>
+                </div>
+                <button class="btn-primary">استشارة طلب مخصص</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+                </div>
+                <p class="text-cream/60 text-sm">© 2024 FOMUS. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set language in localStorage
+        localStorage.setItem('preferred-language', 'ar');
+    </script>
+</body>
+</html>

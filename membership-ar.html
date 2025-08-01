@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بناء مستقبل الثقافة اليابانية — معكم. | عضوية FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Serif:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif', 'serif'],
+                        body: ['Noto Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans Arabic', sans-serif; }
+        .font-heading { font-family: 'Noto Serif', serif; }
+        .btn-primary {
+            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+        }
+        .btn-secondary {
+            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-gradient-fomus {
+            background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+        }
+        .wood-texture {
+            background-image: linear-gradient(45deg, #d0c5b1 25%, transparent 25%), 
+                              linear-gradient(-45deg, #d0c5b1 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #d0c5b1 75%), 
+                              linear-gradient(-45deg, transparent 75%, #d0c5b1 75%);
+            background-size: 30px 30px;
+            background-position: 0 0, 0 15px, 15px -15px, -15px 0px;
+        }
+        /* RTL specific adjustments */
+        .rtl-flex-row {
+            flex-direction: row-reverse;
+        }
+        .rtl-text-right {
+            text-align: right;
+        }
+        .rtl-space-x-reverse > * + * {
+            margin-right: 2rem;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- الرأس -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 rtl-flex-row">
+                <!-- الشعار -->
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                
+                <!-- التنقل -->
+                <div class="hidden lg:flex items-center space-x-8 rtl-space-x-reverse">
+                    <a href="preview-global-ar.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الرئيسية</a>
+                    <a href="preview-global-ar.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الحرف</a>
+                    <a href="preview-global-ar.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">نمط الحياة</a>
+                    <a href="preview-global-ar.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الترفيه</a>
+                    <a href="preview-global-ar.html#membership" class="text-gold font-medium">العضوية</a>
+                    <a href="preview-global-ar.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم البطل -->
+    <section class="relative h-screen w-full overflow-hidden bg-gradient-to-br from-emerald-900 via-slate-800 to-emerald-800">
+        <!-- عناصر الخلفية -->
+        <div class="absolute inset-0">
+            <!-- نسيج يشبه الورق -->
+            <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 20%, rgba(208, 197, 177, 0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(199, 162, 83, 0.1) 0%, transparent 50%), radial-gradient(circle at 20% 70%, rgba(208, 197, 177, 0.08) 0%, transparent 50%);"></div>
+            
+            <!-- زخارف بقع الحبر -->
+            <div class="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-slate-600/20 to-emerald-700/30 rounded-full blur-xl"></div>
+            <div class="absolute bottom-32 left-16 w-48 h-48 bg-gradient-to-br from-emerald-600/15 to-slate-700/20 rounded-full blur-2xl"></div>
+            
+            <!-- عناصر زخرفية للماسو -->
+            <div class="absolute top-1/3 right-1/4 w-16 h-16 border border-gold/25 rotate-45 opacity-30"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-12 h-12 border border-emerald-400/20 rotate-12 opacity-25"></div>
+        </div>
+        
+        <!-- محتوى البطل -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="max-w-7xl mx-auto px-4 text-center text-cream">
+                <nav class="text-sm mb-8">
+                    <a href="preview-global-ar.html" class="text-cream/60 hover:text-gold">الرئيسية</a>
+                    <span class="mx-3 text-cream/40">/</span>
+                    <span class="text-cream">عضوية FOMUS</span>
+                </nav>
+                
+                <h1 class="font-heading text-3xl md:text-5xl lg:text-6xl font-light mb-8 leading-normal">
+                    <span class="block text-gradient-gold mb-6 pb-2">بناء المستقبل</span>
+                    <span class="block text-2xl md:text-4xl lg:text-5xl mb-6 pb-2">للثقافة اليابانية</span>
+                    <span class="block text-2xl md:text-4xl lg:text-5xl pb-2">— معكم.</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl lg:text-3xl font-heading font-light mb-12 text-emerald-100/90 max-w-4xl mx-auto">
+                    الحفاظ على التقاليد وتعزيز الابتكار<br>
+                    مع أعضاء FOMUS. الثقافة اليابانية إلى العالم.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#membership-levels" class="bg-gold text-obsidian px-8 py-4 font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                        عرض مزايا العضوية
+                    </a>
+                    <a href="#membership-levels" class="bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                        انضم الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ما هي عضوية FOMUS -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">ما هي عضوية FOMUS؟</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- الصورة -->
+                <div class="order-2 lg:order-1">
+                    <div class="aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
+                        <img src="職人の手元.jpg" alt="أيدي حرفي FOMUS" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- النص -->
+                <div class="max-w-xl mx-auto text-center lg:text-right order-1 lg:order-2">
+                    <p class="text-xl md:text-2xl text-obsidian/80 font-light leading-relaxed mb-8">
+                        جلب سحر الحرف التقليدية اليابانية إلى العالم الحديث.
+                    </p>
+                    <p class="text-lg md:text-xl text-obsidian/70 font-light leading-relaxed mb-8">
+                        FOMUS هي علامة تجارية تحمل مستقبل الحرف التقليدية، بدءاً من الماسو.<br>
+                        تعمل العضوية كجسر لدعم وخلق الثقافة مع أولئك الذين يشاركونها رؤيتنا.
+                    </p>
+                    <p class="text-lg text-obsidian/70 font-light leading-relaxed">
+                        أكثر من مجرد نظام عضوية، كن رفيقاً<br>
+                        في بناء تقاليد جديدة كوارث للثقافة اليابانية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم بطاقة NFC -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-heading text-4xl font-light text-obsidian mb-8">بطاقة العضوية</h2>
+                    <p class="text-lg text-obsidian/80 mb-6 leading-relaxed">
+                        يحصل كل عضو على بطاقة فعلية (مع NFC) عند الانضمام.
+                    </p>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        تعمل هذه البطاقة كـ "وثيقة عضو FOMUS" لشراء المنتجات والمشاركة الحصرية والإشعارات ذات الأولوية.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 rtl-space-x-reverse">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">💳</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">تمكين NFC</h3>
+                                <p class="text-sm text-obsidian/70">المصادقة الذكية وإدارة الوصول</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 rtl-space-x-reverse">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">🏮</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">التصميم الياباني</h3>
+                                <p class="text-sm text-obsidian/70">تصميم خاص يعكس الجماليات التقليدية</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 rtl-space-x-reverse">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">⭐</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">مزايا حصرية للأعضاء</h3>
+                                <p class="text-sm text-obsidian/70">خدمات خاصة عند تقديم البطاقة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center">
+                    <img src="カードイラスト.png" alt="بطاقة عضوية FOMUS" class="w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قيمة FOMUS الفريدة -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">قيمة FOMUS الفريدة</h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto">
+                    لماذا عضوية FOMUS مميزة
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- الفائدة 1 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🤝</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">الاتصال المباشر مع الحرفيين</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        توفير فرص للاتصال المباشر مع الحرفيين اليابانيين. دعم نقل التقنيات التقليدية.
+                    </p>
+                </div>
+                
+                <!-- الفائدة 2 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🗾</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">الأشخاص الرئيسيون المحليون</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        الوصول إلى الأشخاص الرئيسيين المحليين الذين يعرفون المنطقة. توفير تجارب ثقافية يابانية أصيلة.
+                    </p>
+                </div>
+                
+                <!-- الفائدة 3 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🎋</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">الوصول ذو الأولوية</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        الوصول ذو الأولوية إلى الثقافة اليابانية والمنتجات المحدودة. نعدكم بتجارب نادرة.
+                    </p>
+                </div>
+                
+                <!-- الفائدة 4 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🦉</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">مشاركة إنتاج KUKU</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        المشاركة والدعم في عملية إنتاج KUKU. كن رفيقاً في خلق أساطير جديدة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم تعاون KUKU -->
+    <section class="py-20 bg-gradient-to-br from-gold/10 to-gold/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">دائرة الدعم</h2>
+                <p class="text-xl text-obsidian/70 max-w-3xl mx-auto">
+                    عضويتك تدعم الإبداع الثقافي المستقبلي
+                </p>
+            </div>
+            
+            <div class="text-center max-w-4xl mx-auto">
+                <h3 class="font-heading text-3xl font-semibold text-obsidian mb-6">الأعضاء = المشاركون في الأنشطة الإبداعية</h3>
+                <p class="text-lg text-obsidian/80 mb-6 leading-relaxed">
+                    يُستخدم جزء من إيرادات الأعضاء في تكاليف إنتاج KUKU وتوسع أعمال MASUKAME و Life.
+                </p>
+                <p class="text-lg text-obsidian/80 mb-12 leading-relaxed">
+                    أنت لست مجرد عميل، بل "مشارك في الإنشاء" الذي يخلق مستقبل الثقافة اليابانية معاً،<br>
+                    يشارك في إنشاء تقاليد جديدة.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🦉</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">دعم إنتاج KUKU</h4>
+                        <p class="text-sm text-obsidian/70">سرد الأساطير وتطوير الوسائط</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🐢</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">توسع MASUKAME</h4>
+                        <p class="text-sm text-obsidian/70">تطوير سلسلة التحف محدودة الإصدار</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🍃</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">تطوير أعمال الحياة</h4>
+                        <p class="text-sm text-obsidian/70">تعزيز سلسلة الماتشا والعطور</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اختيار العضوية -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 text-cream relative overflow-hidden" id="membership-levels">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-cream mb-8">العضوية</h2>
+                <p class="text-lg text-cream/70 max-w-3xl mx-auto">
+                    نقدم ثلاث عضويات لتناسب أسلوبك.
+                </p>
+            </div>
+            
+            <!-- جدول العضوية -->
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gradient-to-r from-obsidian to-obsidian/90 text-cream">
+                            <tr>
+                                <th class="px-6 py-6 text-right font-heading text-xl">نوع العضوية</th>
+                                <th class="px-6 py-6 text-right font-heading text-xl">الرسوم السنوية (شامل الضريبة)</th>
+                                <th class="px-6 py-6 text-right font-heading text-xl">نظرة عامة على المزايا</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-hinoki/20">
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">العضو القياسي</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">€650</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">محتوى حصري عبر الإنترنت، حقوق شراء الماسو العادي (حتى 3 سنوياً)</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">عضو VIP</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">€6,500</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">حصة شراء المنتجات الخاصة، حقوق مشاركة المشروع، حقوق شراء الماسو العادي (حتى 5 سنوياً)، تجارب ثقافية يابانية خاصة حتى لليابانيين</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">عضو VVIP</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">€65,000</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">دعم الطلب، تعاون الحرفيين، حقوق شراء الماسو العادي (حتى 5 سنوياً)، تجارب ثقافية يابانية خاصة حتى لليابانيين، دعم اليابان، إلخ.</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- أزرار الشراء -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mt-12">
+                <button onclick="purchaseMembership('standard')" class="bg-gold text-obsidian px-8 py-4 font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                    كن عضواً قياسياً
+                </button>
+                <button onclick="purchaseMembership('vip')" class="bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                    كن عضو VIP
+                </button>
+                <button onclick="purchaseMembership('vvip')" class="bg-transparent text-emerald-400 px-8 py-4 font-semibold border-2 border-emerald-400 hover:bg-emerald-400 hover:text-obsidian transition-all duration-300 rounded-lg">
+                    كن عضو VVIP
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- كيفية الانضمام -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">كيفية الانضمام</h2>
+                <p class="text-lg text-obsidian/70">عملية الانضمام</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">اختر الخطة</h3>
+                    <p class="text-obsidian/70">اختر خطة العضوية الأنسب لك من خياراتنا الثلاثة.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">قدم نموذج الطلب</h3>
+                    <p class="text-obsidian/70">املأ المعلومات المطلوبة في نموذج الطلب وأكمل عملية الدفع.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">إرشاد FOMUS</h3>
+                    <p class="text-obsidian/70">بعد تأكيد العضوية، سنرسل معلومات مفصلة عن مزايا الأعضاء وستبدأ الخدمات.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">4</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">استلام بطاقة العضوية</h3>
+                    <p class="text-obsidian/70">سنسلم لك بطاقة عضوية FOMUS المزودة بـ NFC.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- اتصل بنا/CTA -->
+    <section class="py-20 bg-gradient-to-br from-emerald-800 to-slate-800 text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-cream mb-8">مستقبل الثقافة اليابانية، معاً</h2>
+                <p class="text-xl text-emerald-100/90 max-w-3xl mx-auto mb-12">
+                    نتطلع إلى مشاركتكم.<br>
+                    إذا كان لديك أي أسئلة أو استفسارات، فلا تتردد في الاتصال بنا.
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#membership-levels" class="bg-gold text-obsidian px-12 py-4 text-lg font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                    تقدم للعضوية
+                </a>
+                <a href="preview-global-ar.html#contact" class="bg-transparent text-gold px-12 py-4 text-lg font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                    اتصل بنا الآن
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-emerald-100/70 mb-4">للاستفسارات المباشرة</p>
+                <p class="text-gold font-semibold">membership@fomus.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأمور المهمة -->
+    <section class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-light text-cream mb-8">أمور مهمة</h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- معلومات العضوية -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">حول حقوق العضوية</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            هذه العضوية هي بيع "بطاقة عضوية" بصيغة بطاقة NFC مقدمة من FOMUS Global FZ-LLC (كيان دبي).
+                        </p>
+                        <p>
+                            هذه العضوية ليست منتجاً مالياً يهدف إلى الاستثمار أو العوائد، بل "شهادة مشاركة" لدعم أنشطة FOMUS وتنمية الثقافة معاً.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- معلومات تقديم الخدمة -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">حول تقديم الخدمة</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            يحصل الأعضاء على وصول ذو أولوية إلى الأنشطة الثقافية لـ FOMUS والمنتجات المحدودة، وأحياناً يتلقون دعوات من أعضاء FOMUS المطلعين على مناطق مختلفة من اليابان لأماكن وتجارب خاصة مغلقة عادة أمام الزوار لأول مرة.
+                        </p>
+                        <p class="text-cream/70 text-sm bg-cream/5 p-4 rounded-lg border-l-4 border-gold">
+                            ※هذه ليست خدمة مقدمة من FOMUS JAPAN، بل مجرد إرشاد غير ربحي يعتمد على الصلات الشخصية بين الأعضاء الأفراد.
+                        </p>
+                        <p>
+                            يرجى ملاحظة أن الكيان الياباني لـ FOMUS لا يقدم خدمات السفر أو الترتيب أو الإرشاد.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- إشعار قانوني -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">إشعار قانوني</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            تمثل بطاقة العضوية هذه (بطاقة NFC) ملكية منتج فيزيائي وليست عقد تقديم خدمة.
+                        </p>
+                        <p>
+                            تقوم FOMUS Global FZ-LLC (كيان دبي) ببيع هذه البطاقة فقط، بينما يتم تقديم الخدمات المختلفة والدعم وإدارة المشاريع من قبل الكيان الياباني FOMUS JAPAN.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+                </div>
+                <p class="text-cream/60 text-sm">© 2024 FOMUS. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripe = Stripe('pk_test_51234567890abcdef');
+        
+        function purchaseMembership(type) {
+            const prices = {
+                standard: 65000, // €650 in cents
+                vip: 650000, // €6,500 in cents
+                vvip: 6500000 // €65,000 in cents
+            };
+            
+            const names = {
+                standard: 'عضوية قياسية',
+                vip: 'عضوية VIP',
+                vvip: 'عضوية VVIP'
+            };
+            
+            // Store membership selection
+            localStorage.setItem('selectedMembership', JSON.stringify({
+                type: type,
+                price: prices[type],
+                name: names[type],
+                language: 'ar'
+            }));
+            
+            // Redirect to checkout or handle payment
+            stripe.redirectToCheckout({
+                lineItems: [{
+                    price_data: {
+                        currency: 'eur',
+                        product_data: {
+                            name: names[type],
+                        },
+                        unit_amount: prices[type],
+                    },
+                    quantity: 1,
+                }],
+                mode: 'payment',
+                successUrl: window.location.origin + '/success.html',
+                cancelUrl: window.location.href,
+            }).then(function (result) {
+                if (result.error) {
+                    alert('خطأ في معالجة الدفع: ' + result.error.message);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUS - More than a Product, It's a Cultural Experience</title>
+    <script>
+        // Check if user has a saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage');
+        
+        if (savedLang) {
+            // Redirect to saved language
+            if (savedLang === 'ja') {
+                window.location.href = 'index-ja.html';
+            } else {
+                window.location.href = 'index-' + savedLang + '.html';
+            }
+        } else {
+            // First time visitor - redirect to language selector
+            window.location.href = 'language-selector.html';
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>

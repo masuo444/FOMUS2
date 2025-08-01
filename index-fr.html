@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUS - Plus qu'un produit, c'est une expérience culturelle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        // Traitement des paiements Stripe
+        async function purchaseMembership(tier) {
+            try {
+                const response = await fetch('/api/stripe/create-checkout-session', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        membershipTier: tier,
+                        successUrl: `${window.location.origin}/success?membership=${tier}`,
+                        cancelUrl: window.location.href
+                    }),
+                });
+                
+                const { url } = await response.json();
+                
+                if (url) {
+                    window.location.href = url;
+                } else {
+                    alert('Une erreur s\'est produite lors du traitement du paiement. Veuillez réessayer plus tard.');
+                }
+            } catch (error) {
+                console.error('Payment error:', error);
+                alert('Une erreur s\'est produite lors du traitement du paiement. Veuillez réessayer plus tard.');
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+        .btn-primary {
+            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+        }
+        .btn-secondary {
+            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-gradient-fomus {
+            background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+        }
+        .pillar-card {
+            @apply bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 overflow-hidden;
+        }
+    </style>
+    <script>
+        // Gestion des langues
+        document.addEventListener('DOMContentLoaded', function() {
+            // Stocker la langue actuelle
+            localStorage.setItem('preferredLanguage', 'fr');
+            
+            // Fonction pour mettre à jour les liens selon la langue
+            function updateLinksForLanguage(lang) {
+                const links = document.querySelectorAll('a[href*="membership.html"], a[href*="masu-collection.html"]');
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href.includes('.html')) {
+                        const baseName = href.replace('.html', '');
+                        link.setAttribute('href', baseName + '-' + lang + '.html');
+                    }
+                });
+            }
+            
+            // Mettre à jour les liens pour le français
+            updateLinksForLanguage('fr');
+        });
+    </script>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- En-tête -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                
+                <!-- Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Artisanat</a>
+                    <a href="#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Style de vie</a>
+                    <a href="#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Divertissement</a>
+                    <a href="#membership" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Adhésion</a>
+                    <a href="#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Contact</a>
+                </div>
+                
+                <!-- Changement de langue -->
+                <div class="flex items-center space-x-4">
+                    <a href="language-selector.html" class="text-sm text-obsidian/60 hover:text-gold transition-colors">FR</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section héro -->
+    <section id="home" class="relative h-screen w-full overflow-hidden">
+        <!-- Arrière-plan -->
+        <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-cream"></div>
+        </div>
+        
+        <!-- Contenu héro -->
+        <div class="absolute inset-0 flex items-center justify-center px-4">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    <!-- Gauche : Logo -->
+                    <div class="flex justify-center lg:justify-center">
+                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-32 md:h-48 lg:h-64 xl:h-80 max-w-full">
+                    </div>
+                    
+                    <!-- Droite : Contenu textuel -->
+                    <div class="text-center lg:text-left">
+                        <!-- Accroche -->
+                        <h1 class="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-6 text-obsidian leading-tight">
+                            <span class="block">Plus qu'un produit,</span>
+                            <span class="block text-gold">c'est une expérience culturelle.</span>
+                        </h1>
+                        
+                        <!-- Sous-accroche -->
+                        <p class="text-lg md:text-xl lg:text-2xl text-obsidian/80 font-light mb-12">
+                            La tradition japonaise, une expérience qui résonne dans le monde.<br>
+                            <span class="text-base md:text-lg text-obsidian/60">L'artisanat japonais, sélectionné pour les collectionneurs les plus exigeants au monde.</span>
+                        </p>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos de FOMUS -->
+    <section id="about" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Contenu textuel -->
+                <div>
+                    <div class="mb-8">
+                        <h2 class="font-heading text-sm text-gold mb-2">Notre Philosophie</h2>
+                        <h3 class="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-obsidian">
+                            Qu'est-ce que FOMUS<br>
+                            <span class="text-2xl md:text-3xl lg:text-4xl text-obsidian/70">Qui nous sommes</span>
+                        </h3>
+                    </div>
+                    
+                    <div class="space-y-6 text-lg text-obsidian/80 leading-relaxed">
+                        <p>
+                            FOMUS est une marque culturelle qui fusionne la culture traditionnelle japonaise<br>
+                            et l'art contemporain, offrant des "expériences mémorables" aux gens du monde entier.
+                        </p>
+                        <p>
+                            À travers des produits alliant l'artisanat, la narration et l'esthétique,<br>
+                            nous transmettons l'esprit et l'esthétique du Japon aux générations futures.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Visuel -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- FOMUS Masu -->
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img src="FOMUS枡.png" alt="FOMUS Masu" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Processus de création artistique -->
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img src="制作過程.png" alt="Processus de création" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Mains d'artisan -->
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img src="職人の手元.JPG" alt="Mains d'artisan" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Mur Masu -->
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                            <img src="枡ウォール.png" alt="Mur Masu" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <!-- Éléments décoratifs -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 border border-gold/20 rounded-full"></div>
+                    <div class="absolute -bottom-4 -left-4 w-16 h-16 border border-hinoki/30 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quatre Collections -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">Quatre Collections</h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto">
+                    Découvrez le monde multifacette de la culture japonaise à travers nos collections soigneusement sélectionnées et nos programmes spéciaux.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Collection Artisanat -->
+                <div class="pillar-card">
+                    <div class="h-64 bg-gradient-to-br from-orange-400/30 to-orange-500/30 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <div class="w-20 h-20 bg-orange-400/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-orange-500/40 rounded"></div>
+                            </div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian">ARTISANAT</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-obsidian/70 mb-4 leading-relaxed">
+                            Artisanat traditionnel japonais réinterprété de manière moderne. Des œuvres d'artisans sélectionnées de la collection MASU.
+                        </p>
+                        <ul class="text-sm text-obsidian/60 space-y-1 mb-8">
+                            <li>• MASU</li>
+                            <li>• FOMUS PARURE (bijouterie)</li>
+                            <li>• MASUKAME</li>
+                        </ul>
+                        <div class="flex">
+                            <a href="masu-collection.html" class="inline-block bg-gold text-obsidian px-6 py-3 font-semibold hover:bg-obsidian hover:text-gold transition-colors rounded-lg border-2 border-gold">
+                                En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collection Style de vie -->
+                <div class="pillar-card">
+                    <div class="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <div class="w-20 h-20 bg-green-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-green-500/40 rounded"></div>
+                            </div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian">VIE</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-obsidian/70 mb-4 leading-relaxed">
+                            Produits de haute qualité qui intègrent la tradition dans le quotidien. Un style de vie japonais premium.
+                        </p>
+                        <ul class="text-sm text-obsidian/60 space-y-1 mb-8">
+                            <li>• Matcha & thé japonais</li>
+                            <li>• Série aromatique</li>
+                            <li>• Produits bien-être</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Collection Divertissement -->
+                <div class="pillar-card">
+                    <div class="h-64 bg-gradient-to-br from-purple-100 to-blue-200 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <div class="w-20 h-20 bg-purple-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-purple-500/40 rounded"></div>
+                            </div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian">DIVERTISSEMENT</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-obsidian/70 mb-8 leading-relaxed">
+                            Développement d'IP culturelle à travers le projet KUKU. Animation, art, objets de collection numériques.
+                        </p>
+                        <div class="flex">
+                            <a href="#entertainment" class="inline-block bg-gold text-obsidian px-6 py-3 font-semibold hover:bg-obsidian hover:text-gold transition-colors rounded-lg border-2 border-gold">
+                                En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collection Adhésion -->
+                <div class="pillar-card">
+                    <div class="h-64 bg-gradient-to-br from-gold/30 to-gold/50 flex items-center justify-center">
+                        <div class="text-center p-6">
+                            <div class="w-20 h-20 bg-gold/30 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <div class="w-8 h-8 bg-gold/50 rounded"></div>
+                            </div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian">ADHÉSION</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-obsidian/70 mb-4 leading-relaxed">
+                            Au-delà de la tradition et de l'innovation──Ensemble vers l'avenir en tant que membre FOMUS. Participez à la préservation et au développement de la culture japonaise.
+                        </p>
+                        <ul class="text-sm text-obsidian/60 space-y-1 mb-8">
+                            <li>• Adhésion VIP</li>
+                            <li>• Soutien culturel</li>
+                            <li>• Événements exclusifs</li>
+                        </ul>
+                        <div class="flex">
+                            <a href="membership.html" class="inline-block bg-gold text-obsidian px-6 py-3 font-semibold hover:bg-obsidian hover:text-gold transition-colors rounded-lg border-2 border-gold">
+                                En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Artisanat -->
+    <section id="craft" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-5xl md:text-7xl font-light text-obsidian mb-6">ARTISANAT</h2>
+                <p class="text-xl text-obsidian/70 max-w-3xl mx-auto">
+                    Là où des siècles de technique rencontrent le design moderne. Chaque œuvre raconte une histoire de maîtrise et d'innovation.
+                </p>
+            </div>
+            
+            <!-- Showcase Collection MASU -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <a href="masu-collection.html" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-cream to-hinoki/20">
+                        <img src="MASU collection.png" alt="Collection MASU" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-2">Collection MASU</h3>
+                        <p class="text-obsidian/70">Masu avec 1300 ans d'histoire</p>
+                    </div>
+                </a>
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-cream to-gold/20">
+                        <img src="FOMUS PARURE.png" alt="FOMUS PARURE" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-2">FOMUS PARURE (bijoux masu)</h3>
+                        <p class="text-obsidian/70">Accessoires exquis inspirés des formes traditionnelles</p>
+                    </div>
+                </div>
+                
+                <a href="https://masukame.fomus.jp/" target="_blank" class="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+                    <div class="aspect-square overflow-hidden bg-gradient-to-br from-cream to-obsidian/10">
+                        <img src="MASUKAME.jpg" alt="MASUKAME" class="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-2">MASUKAME</h3>
+                        <p class="text-obsidian/70">Œuvre artisanale ultime de FOMUS avec motif de tortue.</p>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Section Style de vie -->
+    <section id="life" class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-5xl md:text-7xl font-light text-obsidian mb-6">VIE</h2>
+                <div class="bg-gold/20 rounded-lg p-6 mb-8 max-w-md mx-auto">
+                    <p class="text-gold font-semibold text-xl">En préparation</p>
+                    <p class="text-obsidian/70 text-sm mt-2">Bientôt disponible</p>
+                </div>
+                <p class="text-xl text-obsidian/70 max-w-3xl mx-auto">
+                    Collection de style de vie soigneusement sélectionnée qui transforme les moments quotidiens en rituels de beauté.
+                </p>
+            </div>
+            
+            <!-- Matcha & Thé japonais -->
+            <div class="max-w-5xl mx-auto opacity-75">
+                <div class="bg-white rounded-lg shadow-lg p-8 relative">
+                    <div class="absolute top-4 right-4 bg-gold/20 text-gold px-3 py-1 rounded-full text-xs font-semibold">
+                        En préparation
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h3 class="font-heading text-3xl font-semibold text-obsidian mb-6">Matcha & Thé japonais</h3>
+                            <p class="text-obsidian/70 mb-6">
+                                Matcha de qualité cérémonielle et feuilles de thé rares provenant de jardins de thé séculaires.
+                                Chaque mélange est un voyage à travers l'héritage du thé japonais.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="text-center p-4 bg-green-50 rounded">
+                                    <p class="text-2xl mb-1">🍵</p>
+                                    <p class="font-semibold text-obsidian">Matcha Premium</p>
+                                </div>
+                                <div class="text-center p-4 bg-green-50 rounded">
+                                    <p class="text-2xl mb-1">🍃</p>
+                                    <p class="font-semibold text-obsidian">Sencha rare</p>
+                                </div>
+                            </div>
+                            <button class="btn-secondary w-full opacity-50 cursor-not-allowed" disabled>Voir la collection de thé</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divertissement -->
+    <section id="entertainment" class="py-20 bg-gradient-to-br from-emerald-900 via-emerald-800 to-green-900 text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-6xl md:text-8xl font-light text-cream mb-4">DIVERTISSEMENT</h2>
+                <p class="text-lg md:text-xl font-light text-emerald-200/80 tracking-widest mb-8">
+                    – Renaissance de la mythologie de la nature –
+                </p>
+                <div class="max-w-4xl mx-auto mb-8">
+                    <h3 class="font-heading text-4xl md:text-5xl font-light text-cream mb-4">
+                        KUKU
+                    </h3>
+                    <p class="text-2xl md:text-3xl font-heading font-light text-emerald-200 mb-6">
+                        Un projet qui connecte le monde par le pouvoir de la culture et des histoires
+                    </p>
+                    <p class="text-lg md:text-xl text-cream/90 font-light leading-relaxed">
+                        KUKU est un projet IP global développé par FOMUS qui fusionne la culture traditionnelle japonaise et la créativité moderne.<br>
+                        Traversant l'art, l'artisanat, l'animation, les livres et la technologie, il crée divers produits et expériences axés sur la narration.
+                    </p>
+                </div>
+                <p class="text-xl text-cream/90 max-w-4xl mx-auto font-light leading-relaxed">
+                    Ce projet vise à créer un "espace de création ouvert" où les gens du monde entier peuvent participer, soutenir et cultiver ensemble la culture, au-delà de la simple création de contenu.
+                </p>
+            </div>
+            
+            <!-- Visuel principal KUKU -->
+            <div class="mb-16">
+                <div class="relative h-[70vh] rounded-2xl overflow-hidden shadow-2xl border border-emerald-500/20">
+                    <img src="KUKU.jpg" alt="Personnages KUKU" class="w-full h-full object-cover">
+                    <!-- Décorations naturelles -->
+                    <div class="absolute inset-0">
+                        <div class="absolute top-8 left-8 w-24 h-24 border border-emerald-400/30 rounded-full opacity-40"></div>
+                        <div class="absolute bottom-12 right-12 w-16 h-16 border border-emerald-300/20 rounded-full opacity-30"></div>
+                        <div class="absolute top-1/3 right-1/4 w-12 h-12 border border-emerald-500/25 rounded-full opacity-35"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Détails du projet KUKU -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div class="bg-gradient-to-br from-emerald-800/20 to-green-800/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20">
+                    <h4 class="font-heading text-3xl font-light text-emerald-200 mb-8">Vision du projet</h4>
+                    <div class="text-center mb-8">
+                        <p class="text-2xl md:text-3xl font-heading font-light text-emerald-200 mb-6">
+                            "Créer un nouvel écosystème culturel qui durera mille ans."
+                        </p>
+                    </div>
+                    
+                    <p class="text-cream/90 mb-6 text-lg leading-relaxed font-light">
+                        Dans l'histoire de KUKU, l'artisanat traditionnel japonais emblématique "masu" apparaît également comme un élément important.<br>
+                        Ce masu fonctionne en liaison avec la ligne artisanale de FOMUS, à la fois comme art et comme symbole culturel.
+                    </p>
+                    
+                    <p class="text-cream/80 mb-6 text-lg leading-relaxed font-light">
+                        Nous utilisons cette histoire comme axe pour combiner<br>
+                        – La spiritualité et l'esthétique japonaises<br>
+                        – L'artisanat de classe mondiale<br>
+                        – La technologie de pointe et l'accès au marché basés à Dubaï
+                    </p>
+                    
+                    <p class="text-cream/80 mb-8 text-lg leading-relaxed font-light">
+                        Ces éléments se développent en livres d'images, animations, IA, NFT, marchandises, contenu éducatif, business de licences, etc.<br>
+                        Les histoires et les produits circulent ensemble, construisant un modèle durable tant culturellement qu'économiquement.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-800/20 to-emerald-800/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20">
+                    <h4 class="font-heading text-3xl font-light text-emerald-200 mb-8 text-center">Médias de développement</h4>
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Roman -->
+                        <div class="relative bg-gradient-to-br from-emerald-500/10 via-emerald-600/15 to-emerald-700/20 rounded-xl p-6 text-center hover:from-emerald-400/15 hover:via-emerald-500/20 hover:to-emerald-600/25 transition-all duration-500 border border-emerald-400/30 hover:border-emerald-300/50 shadow-lg hover:shadow-emerald-500/20 transform hover:-translate-y-1">
+                            <div class="absolute top-2 right-2">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse shadow-lg shadow-emerald-400/50"></div>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-400/30 to-emerald-600/40 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm border border-emerald-300/30">
+                                <span class="text-2xl">📚</span>
+                            </div>
+                            <h5 class="font-heading text-xl font-semibold text-cream mb-3 tracking-wide">Roman</h5>
+                            <div class="inline-flex items-center px-3 py-1 bg-emerald-400/20 text-emerald-200 text-sm font-medium rounded-full border border-emerald-400/30">
+                                <div class="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></div>
+                                Publié
+                            </div>
+                        </div>
+                        
+                        <!-- Livre d'images -->
+                        <div class="relative bg-gradient-to-br from-slate-500/10 via-slate-600/15 to-slate-700/20 rounded-xl p-6 text-center hover:from-slate-400/15 hover:via-slate-500/20 hover:to-slate-600/25 transition-all duration-500 border border-slate-400/20 hover:border-slate-300/30 shadow-lg transform hover:-translate-y-1">
+                            <div class="absolute top-2 right-2">
+                                <div class="w-3 h-3 bg-slate-400/50 rounded-full"></div>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-slate-400/20 to-slate-600/30 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm border border-slate-300/20">
+                                <span class="text-2xl">🎨</span>
+                            </div>
+                            <h5 class="font-heading text-xl font-semibold text-cream mb-3 tracking-wide">Livre d'images</h5>
+                            <div class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-sm font-medium rounded-full border border-slate-400/20">
+                                <div class="w-2 h-2 bg-slate-400 rounded-full mr-2"></div>
+                                En préparation
+                            </div>
+                        </div>
+                        
+                        <!-- Manga -->
+                        <div class="relative bg-gradient-to-br from-slate-500/10 via-slate-600/15 to-slate-700/20 rounded-xl p-6 text-center hover:from-slate-400/15 hover:via-slate-500/20 hover:to-slate-600/25 transition-all duration-500 border border-slate-400/20 hover:border-slate-300/30 shadow-lg transform hover:-translate-y-1">
+                            <div class="absolute top-2 right-2">
+                                <div class="w-3 h-3 bg-slate-400/50 rounded-full"></div>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-slate-400/20 to-slate-600/30 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm border border-slate-300/20">
+                                <span class="text-2xl">📖</span>
+                            </div>
+                            <h5 class="font-heading text-xl font-semibold text-cream mb-3 tracking-wide">Manga</h5>
+                            <div class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-sm font-medium rounded-full border border-slate-400/20">
+                                <div class="w-2 h-2 bg-slate-400 rounded-full mr-2"></div>
+                                En préparation
+                            </div>
+                        </div>
+                        
+                        <!-- Anime -->
+                        <div class="relative bg-gradient-to-br from-slate-500/10 via-slate-600/15 to-slate-700/20 rounded-xl p-6 text-center hover:from-slate-400/15 hover:via-slate-500/20 hover:to-slate-600/25 transition-all duration-500 border border-slate-400/20 hover:border-slate-300/30 shadow-lg transform hover:-translate-y-1">
+                            <div class="absolute top-2 right-2">
+                                <div class="w-3 h-3 bg-slate-400/50 rounded-full"></div>
+                            </div>
+                            <div class="w-16 h-16 bg-gradient-to-br from-slate-400/20 to-slate-600/30 rounded-full mx-auto mb-4 flex items-center justify-center backdrop-blur-sm border border-slate-300/20">
+                                <span class="text-2xl">🎬</span>
+                            </div>
+                            <h5 class="font-heading text-xl font-semibold text-cream mb-3 tracking-wide">Anime</h5>
+                            <div class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-sm font-medium rounded-full border border-slate-400/20">
+                                <div class="w-2 h-2 bg-slate-400 rounded-full mr-2"></div>
+                                En préparation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bouton de participation au projet KUKU -->
+            <div class="text-center mt-16">
+                <button class="bg-emerald-600 text-cream px-16 py-5 font-semibold hover:bg-emerald-500 transition-all duration-300 rounded-lg border border-emerald-500/50 hover:border-emerald-400/70 text-lg">
+                    Participer au projet KUKU
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Adhésion -->
+    <section id="membership" class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Titre + Sous-titre -->
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-6xl md:text-8xl font-light text-cream mb-4">ADHÉSION</h2>
+                <p class="text-lg md:text-xl font-light text-gold/80 tracking-widest mb-8">
+                    – Découvrez l'essence de la culture japonaise –
+                </p>
+            </div>
+            
+            <!-- Section image de carte -->
+            <div class="mb-16">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Gauche : Image de carte -->
+                    <div class="flex justify-center lg:justify-end">
+                        <img src="カードイラスト.png" alt="Carte d'adhésion FOMUS" class="w-full max-w-lg">
+                    </div>
+                    
+                    <!-- Droite : Texte -->
+                    <div class="text-center lg:text-left">
+                        <h3 class="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-cream mb-4 leading-tight">
+                            Faites partie d'un héritage.
+                        </h3>
+                        <p class="text-lg md:text-xl lg:text-2xl font-heading font-light text-gold mb-3">
+                            Au-delà de la tradition et de l'innovation.
+                        </p>
+                        <p class="text-base md:text-lg text-cream/90 font-light">
+                            Une expérience culturelle spéciale pour vous.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Plans d'adhésion -->
+            <div class="border-2 border-gold/30 rounded-2xl overflow-hidden bg-gradient-to-br from-cream/5 to-cream/10 backdrop-blur-sm">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gradient-to-r from-gold/20 to-gold/30 border-b border-gold/30">
+                            <tr>
+                                <th class="px-8 py-6 text-left font-heading text-xl text-cream">Rang</th>
+                                <th class="px-8 py-6 text-left font-heading text-xl text-cream">Cotisation annuelle</th>
+                                <th class="px-8 py-6 text-left font-heading text-xl text-cream">Avantages</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gold/20">
+                            <tr class="hover:bg-cream/5 transition-colors" style="background-image: linear-gradient(45deg, rgba(199, 162, 83, 0.03) 25%, transparent 25%); background-size: 40px 40px;">
+                                <td class="px-8 py-6">
+                                    <div class="font-heading text-2xl font-light text-cream">Standard</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-gold font-light text-xl">€650</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-cream/90 font-light mb-4">
+                                        • Émission de carte NFC exclusive<br>
+                                        • Accès à l'achat de collections limitées
+                                    </div>
+                                    <button onclick="purchaseMembership('standard')" class="bg-gold text-obsidian px-6 py-2 text-sm font-semibold hover:bg-cream transition-all duration-300 border border-gold hover:border-cream rounded">
+                                        S'abonner
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-cream/5 transition-colors" style="background-image: linear-gradient(45deg, rgba(199, 162, 83, 0.05) 25%, transparent 25%); background-size: 40px 40px;">
+                                <td class="px-8 py-6">
+                                    <div class="font-heading text-2xl font-light text-cream">VIP</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-gold font-light text-xl">€6,500</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-cream/90 font-light mb-4">
+                                        • Émission de carte NFC exclusive<br>
+                                        • Accès à l'achat de collections limitées<br>
+                                        • Droit d'inscription de pseudonyme dans les œuvres du projet KUKU
+                                    </div>
+                                    <button onclick="purchaseMembership('vip')" class="bg-gold text-obsidian px-6 py-2 text-sm font-semibold hover:bg-cream transition-all duration-300 border border-gold hover:border-cream rounded">
+                                        S'abonner
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-cream/5 transition-colors" style="background-image: linear-gradient(45deg, rgba(199, 162, 83, 0.08) 25%, transparent 25%); background-size: 40px 40px;">
+                                <td class="px-8 py-6">
+                                    <div class="font-heading text-2xl font-light text-cream">VVIP</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-gold font-light text-xl">€65,000</div>
+                                </td>
+                                <td class="px-8 py-6">
+                                    <div class="text-cream/90 font-light mb-4">
+                                        • Émission de carte NFC exclusive<br>
+                                        • Accès à l'achat de collections limitées<br>
+                                        • Droit d'inscription de pseudonyme dans les œuvres du projet KUKU<br>
+                                        • Présentation d'expériences japonaises spéciales
+                                    </div>
+                                    <button onclick="purchaseMembership('vvip')" class="bg-gold text-obsidian px-6 py-2 text-sm font-semibold hover:bg-cream transition-all duration-300 border border-gold hover:border-cream rounded">
+                                        S'abonner
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Explication complémentaire -->
+            <div class="text-center mt-12">
+                <p class="text-lg text-cream/90 font-light max-w-4xl mx-auto leading-relaxed mb-6">
+                    Tous les membres reçoivent une carte spéciale équipée NFC.<br>
+                    Expériences pour toucher la beauté et la technique japonaises, invitations spéciales et articles exclusifs.
+                </p>
+                <p class="text-cream/70 font-light mb-8">
+                    Selon le niveau, nous proposons des expériences culturelles FOMUS, des droits de participation à des projets exclusifs, des contacts spéciaux avec les artisans, etc.
+                </p>
+                
+                <div class="text-center">
+                    <a href="membership.html" class="inline-block bg-gold text-obsidian px-12 py-4 font-semibold hover:bg-cream transition-all duration-300 border-2 border-gold hover:border-cream">
+                        Voir les détails
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-5xl md:text-7xl font-light text-cream mb-6">Contact</h2>
+                <p class="text-xl text-cream/80 max-w-3xl mx-auto">
+                    Partenariats commerciaux, demandes d'exportation, relations médias et autres questions, n'hésitez pas à nous contacter.
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <form class="space-y-6" action="mailto:fomus.official@gmail.com" method="post" enctype="text/plain">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Nom" class="bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none">
+                        <input type="email" placeholder="Adresse e-mail" class="bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none">
+                    </div>
+                    <select class="w-full bg-cream/10 border border-cream/30 text-cream px-6 py-4 rounded-lg focus:border-gold focus:outline-none">
+                        <option value="">Sélectionner le type de demande</option>
+                        <option value="business">Partenariat commercial</option>
+                        <option value="export">Export・Distribution</option>
+                        <option value="media">Relations médias</option>
+                        <option value="membership">À propos de l'adhésion</option>
+                        <option value="other">Autre</option>
+                    </select>
+                    <textarea placeholder="Message" rows="6" class="w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none"></textarea>
+                    <div class="text-center">
+                        <button type="submit" class="bg-gold text-obsidian px-12 py-4 font-semibold hover:bg-cream transition-colors">
+                            Envoyer
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Marque -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center justify-center mb-6">
+                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-12">
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Liens rapides -->
+                <div>
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-gold">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#craft" class="text-cream/80 hover:text-gold transition-colors text-sm">Artisanat</a></li>
+                        <li><a href="#life" class="text-cream/80 hover:text-gold transition-colors text-sm">Style de vie</a></li>
+                        <li><a href="#entertainment" class="text-cream/80 hover:text-gold transition-colors text-sm">Divertissement</a></li>
+                        <li><a href="#membership" class="text-cream/80 hover:text-gold transition-colors text-sm">Adhésion</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support & Légal -->
+                <div>
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-gold">Support & Légal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="text-cream/80 hover:text-gold transition-colors text-sm">Contact</a></li>
+                        <li><a href="#" class="text-cream/80 hover:text-gold transition-colors text-sm">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-cream/80 hover:text-gold transition-colors text-sm">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bas -->
+            <div class="border-t border-cream/20 pt-8 text-center">
+                <p class="text-cream/60 text-sm">© 2024 FOMUS Global FZ-LLC. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

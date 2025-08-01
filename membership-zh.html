@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构建日本文化的未来 — 与您一起。| FOMUS 会员</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif SC', 'serif'],
+                        body: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        .font-heading { font-family: 'Noto Serif SC', serif; }
+        .btn-primary {
+            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+        }
+        .btn-secondary {
+            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-gradient-fomus {
+            background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+        }
+        .wood-texture {
+            background-image: linear-gradient(45deg, #d0c5b1 25%, transparent 25%), 
+                              linear-gradient(-45deg, #d0c5b1 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, #d0c5b1 75%), 
+                              linear-gradient(-45deg, transparent 75%, #d0c5b1 75%);
+            background-size: 30px 30px;
+            background-position: 0 0, 0 15px, 15px -15px, -15px 0px;
+        }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- 头部 -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- 标志 -->
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                
+                <!-- 导航 -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="preview-global-zh.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">首页</a>
+                    <a href="preview-global-zh.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">工艺</a>
+                    <a href="preview-global-zh.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">生活方式</a>
+                    <a href="preview-global-zh.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">娱乐</a>
+                    <a href="preview-global-zh.html#membership" class="text-gold font-medium">会员</a>
+                    <a href="preview-global-zh.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="relative h-screen w-full overflow-hidden bg-gradient-to-br from-emerald-900 via-slate-800 to-emerald-800">
+        <!-- 背景元素 -->
+        <div class="absolute inset-0">
+            <!-- 纸质纹理 -->
+            <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 30% 20%, rgba(208, 197, 177, 0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(199, 162, 83, 0.1) 0%, transparent 50%), radial-gradient(circle at 20% 70%, rgba(208, 197, 177, 0.08) 0%, transparent 50%);"></div>
+            
+            <!-- 墨点装饰 -->
+            <div class="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-slate-600/20 to-emerald-700/30 rounded-full blur-xl"></div>
+            <div class="absolute bottom-32 left-16 w-48 h-48 bg-gradient-to-br from-emerald-600/15 to-slate-700/20 rounded-full blur-2xl"></div>
+            
+            <!-- 枡装饰元素 -->
+            <div class="absolute top-1/3 right-1/4 w-16 h-16 border border-gold/25 rotate-45 opacity-30"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-12 h-12 border border-emerald-400/20 rotate-12 opacity-25"></div>
+        </div>
+        
+        <!-- 英雄内容 -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="max-w-7xl mx-auto px-4 text-center text-cream">
+                <nav class="text-sm mb-8">
+                    <a href="preview-global-zh.html" class="text-cream/60 hover:text-gold">首页</a>
+                    <span class="mx-3 text-cream/40">/</span>
+                    <span class="text-cream">FOMUS 会员</span>
+                </nav>
+                
+                <h1 class="font-heading text-3xl md:text-5xl lg:text-6xl font-light mb-8 leading-normal">
+                    <span class="block text-gradient-gold mb-6 pb-2">构建未来</span>
+                    <span class="block text-2xl md:text-4xl lg:text-5xl mb-6 pb-2">日本文化</span>
+                    <span class="block text-2xl md:text-4xl lg:text-5xl pb-2">— 与您一起。</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl lg:text-3xl font-heading font-light mb-12 text-emerald-100/90 max-w-4xl mx-auto">
+                    与FOMUS会员一起传承传统、促进创新。<br>
+                    让日本文化走向世界。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#membership-levels" class="bg-gold text-obsidian px-8 py-4 font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                        查看会员福利
+                    </a>
+                    <a href="#membership-levels" class="bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                        立即加入
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 什么是FOMUS会员 -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">什么是FOMUS会员？</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- 图片 -->
+                <div class="order-2 lg:order-1">
+                    <div class="aspect-square relative overflow-hidden rounded-2xl shadow-2xl">
+                        <img src="職人の手元.jpg" alt="FOMUS 工匠的手" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <!-- 文字 -->
+                <div class="max-w-xl mx-auto text-center lg:text-left order-1 lg:order-2">
+                    <p class="text-xl md:text-2xl text-obsidian/80 font-light leading-relaxed mb-8">
+                        将日本传统工艺的魅力带向现代世界。
+                    </p>
+                    <p class="text-lg md:text-xl text-obsidian/70 font-light leading-relaxed mb-8">
+                        FOMUS是承载传统工艺未来的品牌，从枡开始。<br>
+                        会员服务是与认同我们愿景的人一起支持和创造文化的桥梁。
+                    </p>
+                    <p class="text-lg text-obsidian/70 font-light leading-relaxed">
+                        不仅仅是会员制度，更是成为日本文化传承者的伙伴，<br>
+                        共同建设新传统。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NFC卡区域 -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-heading text-4xl font-light text-obsidian mb-8">会员卡</h2>
+                    <p class="text-lg text-obsidian/80 mb-6 leading-relaxed">
+                        每位会员在加入时都会收到一张实体卡（带NFC功能）。
+                    </p>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        这张卡作为您的"FOMUS会员凭证"，用于产品购买、独家参与和优先通知。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">💳</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">NFC功能</h3>
+                                <p class="text-sm text-obsidian/70">智能认证和访问管理</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">🏮</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">日本设计</h3>
+                                <p class="text-sm text-obsidian/70">体现传统美学的特殊设计</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">⭐</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">会员专属福利</h3>
+                                <p class="text-sm text-obsidian/70">出示卡片即可获得特殊服务</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center">
+                    <img src="カードイラスト.png" alt="FOMUS会员卡" class="w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOMUS独特价值 -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">FOMUS独特价值</h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto">
+                    为什么FOMUS会员特别
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 优势1 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🤝</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">与工匠直接联系</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        提供与日本工匠直接联系的机会。支持传统技艺的传承。
+                    </p>
+                </div>
+                
+                <!-- 优势2 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🗾</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">本地关键人物</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        接触了解当地的关键人物。提供正宗的日本文化体验。
+                    </p>
+                </div>
+                
+                <!-- 优势3 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🎋</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">优先访问</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        优先获得日本文化和限定产品的体验。我们承诺珍贵的体验。
+                    </p>
+                </div>
+                
+                <!-- 优势4 -->
+                <div class="text-center group">
+                    <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold/30 transition-colors">
+                        <span class="text-3xl">🦉</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">KUKU制作参与</h3>
+                    <p class="text-obsidian/70 leading-relaxed">
+                        参与和支持KUKU的制作过程。成为创造新神话的伙伴。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KUKU合作区域 -->
+    <section class="py-20 bg-gradient-to-br from-gold/10 to-gold/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">支持圈</h2>
+                <p class="text-xl text-obsidian/70 max-w-3xl mx-auto">
+                    您的会员身份支持未来文化创造
+                </p>
+            </div>
+            
+            <div class="text-center max-w-4xl mx-auto">
+                <h3 class="font-heading text-3xl font-semibold text-obsidian mb-6">会员 = 创意活动的共同创造者</h3>
+                <p class="text-lg text-obsidian/80 mb-6 leading-relaxed">
+                    会员收入的一部分用于KUKU制作费用、MASUKAME和Life业务扩展。
+                </p>
+                <p class="text-lg text-obsidian/80 mb-12 leading-relaxed">
+                    您不仅仅是客户，更是共同创造日本文化未来的"共同创造者"，<br>
+                    参与新传统的创造。
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🦉</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">KUKU制作支持</h4>
+                        <p class="text-sm text-obsidian/70">神话故事创作和媒体展开</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🐢</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">MASUKAME扩充</h4>
+                        <p class="text-sm text-obsidian/70">限量版精品系列开发</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🍃</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">Life业务发展</h4>
+                        <p class="text-sm text-obsidian/70">抹茶和香氛系列的充实</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会员选择区域 -->
+    <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 text-cream relative overflow-hidden" id="membership-levels">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-cream mb-8">会员</h2>
+                <p class="text-lg text-cream/70 max-w-3xl mx-auto">
+                    我们提供三种会员服务来适应您的风格。
+                </p>
+            </div>
+            
+            <!-- 会员表格 -->
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gradient-to-r from-obsidian to-obsidian/90 text-cream">
+                            <tr>
+                                <th class="px-6 py-6 text-left font-heading text-xl">会员类型</th>
+                                <th class="px-6 py-6 text-left font-heading text-xl">年费（含税）</th>
+                                <th class="px-6 py-6 text-left font-heading text-xl">福利概述</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-hinoki/20">
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">标准会员</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">€650</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">在线独家内容，素体购买权（每年最多3个）</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">VIP会员</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">€6,500</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">特别产品购买配额，项目参与权，素体购买权（每年最多5个），即使是日本人也能获得的特别日本文化体验</div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-hinoki/10 transition-colors">
+                                <td class="px-6 py-6">
+                                    <div class="font-heading text-xl font-semibold text-obsidian">VVIP会员</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-gold font-bold text-xl">€65,000</div>
+                                </td>
+                                <td class="px-6 py-6">
+                                    <div class="text-obsidian">订单支持，工匠合作，素体购买权（每年最多5个），即使是日本人也能获得的特别日本文化体验，日本支持等</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- 购买按钮 -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mt-12">
+                <button onclick="purchaseMembership('standard')" class="bg-gold text-obsidian px-8 py-4 font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                    成为标准会员
+                </button>
+                <button onclick="purchaseMembership('vip')" class="bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                    成为VIP会员
+                </button>
+                <button onclick="purchaseMembership('vvip')" class="bg-transparent text-emerald-400 px-8 py-4 font-semibold border-2 border-emerald-400 hover:bg-emerald-400 hover:text-obsidian transition-all duration-300 rounded-lg">
+                    成为VVIP会员
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 如何加入 -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-obsidian mb-8">如何加入</h2>
+                <p class="text-lg text-obsidian/70">加入流程</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">1</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">选择计划</h3>
+                    <p class="text-obsidian/70">从我们的三个选项中选择最适合您的会员计划。</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">2</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">提交申请表</h3>
+                    <p class="text-obsidian/70">在申请表中填写必要信息并完成付款流程。</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">3</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">FOMUS指导</h3>
+                    <p class="text-obsidian/70">会员确认后，我们将发送详细的会员福利信息，服务将开始。</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gold text-obsidian rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">4</div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">接收会员卡</h3>
+                    <p class="text-obsidian/70">我们将为您送达支持NFC的FOMUS会员卡。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们/CTA -->
+    <section class="py-20 bg-gradient-to-br from-emerald-800 to-slate-800 text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl md:text-6xl font-light text-cream mb-8">日本文化的未来，一起</h2>
+                <p class="text-xl text-emerald-100/90 max-w-3xl mx-auto mb-12">
+                    我们期待您的参与。<br>
+                    如果您有任何问题或关切，请随时联系我们。
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#membership-levels" class="bg-gold text-obsidian px-12 py-4 text-lg font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
+                    申请会员
+                </a>
+                <a href="preview-global-zh.html#contact" class="bg-transparent text-gold px-12 py-4 text-lg font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
+                    现在联系我们
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-emerald-100/70 mb-4">直接咨询</p>
+                <p class="text-gold font-semibold">membership@fomus.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 重要事项区域 -->
+    <section class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-light text-cream mb-8">重要事项</h2>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 会员信息 -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">关于会员权利</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            此会员资格是由FOMUS Global FZ-LLC（迪拜实体）提供的NFC卡格式"会员卡"的销售。
+                        </p>
+                        <p>
+                            此会员资格不是以投资或回报为目的的金融产品，而是支持FOMUS活动并共同培育文化的"参与证明"。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 服务提供信息 -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">关于服务提供</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            会员可以优先获得FOMUS文化活动和限定产品，偶尔会收到熟悉日本各地区的FOMUS成员对通常不对初次访客开放的特殊场所和体验的邀请。
+                        </p>
+                        <p class="text-cream/70 text-sm bg-cream/5 p-4 rounded-lg border-l-4 border-gold">
+                            ※这不是FOMUS JAPAN提供的服务，仅是基于个人会员间联系的非营利性指导。
+                        </p>
+                        <p>
+                            请注意，FOMUS的日本实体不提供旅行、安排或导游服务。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 法律声明 -->
+                <div class="bg-cream/10 rounded-2xl p-8 border border-cream/20">
+                    <h3 class="font-heading text-2xl font-semibold text-gold mb-6">法律声明</h3>
+                    <div class="space-y-4 text-cream/90 leading-relaxed">
+                        <p>
+                            此会员卡（NFC卡）代表物理产品的所有权，不是服务提供合同。
+                        </p>
+                        <p>
+                            FOMUS Global FZ-LLC（迪拜实体）仅销售此卡，而各种服务提供、支持和项目管理由日本实体FOMUS JAPAN进行。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+                </div>
+                <p class="text-cream/60 text-sm">© 2024 FOMUS。保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripe = Stripe('pk_test_51234567890abcdef');
+        
+        function purchaseMembership(type) {
+            const prices = {
+                standard: 65000, // €650 in cents
+                vip: 650000, // €6,500 in cents
+                vvip: 6500000 // €65,000 in cents
+            };
+            
+            const names = {
+                standard: '标准会员',
+                vip: 'VIP会员',
+                vvip: 'VVIP会员'
+            };
+            
+            // Store membership selection
+            localStorage.setItem('selectedMembership', JSON.stringify({
+                type: type,
+                price: prices[type],
+                name: names[type],
+                language: 'zh'
+            }));
+            
+            // Redirect to checkout or handle payment
+            stripe.redirectToCheckout({
+                lineItems: [{
+                    price_data: {
+                        currency: 'eur',
+                        product_data: {
+                            name: names[type],
+                        },
+                        unit_amount: prices[type],
+                    },
+                    quantity: 1,
+                }],
+                mode: 'payment',
+                successUrl: window.location.origin + '/success.html',
+                cancelUrl: window.location.href,
+            }).then(function (result) {
+                if (result.error) {
+                    alert('付款处理错误：' + result.error.message);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

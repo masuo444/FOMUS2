@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection MASU - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Source Sans Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Source Sans Pro', sans-serif; }
+        .font-heading { font-family: 'Playfair Display', serif; }
+        .btn-primary {
+            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+        }
+        .btn-secondary {
+            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bg-gradient-fomus {
+            background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+        }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- En-tête -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                
+                <!-- Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="preview-global-fr.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="preview-global-fr.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Artisanat</a>
+                    <a href="preview-global-fr.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Art de vivre</a>
+                    <a href="preview-global-fr.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Divertissement</a>
+                    <a href="preview-global-fr.html#membership" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Adhésion</a>
+                    <a href="preview-global-fr.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section héros -->
+    <section class="pt-24 pb-12 bg-gradient-to-br from-obsidian via-obsidian/95 to-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center">
+                <nav class="text-sm mb-8">
+                    <a href="preview-global-fr.html" class="text-cream/60 hover:text-gold">Accueil</a>
+                    <span class="mx-3 text-cream/40">/</span>
+                    <a href="preview-global-fr.html#craft" class="text-cream/60 hover:text-gold">Artisanat</a>
+                    <span class="mx-3 text-cream/40">/</span>
+                    <span class="text-cream">Collection MASU</span>
+                </nav>
+                
+                <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-light mb-6">
+                    <span class="text-gradient-gold">MASU</span>
+                    <span class="block text-3xl md:text-5xl lg:text-6xl mt-4">Collection</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-cream/80 max-w-3xl mx-auto">
+                    Le masu japonais, avec 1300 ans d'histoire.<br>
+                    Sa forme et sa fonction traditionnelles réinterprétées avec une esthétique contemporaine.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aperçu de la collection -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                <div>
+                    <h2 class="font-heading text-4xl font-light text-obsidian mb-8">Nouvelles possibilités du Masu</h2>
+                    <p class="text-lg text-obsidian/80 mb-6 leading-relaxed">
+                        Le masu est aimé au Japon depuis l'Antiquité comme outil de mesure des grains et comme coupe à saké pour les occasions festives.
+                        Sa forme carrée parfaite, ses proportions de nombre d'or et le parfum du cyprès hinoki - tout incarne l'essence de la culture japonaise.
+                    </p>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        FOMUS reconstruit ce masu traditionnel pour l'adapter aux modes de vie contemporains.
+                        Au-delà de sa fonction de simple récipient, nous le proposons comme objet d'art et pont culturel qui transmet l'esthétique japonaise au monde.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">Sélection d'Hinoki Centenaire</h3>
+                                <p class="text-sm text-obsidian/70">Utilisation exclusive de cyprès hinoki âgé de plus de 100 ans</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">Artisanat Traditionnel</h3>
+                                <p class="text-sm text-obsidian/70">Techniques d'assemblage sans clous</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-obsidian mb-1">Finition Contemporaine</h3>
+                                <p class="text-sm text-obsidian/70">Diverses décorations incluant laque, feuille d'or et platine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-hinoki/30 to-gold/30 rounded-lg p-8 h-96 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="w-32 h-32 bg-gold/20 rounded mx-auto mb-4"></div>
+                        <p class="text-obsidian/60 italic">Image Collection MASU</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gamme de produits -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-obsidian text-center mb-16">Gamme de Produits</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Masu Traditionnel -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-64 bg-gradient-to-br from-hinoki/20 to-hinoki/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-hinoki/40 rounded-lg"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">Masu Traditionnel</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
+                            Série classique reproduisant fidèlement les formes traditionnelles. Un design intemporel portant 1300 ans d'histoire dans l'ère moderne.
+                        </p>
+                        
+                        <!-- Options de taille -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Sélection de Taille</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-hinoki/20 text-obsidian text-xs rounded hover:bg-hinoki/30 transition-colors">Mini Masu</button>
+                                <button class="px-3 py-1 bg-hinoki/40 text-obsidian text-xs rounded font-semibold">Masu Basique</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Options de revêtement -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Revêtement</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded font-semibold">Avec</button>
+                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">Sans</button>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gold font-bold text-lg mb-4">¥50,000~</p>
+                        <button class="btn-primary w-full">Personnaliser & Commander</button>
+                    </div>
+                </div>
+                
+                <!-- Masu Sur Mesure -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-64 bg-gradient-to-br from-gold/20 to-gold/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-gold/40 rounded-lg"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">Masu Sur Mesure</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
+                            Production entièrement personnalisée adaptée aux exigences du client. Tous les matériaux, tailles et décorations sur commande.
+                        </p>
+                        
+                        <!-- Options de taille -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Sélection de Taille</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded hover:bg-gold/30 transition-colors">Mini Masu</button>
+                                <button class="px-3 py-1 bg-gold/40 text-obsidian text-xs rounded font-semibold">Masu Basique</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Options de revêtement -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Revêtement</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded font-semibold">Avec</button>
+                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">Sans</button>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gold font-bold text-lg mb-4">¥200,000~</p>
+                        <button class="btn-primary w-full">Personnaliser & Commander</button>
+                    </div>
+                </div>
+                
+                <!-- Design Original FOMUS -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-64 bg-gradient-to-br from-obsidian/20 to-obsidian/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-obsidian/40 rounded-lg"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">FOMUS Original</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
+                            Série de designs innovants avec interprétation contemporaine. Œuvres d'art uniques où tradition et innovation se rencontrent.
+                        </p>
+                        
+                        <!-- Options de taille -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Sélection de Taille</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-obsidian/20 text-obsidian text-xs rounded hover:bg-obsidian/30 transition-colors">Mini Masu</button>
+                                <button class="px-3 py-1 bg-obsidian/40 text-cream text-xs rounded font-semibold">Masu Basique</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Options de revêtement -->
+                        <div class="mb-4">
+                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Revêtement</h4>
+                            <div class="flex gap-2">
+                                <button class="px-3 py-1 bg-obsidian/30 text-cream text-xs rounded font-semibold">Avec</button>
+                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">Sans</button>
+                            </div>
+                        </div>
+                        
+                        <p class="text-gold font-bold text-lg mb-4">¥300,000~</p>
+                        <button class="btn-primary w-full">Personnaliser & Commander</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marques Associées -->
+    <section class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-center mb-16">Marques Associées</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- FOMUS PARURE (Bijoux Masu) -->
+                <div class="bg-cream/10 rounded-lg p-8 hover:bg-cream/20 transition-all duration-500">
+                    <h3 class="font-heading text-3xl font-semibold text-gold mb-4">FOMUS PARURE (Bijoux Masu)</h3>
+                    <p class="text-cream/80 mb-6">
+                        Collection de bijoux exquis inspirée de la forme traditionnelle du masu.
+                        Une nouvelle forme de luxe où l'esthétique japonaise peut être portée.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-cream/60">Site de marque indépendant</span>
+                        <a href="https://masu-jewelry.com" target="_blank" class="text-gold hover:text-cream transition-colors">
+                            Visiter le Site →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- MASUKAME -->
+                <div class="bg-cream/10 rounded-lg p-8 hover:bg-cream/20 transition-all duration-500">
+                    <h3 class="font-heading text-3xl font-semibold text-gold mb-4">MASUKAME</h3>
+                    <p class="text-cream/80 mb-6">
+                        Série de chefs-d'œuvre en édition limitée avec motifs de tortue.
+                        Symboles de longévité et de prospérité élevés comme art contemporain.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-cream/60">Site de marque indépendant</span>
+                        <a href="https://masukame.com" target="_blank" class="text-gold hover:text-cream transition-colors">
+                            Visiter le Site →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commande Personnalisée -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-gradient-to-br from-gold/10 to-gold/20 rounded-lg p-12 text-center">
+                <h2 class="font-heading text-4xl font-light text-obsidian mb-8">Commande Personnalisée</h2>
+                <p class="text-lg text-obsidian/80 max-w-3xl mx-auto mb-8">
+                    Nous créons des MASU uniques adaptés à vos exigences.
+                    Tous les éléments incluant matériaux, taille, décoration et gravure peuvent être personnalisés.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white/50 rounded-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-2">Sélection de Matériaux</h3>
+                        <p class="text-sm text-obsidian/70">Divers bois précieux incluant hinoki, camphrier et cerisier</p>
+                    </div>
+                    <div class="bg-white/50 rounded-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-2">Techniques de Décoration</h3>
+                        <p class="text-sm text-obsidian/70">Laque, nacre, feuille d'or, sculpture</p>
+                    </div>
+                    <div class="bg-white/50 rounded-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-2">Gravure & Personnalisation</h3>
+                        <p class="text-sm text-obsidian/70">Armoiries familiales, logos, messages</p>
+                    </div>
+                </div>
+                <button class="btn-primary">Consultation Commande Personnalisée</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+                </div>
+                <p class="text-cream/60 text-sm">© 2024 FOMUS. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set language in localStorage
+        localStorage.setItem('preferred-language', 'fr');
+    </script>
+</body>
+</html>
