@@ -31,7 +31,7 @@
             font-family: 'Noto Sans', sans-serif; 
             background: linear-gradient(135deg, #141414 0%, #1f1f1f 50%, #141414 100%);
             min-height: 100vh;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         .language-card {
             position: relative;
@@ -98,23 +98,33 @@
         /* Decorative elements */
         .corner-decoration {
             position: absolute;
-            width: 100px;
-            height: 100px;
-            border: 2px solid rgba(199, 162, 83, 0.3);
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgba(199, 162, 83, 0.3);
         }
         .corner-decoration.top-left {
-            top: -50px;
-            left: -50px;
+            top: -30px;
+            left: -30px;
             border-right: none;
             border-bottom: none;
             transform: rotate(45deg);
         }
         .corner-decoration.bottom-right {
-            bottom: -50px;
-            right: -50px;
+            bottom: -30px;
+            right: -30px;
             border-left: none;
             border-top: none;
             transform: rotate(45deg);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .floating {
+                display: none;
+            }
+            .corner-decoration {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -126,67 +136,67 @@
         <div class="absolute top-1/2 left-1/4 w-32 h-32 border border-hinoki/20 rounded-full floating" style="animation-delay: 1.5s;"></div>
     </div>
     
-    <div class="relative z-10 max-w-6xl mx-auto px-4 py-12">
+    <div class="relative z-10 max-w-6xl mx-auto px-4 py-6 md:py-12">
         <!-- Logo -->
-        <div class="text-center mb-12 fade-in">
-            <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-24 md:h-32 mx-auto mb-8">
-            <h1 class="text-4xl md:text-6xl font-light mb-4">
+        <div class="text-center mb-8 md:mb-12 fade-in">
+            <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-16 md:h-24 lg:h-32 mx-auto mb-4 md:mb-8">
+            <h1 class="text-2xl md:text-4xl lg:text-6xl font-light mb-2 md:mb-4">
                 <span class="gold-gradient glow">Select Your Language</span>
             </h1>
-            <p class="text-lg md:text-xl text-cream/70 font-light">Experience Japanese culture in your preferred language</p>
+            <p class="text-sm md:text-lg lg:text-xl text-cream/70 font-light px-4">Experience Japanese culture in your preferred language</p>
         </div>
         
         <!-- Language cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+        <div class="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-6 mb-6 md:mb-12">
             <!-- Japanese -->
-            <a href="index-ja.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.1s;">
+            <a href="index-ja.html" class="language-card rounded-xl md:rounded-2xl p-4 md:p-8 text-center block slide-up" style="animation-delay: 0.1s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇯🇵</div>
-                <h2 class="text-2xl font-light mb-2 text-gold">日本語</h2>
-                <p class="text-cream/60 text-sm">Japanese</p>
+                <div class="text-3xl md:text-5xl mb-2 md:mb-4">🇯🇵</div>
+                <h2 class="text-lg md:text-2xl font-light mb-1 md:mb-2 text-gold">日本語</h2>
+                <p class="text-cream/60 text-xs md:text-sm hidden md:block">Japanese</p>
             </a>
             
             <!-- English -->
-            <a href="index-en.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.2s;">
+            <a href="index-en.html" class="language-card rounded-xl md:rounded-2xl p-4 md:p-8 text-center block slide-up" style="animation-delay: 0.2s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇬🇧</div>
-                <h2 class="text-2xl font-light mb-2 text-gold">English</h2>
-                <p class="text-cream/60 text-sm">英語</p>
+                <div class="text-3xl md:text-5xl mb-2 md:mb-4">🇬🇧</div>
+                <h2 class="text-lg md:text-2xl font-light mb-1 md:mb-2 text-gold">English</h2>
+                <p class="text-cream/60 text-xs md:text-sm hidden md:block">英語</p>
             </a>
             
             <!-- Arabic -->
-            <a href="index-ar.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.3s;">
+            <a href="index-ar.html" class="language-card rounded-xl md:rounded-2xl p-4 md:p-8 text-center block slide-up" style="animation-delay: 0.3s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇦🇪</div>
-                <h2 class="text-2xl font-arabic font-light mb-2 text-gold">العربية</h2>
-                <p class="text-cream/60 text-sm">Arabic</p>
+                <div class="text-3xl md:text-5xl mb-2 md:mb-4">🇦🇪</div>
+                <h2 class="text-lg md:text-2xl font-arabic font-light mb-1 md:mb-2 text-gold">العربية</h2>
+                <p class="text-cream/60 text-xs md:text-sm hidden md:block">Arabic</p>
             </a>
             
             <!-- Chinese -->
-            <a href="index-zh.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.4s;">
+            <a href="index-zh.html" class="language-card rounded-xl md:rounded-2xl p-4 md:p-8 text-center block slide-up" style="animation-delay: 0.4s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇨🇳</div>
-                <h2 class="text-2xl font-chinese font-light mb-2 text-gold">中文</h2>
-                <p class="text-cream/60 text-sm">Chinese</p>
+                <div class="text-3xl md:text-5xl mb-2 md:mb-4">🇨🇳</div>
+                <h2 class="text-lg md:text-2xl font-chinese font-light mb-1 md:mb-2 text-gold">中文</h2>
+                <p class="text-cream/60 text-xs md:text-sm hidden md:block">Chinese</p>
             </a>
             
             <!-- French -->
-            <a href="index-fr.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.5s;">
+            <a href="index-fr.html" class="language-card rounded-xl md:rounded-2xl p-4 md:p-8 text-center block slide-up" style="animation-delay: 0.5s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇫🇷</div>
-                <h2 class="text-2xl font-light mb-2 text-gold">Français</h2>
-                <p class="text-cream/60 text-sm">French</p>
+                <div class="text-3xl md:text-5xl mb-2 md:mb-4">🇫🇷</div>
+                <h2 class="text-lg md:text-2xl font-light mb-1 md:mb-2 text-gold">Français</h2>
+                <p class="text-cream/60 text-xs md:text-sm hidden md:block">French</p>
             </a>
         </div>
         
         <!-- Footer message -->
         <div class="text-center fade-in" style="animation-delay: 0.8s;">
-            <p class="text-cream/50 text-sm">
+            <p class="text-cream/50 text-xs md:text-sm px-4">
                 More than a Product, It's a Cultural Experience.
             </p>
         </div>
