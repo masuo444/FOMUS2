@@ -1,28 +1,56 @@
 {
-  "buildCommand": "",
-  "outputDirectory": ".",
-  "installCommand": "",
-  "framework": null,
+  "functions": {},
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
       "destination": "/index.html"
     },
     {
+      "source": "/en/(.*)",
+      "destination": "/index-en.html"
+    },
+    {
       "source": "/en",
       "destination": "/index-en.html"
+    },
+    {
+      "source": "/ja/(.*)",
+      "destination": "/index-ja.html"
     },
     {
       "source": "/ja", 
       "destination": "/index-ja.html"
     },
     {
+      "source": "/ar/(.*)",
+      "destination": "/index-ar.html"
+    },
+    {
       "source": "/ar",
       "destination": "/index-ar.html"
     },
     {
+      "source": "/zh/(.*)",
+      "destination": "/index-zh.html"
+    },
+    {
       "source": "/zh",
       "destination": "/index-zh.html"
+    },
+    {
+      "source": "/fr/(.*)",
+      "destination": "/index-fr.html"
     },
     {
       "source": "/fr",
