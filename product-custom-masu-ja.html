@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オーダーメイドデザイン枡 - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- ヘッダー -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-ja.html" class="text-obsidian hover:text-gold transition-colors">コレクションに戻る</a>
+                    <a href="index-ja.html" class="text-obsidian hover:text-gold transition-colors">ホーム</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 商品詳細 -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- パンくずリスト -->
+            <nav class="text-sm mb-8">
+                <a href="index-ja.html" class="text-obsidian/60 hover:text-gold">ホーム</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-ja.html" class="text-obsidian/60 hover:text-gold">MASUコレクション</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">オーダーメイドデザイン枡</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 左側：商品画像 -->
+                <div class="space-y-4">
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                        <img src="オーダーメイド２.JPG" alt="オーダーメイドデザイン枡" class="w-full h-full object-cover">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-md cursor-pointer hover:shadow-lg transition-shadow">
+                            <img src="オーダーメイド.JPG" alt="オーダーメイドデザイン枡 詳細" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-md cursor-pointer hover:shadow-lg transition-shadow">
+                            <img src="オーダーメイド３.jpg" alt="オーダーメイドデザイン枡 バリエーション" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：商品情報 -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">オーダーメイドデザイン枡</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            お客様のご要望に合わせた完全カスタムデザインの枡。企業ロゴ、家紋、記念日メッセージなど、
+                            あらゆるデザインを精密に彫刻いたします。世界に一つだけの特別な枡をお作りします。
+                        </p>
+                    </div>
+
+                    <!-- デザイン料金説明 -->
+                    <div class="bg-gold/10 rounded-lg p-6 border border-gold/30">
+                        <h3 class="font-semibold text-obsidian mb-3">デザイン料金体系</h3>
+                        <div class="space-y-2 text-sm text-obsidian/80">
+                            <div class="flex justify-between">
+                                <span>デザイン追加料金:</span>
+                                <span class="font-semibold text-gold">€60</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>制作代（1個につき）:</span>
+                                <span class="font-semibold text-gold">€3</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-obsidian/60 mt-3">※料金は枡の基本価格に加算されます</p>
+                    </div>
+
+                    <!-- サイズ詳細 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">サイズ詳細</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">桝の大きさ</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">外寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">底板<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内容量<br>(ml)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">ミニ枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">ベーシック枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 事前相談のご案内 -->
+                    <div class="bg-gold/10 rounded-lg shadow-lg p-6 border border-gold/30">
+                        <h3 class="font-semibold text-obsidian mb-4">デザイン相談について</h3>
+                        <p class="text-obsidian/80 mb-4">
+                            オーダーメイドデザインは事前のご相談が必要です。デザインの詳細や仕様について、下記よりお気軽にお問い合わせください。
+                        </p>
+                        <div class="space-y-3">
+                            <a href="mailto:info@fomus.com" class="flex items-center justify-center w-full bg-obsidian text-cream px-6 py-3 rounded-lg font-semibold hover:bg-obsidian/80 transition-all duration-300">
+                                <span class="mr-2">📧</span>
+                                メールでお問い合わせ
+                            </a>
+                            <a href="https://www.instagram.com/fomus_official" target="_blank" class="flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                                <span class="mr-2">📱</span>
+                                Instagramでお問い合わせ
+                            </a>
+                        </div>
+                        <p class="text-xs text-obsidian/60 mt-3">
+                            ※デザインの複雑さや制作期間により料金が変動する場合があります
+                        </p>
+                    </div>
+
+
+                    <!-- コーティング加工オプション -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">コーティング加工（オプション）</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">コーティングなし</span>
+                                        <p class="text-sm text-obsidian/60">自然な木の風合いをお楽しみください</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">コーティング加工あり</span>
+                                        <p class="text-sm text-obsidian/60">耐久性を向上させる特殊加工</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-- 商品特徴 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">商品特徴</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                レーザー彫刻による精密なデザイン表現
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                日本産のヒノキ材を使用
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                完全オリジナルデザイン
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                製作期間：約2-3週間
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 相談ボタン -->
+                    <div class="space-y-4">
+                        <p class="text-center text-obsidian/70 text-sm">
+                            オーダーメイド商品のご注文は事前相談が必要です
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="mailto:info@fomus.com" class="flex items-center justify-center bg-obsidian text-cream px-6 py-3 rounded-lg font-semibold hover:bg-obsidian/80 transition-all duration-300">
+                                <span class="mr-2">📧</span>
+                                メール相談
+                            </a>
+                            <a href="https://www.instagram.com/fomus_official" target="_blank" class="flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                                <span class="mr-2">📱</span>
+                                Instagram相談
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 製作プロセス -->
+            <div class="mt-20">
+                <h3 class="font-heading text-3xl font-light text-obsidian text-center mb-12">製作プロセス</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">1</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">デザイン確認</h4>
+                        <p class="text-sm text-obsidian/70">デザインを確認し、製作可能な形に調整いたします</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">2</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">枡の製作</h4>
+                        <p class="text-sm text-obsidian/70">伝統工法により、厳選された檜で枡本体を製作いたします</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">3</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">デザイン彫刻</h4>
+                        <p class="text-sm text-obsidian/70">レーザー彫刻機により、精密にデザインを彫刻いたします</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">4</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">仕上げ・発送</h4>
+                        <p class="text-sm text-obsidian/70">最終仕上げを行い、丁寧に梱包してお客様にお届けいたします</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

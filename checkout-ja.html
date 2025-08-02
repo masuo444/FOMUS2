@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チェックアウト - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- ヘッダー -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="index-ja.html" class="text-obsidian hover:text-gold transition-colors">ホームに戻る</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- チェックアウトコンテンツ -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- 左側：注文フォーム -->
+                <div class="lg:col-span-2">
+                    <h1 class="font-heading text-3xl md:text-4xl font-light mb-8">チェックアウト</h1>
+                    
+                    <!-- お客様情報 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                        <h2 class="font-heading text-xl font-semibold mb-4">お客様情報</h2>
+                        <form id="checkoutForm" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">お名前 <span class="text-red-500">*</span></label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">フリガナ <span class="text-red-500">*</span></label>
+                                    <input type="text" id="furigana" name="furigana" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">電話番号 <span class="text-red-500">*</span></label>
+                                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 配送先情報 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                        <h2 class="font-heading text-xl font-semibold mb-4">配送先情報</h2>
+                        <form id="shippingForm" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">郵便番号 <span class="text-red-500">*</span></label>
+                                    <input type="text" id="zipcode" name="zipcode" placeholder="123-4567" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">都道府県 <span class="text-red-500">*</span></label>
+                                    <input type="text" id="prefecture" name="prefecture" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">市区町村 <span class="text-red-500">*</span></label>
+                                <input type="text" id="city" name="city" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">番地・建物名 <span class="text-red-500">*</span></label>
+                                <input type="text" id="address" name="address" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 支払い方法 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h2 class="font-heading text-xl font-semibold mb-4">お支払い方法</h2>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <input type="radio" name="payment" value="card" checked class="mr-3">
+                                <span>クレジットカード</span>
+                            </label>
+                            <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <input type="radio" name="payment" value="bank" class="mr-3">
+                                <span>銀行振込</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：注文サマリー -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow-lg p-6 sticky top-24">
+                        <h2 class="font-heading text-xl font-semibold mb-4">ご注文内容</h2>
+                        
+                        <div id="orderSummary" class="space-y-4 mb-6">
+                            <!-- 商品情報がここに動的に表示されます -->
+                        </div>
+                        
+                        <div class="border-t pt-4 space-y-2">
+                            <div class="flex justify-between">
+                                <span>小計</span>
+                                <span id="subtotal">€0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>送料</span>
+                                <span id="shipping">€15</span>
+                            </div>
+                            <div class="flex justify-between font-semibold text-lg border-t pt-2">
+                                <span>合計</span>
+                                <span id="total" class="text-gold">€15</span>
+                            </div>
+                        </div>
+                        
+                        <button id="confirmOrder" class="w-full bg-gold text-obsidian px-6 py-3 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold mt-6">
+                            注文を確定する
+                        </button>
+                        
+                        <p class="text-xs text-gray-600 mt-4 text-center">
+                            「注文を確定する」をクリックすることで、利用規約に同意したものとみなされます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // URLパラメータから商品情報を取得
+        const urlParams = new URLSearchParams(window.location.search);
+        const products = {
+            'masu-mini': { name: 'ミニ枡', price: 20 },
+            'masu-basic': { name: 'ベーシック枡', price: 30 },
+            'masu-custom-mini': { name: 'オーダーメイドデザイン枡（ミニ）', price: 35 },
+            'masu-custom-basic': { name: 'オーダーメイドデザイン枡（ベーシック）', price: 45 },
+            'masu-original-mini': { name: 'FOMUSオリジナルデザイン枡（ミニ）', price: 25 },
+            'masu-original-basic': { name: 'FOMUSオリジナルデザイン枡（ベーシック）', price: 35 },
+            'masu-logo-mini': { name: 'FOMUSロゴ枡（ミニ）', price: 30 },
+            'masu-logo-basic': { name: 'FOMUSロゴ枡（ベーシック）', price: 40 },
+            'uniform-m': { name: 'FOMUSユニフォーム（Mサイズ）- 在庫5点のみ', price: 150 },
+            'uniform-l': { name: 'FOMUSユニフォーム（Lサイズ）- 在庫5点のみ', price: 150 }
+        };
+
+        // 注文サマリーを表示
+        function displayOrderSummary() {
+            const orderSummary = document.getElementById('orderSummary');
+            const productId = urlParams.get('product');
+            const quantity = parseInt(urlParams.get('quantity') || '1');
+            
+            if (productId && products[productId]) {
+                const product = products[productId];
+                const itemTotal = product.price * quantity;
+                
+                orderSummary.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">${product.name}</h3>
+                            <p class="text-sm text-gray-600">数量: ${quantity}</p>
+                        </div>
+                        <span class="font-semibold">€${itemTotal}</span>
+                    </div>
+                `;
+                
+                // 合計金額を更新
+                const shipping = 15;
+                document.getElementById('subtotal').textContent = `€${itemTotal}`;
+                document.getElementById('total').textContent = `€${itemTotal + shipping}`;
+            } else {
+                orderSummary.innerHTML = '<p class="text-gray-600">商品が選択されていません</p>';
+            }
+        }
+
+        // フォーム送信処理
+        document.getElementById('confirmOrder').addEventListener('click', function() {
+            const checkoutForm = document.getElementById('checkoutForm');
+            const shippingForm = document.getElementById('shippingForm');
+            
+            if (checkoutForm.checkValidity() && shippingForm.checkValidity()) {
+                // ここでStripe決済処理を実行
+                alert('注文処理を開始します...');
+                // 実際の実装では、ここでStripe APIを呼び出す
+            } else {
+                alert('必須項目をすべて入力してください。');
+                checkoutForm.reportValidity();
+                shippingForm.reportValidity();
+            }
+        });
+
+        // ページ読み込み時に注文サマリーを表示
+        displayOrderSummary();
+    </script>
+</body>
+</html>

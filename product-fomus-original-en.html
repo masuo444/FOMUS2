@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUS Original Design Masu - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- Header -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-en.html" class="text-obsidian hover:text-gold transition-colors">Back to Collection</a>
+                    <a href="index-en.html" class="text-obsidian hover:text-gold transition-colors">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="text-sm mb-8">
+                <a href="index-en.html" class="text-obsidian/60 hover:text-gold">Home</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-en.html" class="text-obsidian/60 hover:text-gold">MASU Collection</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">FOMUS Original Design Masu</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left: Product Image -->
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-br from-obsidian/20 to-obsidian/40 rounded-xl h-96 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-obsidian/60 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-cream font-bold text-sm">ORIGINAL</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Information -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">FOMUS Original Design Masu</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            Innovative design series with contemporary interpretation. A unique artwork where tradition and innovation merge.
+                            Original patterns and motifs crafted by FOMUS designers express new possibilities for masu.
+                        </p>
+                    </div>
+
+                    <!-- Design Variations -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Design Variations</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-obsidian/20 to-obsidian/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">Modern Geometric</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-gold/20 to-gold/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">East-West Fusion</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-hinoki/20 to-hinoki/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">Nature Motifs</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-cream/20 to-cream/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">Abstract Art</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Size Details -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Size Details</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Masu Size</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">External<br>L×W×H<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Internal<br>L×W×H<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Base<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Capacity<br>(ml)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">Mini Masu</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€25</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">Basic Masu</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€35</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Coating Option -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Coating Process (Optional)</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">No Coating</span>
+                                        <p class="text-sm text-obsidian/60">Enjoy the natural wood texture</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">With Coating</span>
+                                        <p class="text-sm text-obsidian/60">Special coating for enhanced durability</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Product Features -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Product Features</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Original design by FOMUS exclusive designers
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Fusion of traditional techniques and contemporary art
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Limited production with serial numbers
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Collector's item
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Purchase Button -->
+                    <div class="space-y-4">
+                        <button onclick="proceedToStripe()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            Purchase
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Concept -->
+            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">Design Concept</h3>
+                    <div class="space-y-4 text-obsidian/80">
+                        <p>
+                            <strong>Reconstruction of Tradition:</strong>
+                            Based on the 1300-year-old masu form, we propose new aesthetics adapted to contemporary lifestyles.
+                        </p>
+                        <p>
+                            <strong>Cultural Bridge:</strong>
+                            We aim to create works loved across borders by fusing Japanese aesthetics with contemporary art.
+                        </p>
+                        <p>
+                            <strong>Pursuit of Functional Beauty:</strong>
+                            We express true functional beauty that combines decorative beauty with practicality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">Artist Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-obsidian/20 rounded-full flex-shrink-0"></div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian">FOMUS Design Team</h4>
+                                <p class="text-sm text-obsidian/70 mb-2">Group of experts in traditional crafts and modern art</p>
+                                <p class="text-xs text-obsidian/60">
+                                    With the mission of balancing technical inheritance of Japanese traditional crafts 
+                                    and creativity of contemporary art, they continue to create numerous innovative works.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let basePrice = 25; // Mini masu initial price
+        let coatingPrice = 0; // Coating fee
+
+        function updateDisplay() {
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            const itemPrice = basePrice + coatingPrice;
+            const sizeText = selectedSize === 'mini' ? 'Mini' : 'Basic';
+            const coatingText = selectedCoating === 'coating' ? ' (With Coating)' : '';
+            
+            if (document.getElementById('total-price')) {
+                document.getElementById('total-price').textContent = `€${itemPrice}`;
+            }
+            if (document.getElementById('order-summary')) {
+                document.getElementById('order-summary').textContent = `FOMUS Original Design Masu (${sizeText})${coatingText}`;
+            }
+        }
+
+        // Price update on size/coating change
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'size') {
+                basePrice = e.target.value === 'mini' ? 25 : 35;
+                updateDisplay();
+                
+            }
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+                updateDisplay();
+                
+            }
+        });
+
+        function proceedToStripe() {
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            
+            // Stripe product link mapping
+            const stripeLinks = {
+                'mini-none': 'https://buy.stripe.com/fomus-original-mini',
+                'mini-coating': 'https://buy.stripe.com/fomus-original-mini-coated',
+                'basic-none': 'https://buy.stripe.com/fomus-original-basic',
+                'basic-coating': 'https://buy.stripe.com/fomus-original-basic-coated'
+            };
+            
+            const productKey = `${selectedSize}-${selectedCoating}`;
+            const stripeUrl = stripeLinks[productKey];
+            
+            if (stripeUrl) {
+                // Add quantity parameter (if supported by Stripe)
+                // Quantity is selected on Stripe side
+                window.open(stripeUrl, '_blank');
+            } else {
+                alert('Sorry, we are preparing the payment link for this product. Please contact us.');
+            }
+        }
+    </script>
+</body>
+</html>

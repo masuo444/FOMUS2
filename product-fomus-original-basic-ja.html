@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUSオリジナルデザイン枡 ベーシックサイズ - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- ヘッダー -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-ja.html" class="text-obsidian hover:text-gold transition-colors">コレクションに戻る</a>
+                    <a href="index-ja.html" class="text-obsidian hover:text-gold transition-colors">ホーム</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 商品詳細 -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- パンくずリスト -->
+            <nav class="text-sm mb-8">
+                <a href="index-ja.html" class="text-obsidian/60 hover:text-gold">ホーム</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-ja.html" class="text-obsidian/60 hover:text-gold">MASUコレクション</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">FOMUSオリジナルデザイン枡 ベーシック</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 左側：商品画像 -->
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-br from-obsidian/20 to-obsidian/40 rounded-xl h-96 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-obsidian/60 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-cream font-bold text-sm">ORIGINAL<br>BASIC</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：商品情報 -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">FOMUSオリジナルデザイン枡 ベーシック</h1>
+                        <div class="text-3xl font-bold text-gold mb-4">€35</div>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            現代的解釈による革新的デザインの標準サイズ版。伝統と革新が融合した唯一無二のアート作品です。
+                            FOMUSデザイナーが手がける独創的なパターンとモチーフが、標準的な枡のサイズで最大限に表現されます。
+                        </p>
+                    </div>
+
+                    <!-- サイズオプション -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">サイズオプション</h3>
+                        <div class="space-y-3">
+                            <a href="product-fomus-original-mini-ja.html" class="block">
+                                <div class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors">
+                                    <div>
+                                        <span class="font-semibold text-obsidian">ミニサイズに変更</span>
+                                        <p class="text-sm text-obsidian/60">コンパクトサイズ・オリジナルデザイン</p>
+                                    </div>
+                                    <span class="text-obsidian font-bold text-xl">€25</span>
+                                </div>
+                            </a>
+                            <div class="flex items-center justify-between p-4 border-2 border-gold rounded-lg bg-gold/5">
+                                <div>
+                                    <span class="font-semibold text-obsidian">ベーシックサイズ（現在選択中）</span>
+                                    <p class="text-sm text-obsidian/60">標準サイズ・オリジナルデザイン</p>
+                                </div>
+                                <span class="text-gold font-bold text-xl">€35</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- デザインバリエーション -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">デザインバリエーション</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-obsidian/20 to-obsidian/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">モダン幾何学</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-gold/20 to-gold/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">和洋折衷</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-hinoki/20 to-hinoki/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">自然モチーフ</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-cream/20 to-cream/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">抽象アート</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- サイズ詳細 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">サイズ詳細</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">桝の大きさ</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">外寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">底板<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内容量<br>(ml)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">ミニ枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">ベーシック枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- コーティング加工オプション -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">コーティング加工（オプション）</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">コーティングなし</span>
+                                        <p class="text-sm text-obsidian/60">自然な木の風合いをお楽しみください</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">コーティング加工あり</span>
+                                        <p class="text-sm text-obsidian/60">耐久性を向上させる特殊加工</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 数量選択 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">数量</h3>
+                        <div class="flex items-center space-x-4">
+                            <button onclick="decreaseQuantity()" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition-colors">-</button>
+                            <span id="quantity" class="text-xl font-semibold">1</span>
+                            <button onclick="increaseQuantity()" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition-colors">+</button>
+                        </div>
+                    </div>
+
+                    <!-- 商品特徴 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">商品特徴</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                標準サイズでデザインを最大限に表現
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                FOMUS専属デザイナーによる独創的デザイン
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                伝統技術と現代アートの融合
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                限定生産・シリアルナンバー付き
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 購入ボタン -->
+                    <div class="space-y-4">
+                        <button onclick="addToCart()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            カートに追加 - <span id="total-price">€35</span>
+                        </button>
+                        <button onclick="buyNow()" class="w-full bg-obsidian text-gold px-8 py-4 rounded-lg font-semibold hover:bg-gold hover:text-obsidian transition-all duration-300 border-2 border-obsidian">
+                            今すぐ購入
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- デザインコンセプト -->
+            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">ベーシックサイズの魅力</h3>
+                    <div class="space-y-4 text-obsidian/80">
+                        <p>
+                            <strong>完璧なバランス：</strong>
+                            標準的なサイズでありながら、デザインの細部まで丁寧に表現。枡本来の機能性も十分に備えています。
+                        </p>
+                        <p>
+                            <strong>デザインの完全表現：</strong>
+                            このサイズだからこそ実現できる、FOMUSオリジナルデザインの本領発揮をご体感いただけます。
+                        </p>
+                        <p>
+                            <strong>多様な用途：</strong>
+                            日本酒の酒器としても、インテリアアイテムとしても、その存在感で空間を豊かに演出します。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">アーティスト情報</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-obsidian/20 rounded-full flex-shrink-0"></div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian">FOMUS デザインチーム</h4>
+                                <p class="text-sm text-obsidian/70 mb-2">伝統工芸とモダンアートの専門家集団</p>
+                                <p class="text-xs text-obsidian/60">
+                                    日本の伝統工芸の技術継承と現代アートの創造性を両立させることを使命として、
+                                    数多くの革新的作品を生み出し続けています。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuantity = 1;
+        let basePrice = 35; // ベーシック枡の価格
+        let coatingPrice = 0; // コーティング料金
+
+        function increaseQuantity() {
+            currentQuantity++;
+            updateDisplay();
+        }
+
+        function decreaseQuantity() {
+            if (currentQuantity > 1) {
+                currentQuantity--;
+                updateDisplay();
+            }
+        }
+
+        function updateDisplay() {
+            document.getElementById('quantity').textContent = currentQuantity;
+            const itemPrice = basePrice + coatingPrice;
+            const totalPrice = itemPrice * currentQuantity;
+            document.getElementById('total-price').textContent = `€${totalPrice}`;
+        }
+
+        // コーティング変更時の価格更新
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+                updateDisplay();
+            }
+        });
+
+        function addToCart() {
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            const coatingText = selectedCoating === 'coating' ? '（コーティング加工付き）' : '';
+            
+            alert(`FOMUSオリジナルデザイン枡（ベーシック）${coatingText} ${currentQuantity}個をカートに追加しました`);
+        }
+
+        function buyNow() {
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            let productId = 'masu-original-basic';
+            
+            // コーティング付きの場合はproduct idを調整
+            if (selectedCoating === 'coating') {
+                productId += '-coated';
+            }
+            
+            window.location.href = `checkout-ja.html?product=${productId}&quantity=${currentQuantity}`;
+        }
+    </script>
+</body>
+</html>

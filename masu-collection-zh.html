@@ -112,8 +112,8 @@
                                 <span class="text-gold">✓</span>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-obsidian mb-1">百年桧木精选</h3>
-                                <p class="text-sm text-obsidian/70">仅使用树龄100年以上的桧木</p>
+                                <h3 class="font-semibold text-obsidian mb-1">桧木精选</h3>
+                                <p class="text-sm text-obsidian/70">使用日本产桧木</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
@@ -137,124 +137,358 @@
                     </div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-hinoki/30 to-gold/30 rounded-lg p-8 h-96 flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="w-32 h-32 bg-gold/20 rounded mx-auto mb-4"></div>
-                        <p class="text-obsidian/60 italic">MASU系列图片</p>
+                <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                    <img src="MASU collection.png" alt="MASU系列" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品类别导航 -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mt-20">
+                <h3 class="font-heading text-3xl font-light text-obsidian text-center mb-12">产品类别</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic MASU -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="document.getElementById('basic-masu-section').scrollIntoView({behavior: 'smooth'})">
+                        <div class="h-48 rounded-t-xl overflow-hidden">
+                            <img src="basic masu.JPG" alt="Basic MASU" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-heading text-xl font-semibold text-obsidian mb-3">Basic MASU</h4>
+                            <p class="text-obsidian/70 text-sm mb-4">
+                                保持1300年传统。享受简洁美丽的基础升。
+                            </p>
+                            <span class="text-gold font-semibold">查看详情 →</span>
+                        </div>
+                    </div>
+
+                    <!-- FOMUS品牌标志升 -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="document.getElementById('fomus-logo-section').scrollIntoView({behavior: 'smooth'})">
+                        <div class="h-48 rounded-t-xl overflow-hidden">
+                            <img src="FOMUS枡.png" alt="FOMUS品牌标志升" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-heading text-xl font-semibold text-obsidian mb-3">FOMUS品牌标志升</h4>
+                            <p class="text-obsidian/70 text-sm mb-4">
+                                体现品牌身份的特殊升。作为收藏品具有很高价值的精品。
+                            </p>
+                            <span class="text-gold font-semibold">查看详情 →</span>
+                        </div>
+                    </div>
+
+                    <!-- 定制升 -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="document.getElementById('custom-masu-section').scrollIntoView({behavior: 'smooth'})">
+                        <div class="h-48 rounded-t-xl overflow-hidden">
+                            <img src="オーダーメイド２.JPG" alt="定制升" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-heading text-xl font-semibold text-obsidian mb-3">定制升</h4>
+                            <p class="text-obsidian/70 text-sm mb-4">
+                                世界上独一无二的升。我们根据客户要求制作完全定制的升。
+                            </p>
+                            <span class="text-gold font-semibold">查看详情 →</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 产品阵容 -->
-    <section class="py-20 bg-gradient-fomus">
+    <!-- FOMUS品牌标志升部分 -->
+    <section id="fomus-logo-section" class="py-20 bg-gradient-to-br from-gold/10 to-gold/20">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-heading text-4xl font-light text-obsidian text-center mb-16">产品阵容</h2>
+            <h2 class="font-heading text-4xl font-light text-center mb-16">
+                <span class="text-gradient-gold">FOMUS品牌标志升</span>
+            </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- 传统升 -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                    <div class="h-64 bg-gradient-to-br from-hinoki/20 to-hinoki/40 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-hinoki/40 rounded-lg"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">传统升</h3>
-                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
-                            忠实再现传统形状的经典系列。将1300年历史传承到现代的永恒设计。
-                        </p>
-                        
-                        <!-- 尺寸选项 -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">尺寸选择</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-hinoki/20 text-obsidian text-xs rounded hover:bg-hinoki/30 transition-colors">迷你升</button>
-                                <button class="px-3 py-1 bg-hinoki/40 text-obsidian text-xs rounded font-semibold">基础升</button>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h3 class="font-heading text-3xl font-light mb-6">体现品牌身份</h3>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        雕刻有FOMUS品牌标志的特殊升。体现品牌身份，
+                        这是一个作为收藏品具有很高价值的精品。适合作为礼物和商务场合。
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">精密激光雕刻</h4>
+                                <p class="text-sm text-obsidian/70">使用最新技术美丽地表现标志</p>
                             </div>
                         </div>
                         
-                        <!-- 涂层选项 -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">涂层</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded font-semibold">有</button>
-                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">无</button>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">两种尺寸选择</h4>
+                                <p class="text-sm text-obsidian/70">可从迷你和基础尺寸中选择</p>
                             </div>
                         </div>
                         
-                        <p class="text-gold font-bold text-lg mb-4">¥50,000~</p>
-                        <button class="btn-primary w-full">定制下单</button>
-                    </div>
-                </div>
-                
-                <!-- 定制升 -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                    <div class="h-64 bg-gradient-to-br from-gold/20 to-gold/40 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-gold/40 rounded-lg"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">定制升</h3>
-                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
-                            根据客户需求完全定制制作。所有材料、尺寸和装饰均可定制。
-                        </p>
-                        
-                        <!-- 尺寸选项 -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">尺寸选择</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded hover:bg-gold/30 transition-colors">迷你升</button>
-                                <button class="px-3 py-1 bg-gold/40 text-obsidian text-xs rounded font-semibold">基础升</button>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">涂层处理（可选）</h4>
+                                <p class="text-sm text-obsidian/70">提高耐久性的特殊涂层（+€10）</p>
                             </div>
                         </div>
-                        
-                        <!-- 涂层选项 -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">涂层</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded font-semibold">有</button>
-                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">无</button>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gold font-bold text-lg mb-4">¥200,000~</p>
-                        <button class="btn-primary w-full">定制下单</button>
                     </div>
                 </div>
                 
-                <!-- FOMUS原创设计升 -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                    <div class="h-64 bg-gradient-to-br from-obsidian/20 to-obsidian/40 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-obsidian/40 rounded-lg"></div>
+                <div class="space-y-8">
+                    <!-- 产品图片 -->
+                    <div class="max-w-sm mx-auto">
+                        <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                            <img src="FOMUS枡.png" alt="FOMUS品牌标志升" class="w-full h-full object-cover">
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">FOMUS原创</h3>
-                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
-                            以现代诠释的创新设计系列。传统与创新融合的独特艺术品。
-                        </p>
-                        
-                        <!-- 尺寸选项 -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">尺寸选择</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-obsidian/20 text-obsidian text-xs rounded hover:bg-obsidian/30 transition-colors">迷你升</button>
-                                <button class="px-3 py-1 bg-obsidian/40 text-cream text-xs rounded font-semibold">基础升</button>
-                            </div>
-                        </div>
-                        
-                        <!-- 涂层选项 -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">涂层</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-obsidian/30 text-cream text-xs rounded font-semibold">有</button>
-                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">无</button>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gold font-bold text-lg mb-4">¥300,000~</p>
-                        <button class="btn-primary w-full">定制下单</button>
+                    
+                    <div class="text-center">
+                        <button onclick="window.location.href='product-fomus-logo-zh.html'" class="bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            查看详情
+                        </button>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Basic MASU部分 -->
+    <section id="basic-masu-section" class="py-20 bg-gradient-to-br from-hinoki/10 to-hinoki/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-center mb-16">
+                <span class="text-gradient-gold">Basic MASU</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h3 class="font-heading text-3xl font-light mb-6">传统美感原汁原味</h3>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        拥有1300年历史的日本传统升。Basic MASU拥有简洁而完美的比例，
+                        体现了日本文化的精髓。从日常使用到特殊场合的每个场景都能感受到日本美学。
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-hinoki/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">精选桧木材质</h4>
+                                <p class="text-sm text-obsidian/70">使用日本产桧木的正宗规格</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-hinoki/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">传统无钉构造</h4>
+                                <p class="text-sm text-obsidian/70">使用古代榫卯技术精心制作</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-hinoki/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">两种尺寸选择</h4>
+                                <p class="text-sm text-obsidian/70">根据需要选择</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- 产品图片 -->
+                    <div class="max-w-sm mx-auto">
+                        <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                            <img src="basic masu.JPG" alt="Basic MASU" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button onclick="window.location.href='product-masu-zh.html'" class="bg-hinoki text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-hinoki transition-all duration-300 border-2 border-hinoki">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 定制升部分 -->
+    <section id="custom-masu-section" class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-center mb-16">
+                <span class="text-gradient-gold">定制升</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h3 class="font-heading text-3xl font-light mb-6">世界上独一无二的升</h3>
+                    <p class="text-lg text-cream/80 mb-8 leading-relaxed">
+                        我们根据客户要求制作完全定制的升。
+                        企业标志、家徽、纪念日信息等，任何设计都可以精密雕刻。
+                        作为珍贵的纪念品或特殊礼物，为您提供世界上独一无二的升。
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-cream mb-1">选择尺寸</h4>
+                                <p class="text-sm text-cream/70">从迷你升或基础升中选择</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-cream mb-1">定制设计</h4>
+                                <p class="text-sm text-cream/70">可自由设计标志、文字、图案等</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-cream mb-1">涂层处理（可选）</h4>
+                                <p class="text-sm text-cream/70">提高耐久性的特殊涂层（+€10）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- 产品图片 -->
+                    <div class="max-w-sm mx-auto">
+                        <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                            <img src="オーダーメイド２.JPG" alt="定制升" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button onclick="window.location.href='product-custom-masu-zh.html'" class="bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-cream hover:text-obsidian transition-all duration-300 border-2 border-gold">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOMUS原创设计部分 -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-obsidian text-center mb-16">产品阵容摘要</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Basic MASU -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-48 rounded-t-xl overflow-hidden">
+                        <img src="basic masu.JPG" alt="Basic MASU" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-semibold text-obsidian mb-2">Basic MASU</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">迷你升</span>
+                                <span class="text-gold font-semibold">€20</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">基础升</span>
+                                <span class="text-gold font-semibold">€30</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='product-masu-zh.html'" class="btn-primary w-full mt-4 text-sm py-2">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- FOMUS Logo MASU -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-48 rounded-t-xl overflow-hidden">
+                        <img src="FOMUS枡.png" alt="FOMUS标志升" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-semibold text-obsidian mb-2">FOMUS标志升</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">迷你升</span>
+                                <span class="text-gold font-semibold">€30</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">基础升</span>
+                                <span class="text-gold font-semibold">€40</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='product-fomus-logo-zh.html'" class="btn-primary w-full mt-4 text-sm py-2">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- FOMUS Original Design MASU -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-48 rounded-t-xl overflow-hidden">
+                        <img src="オーダーメイド３.jpg" alt="FOMUS原创设计升" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-semibold text-obsidian mb-2">FOMUS原创设计升</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">迷你升</span>
+                                <span class="text-gold font-semibold">€25</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">基础升</span>
+                                <span class="text-gold font-semibold">€35</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='product-fomus-original-zh.html'" class="btn-primary w-full mt-4 text-sm py-2">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- Custom Order MASU -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-48 rounded-t-xl overflow-hidden">
+                        <img src="オーダーメイド２.JPG" alt="定制升" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-semibold text-obsidian mb-2">定制升</h3>
+                        <div class="space-y-2 mb-3">
+                            <div class="text-xs text-obsidian/60">起价€93</div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">迷你升</span>
+                                <span class="text-gold font-semibold">€93</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">基础升</span>
+                                <span class="text-gold font-semibold">€103</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='product-custom-masu-zh.html'" class="btn-primary w-full mt-4 text-sm py-2">查看详情</button>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -326,13 +560,106 @@
     </section>
 
     <!-- 页脚 -->
-    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-8">
-                <div class="flex items-center justify-center mb-4">
-                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+    <footer class="bg-gradient-to-br from-obsidian via-obsidian/95 to-obsidian/90 text-cream">
+        <!-- 主要页脚内容 -->
+        <div class="py-20">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- 品牌信息 -->
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center mb-6">
+                            <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-10 mr-4">
+                            <span class="font-heading text-2xl font-light">FOMUS</span>
+                        </div>
+                        <p class="text-cream/80 text-lg leading-relaxed mb-6">
+                            我们的使命是复兴拥有1300年历史的日本升，<br>
+                            将传统工艺的美感传递到世界各地。
+                        </p>
+                        <div class="flex space-x-6">
+                            <a href="#" class="text-cream/60 hover:text-gold transition-colors duration-300">
+                                <span class="text-2xl">📧</span>
+                            </a>
+                            <a href="#" class="text-cream/60 hover:text-gold transition-colors duration-300">
+                                <span class="text-2xl">📱</span>
+                            </a>
+                            <a href="#" class="text-cream/60 hover:text-gold transition-colors duration-300">
+                                <span class="text-2xl">🌐</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 产品类别 -->
+                    <div>
+                        <h4 class="font-heading text-xl font-semibold text-gold mb-6">产品类别</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#basic-masu-section" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>Basic MASU
+                            </a></li>
+                            <li><a href="#fomus-logo-section" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>FOMUS品牌标志升
+                            </a></li>
+                            <li><a href="#custom-masu-section" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>定制升
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 支持 -->
+                    <div>
+                        <h4 class="font-heading text-xl font-semibold text-gold mb-6">支持</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>联系我们
+                            </a></li>
+                            <li><a href="#" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>配送信息
+                            </a></li>
+                            <li><a href="#" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>退货与换货
+                            </a></li>
+                            <li><a href="#" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>常见问题
+                            </a></li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="text-cream/60 text-sm">© 2024 FOMUS. 版权所有。</p>
+                
+                <!-- 相关品牌 -->
+                <div class="border-t border-cream/10 pt-16 mb-16">
+                    <h4 class="font-heading text-2xl font-light text-center text-gold mb-12">相关品牌</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-cream/5 rounded-xl p-6 hover:bg-cream/10 transition-all duration-300">
+                            <h5 class="font-heading text-lg font-semibold text-gold mb-3">FOMUS PARURE</h5>
+                            <p class="text-cream/70 text-sm mb-4">受升形状启发的精美珠宝系列</p>
+                            <a href="https://masu-jewelry.com" target="_blank" class="text-gold hover:text-cream transition-colors text-sm">
+                                访问网站 →
+                            </a>
+                        </div>
+                        <div class="bg-cream/5 rounded-xl p-6 hover:bg-cream/10 transition-all duration-300">
+                            <h5 class="font-heading text-lg font-semibold text-gold mb-3">MASUKAME</h5>
+                            <p class="text-cream/70 text-sm mb-4">以龟为主题的限量版杰作系列</p>
+                            <a href="https://masukame.com" target="_blank" class="text-gold hover:text-cream transition-colors text-sm">
+                                访问网站 →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 版权 -->
+        <div class="border-t border-cream/10 py-8">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-cream/60 text-sm mb-4 md:mb-0">
+                        © 2024 FOMUS. 版权所有。将1300年的日本工艺传统连接到世界。
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">隐私政策</a>
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">服务条款</a>
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">商业法</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

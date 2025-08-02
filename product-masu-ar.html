@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماسو - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- الرأس -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <a href="masu-collection-ar.html" class="text-obsidian hover:text-gold transition-colors">العودة إلى المجموعة</a>
+                    <a href="index-ar.html" class="text-obsidian hover:text-gold transition-colors">الرئيسية</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- تفاصيل المنتج -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- مسار التنقل -->
+            <nav class="text-sm mb-8">
+                <a href="index-ar.html" class="text-obsidian/60 hover:text-gold">الرئيسية</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-ar.html" class="text-obsidian/60 hover:text-gold">مجموعة ماسو</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">ماسو</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- اليسار: صورة المنتج -->
+                <div class="space-y-4 lg:order-2">
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                        <img src="basic masu.JPG" alt="ماسو" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- اليمين: معلومات المنتج -->
+                <div class="space-y-6 lg:order-1">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">ماسو</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            ماسو ياباني تقليدي بتاريخ يمتد لـ 1300 عام. مصنوع من خشب السرو الياباني الهينوكي باستخدام الحرف التقليدية، هذا الماسو الأصيل يجسد جوهر الثقافة اليابانية.
+                            يُستخدم كأداة لقياس الحبوب وككوب ساكي في المناسبات الاحتفالية.
+                        </p>
+                    </div>
+
+                    <!-- تفاصيل الأحجام -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">تفاصيل الأحجام</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">حجم الماسو</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">خارجي<br>ط×ع×ا<br>(مم)</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">داخلي<br>ط×ع×ا<br>(مم)</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">القاعدة<br>(مم)</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">السعة<br>(مل)</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">السعر</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">ماسو مصغر</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">ماسو أساسي</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- خيار الطلاء -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">الطلاء (اختياري)</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="ml-3">
+                                    <div>
+                                        <span class="font-semibold">بدون طلاء</span>
+                                        <p class="text-sm text-obsidian/60">استمتع بملمس الخشب الطبيعي</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="ml-3">
+                                    <div>
+                                        <span class="font-semibold">مع الطلاء</span>
+                                        <p class="text-sm text-obsidian/60">طلاء خاص لمتانة معززة</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- ميزات المنتج -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">ميزات المنتج</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full ml-3"></span>
+                                مصنوع من خشب السرو الياباني الهينوكي
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full ml-3"></span>
+                                تقنية الربط التقليدية بدون مسامير
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full ml-3"></span>
+                                لمسة نهائية يدوية بواسطة الحرفيين
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- زر الشراء -->
+                    <div class="space-y-4">
+                        <button onclick="proceedToStripe()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            شراء
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معلومات تفصيلية عن المنتج -->
+            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">مواصفات المنتج</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">المادة</span>
+                            <span class="text-obsidian font-semibold">خشب السرو الياباني الهينوكي</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">البناء</span>
+                            <span class="text-obsidian font-semibold">الربط التقليدي</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">اللمسة النهائية</span>
+                            <span class="text-obsidian font-semibold">طبيعي (بدون طلاء)</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">الاستخدام</span>
+                            <span class="text-obsidian font-semibold">كوب ساكي・زخرفة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">تعليمات العناية</h3>
+                    <div class="space-y-4 text-obsidian/80">
+                        <p>1. اغسل برفق بمنظف معتدل بعد الاستخدام</p>
+                        <p>2. اتركه يجف تماماً قبل التخزين</p>
+                        <p>3. احفظه بعيداً عن أشعة الشمس المباشرة</p>
+                        <p>4. يُنصح بالصيانة الدورية بزيت نباتي</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let basePrice = 20; // السعر الأولي للماسو المصغر
+        let coatingPrice = 0; // رسوم الطلاء
+        
+        function updateDisplay() {
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            const itemPrice = basePrice + coatingPrice;
+            const sizeText = selectedSize === 'mini' ? 'مصغر' : 'أساسي';
+            const coatingText = selectedCoating === 'coating' ? ' (مع الطلاء)' : '';
+            
+            document.getElementById('total-price').textContent = `€${itemPrice}`;
+            document.getElementById('order-summary').textContent = `${sizeText} ماسو${coatingText}`;
+        }
+
+        // تحديث السعر عند تغيير الحجم/الطلاء
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'size') {
+                basePrice = e.target.value === 'mini' ? 20 : 30;
+                updateDisplay();
+                
+            }
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+                updateDisplay();
+                
+            }
+        });
+
+        function proceedToStripe() {
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            
+            // خريطة روابط منتجات سترايب
+            const stripeLinks = {
+                'mini-none': 'https://buy.stripe.com/basic-masu-mini',
+                'mini-coating': 'https://buy.stripe.com/basic-masu-mini-coated',
+                'basic-none': 'https://buy.stripe.com/basic-masu-basic',
+                'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
+            };
+            
+            const productKey = `${selectedSize}-${selectedCoating}`;
+            const stripeUrl = stripeLinks[productKey];
+            
+            if (stripeUrl) {
+                // إضافة معامل الكمية (إذا كان مدعوماً من سترايب)
+                // يتم اختيار الكمية من جانب سترايب
+                window.open(stripeUrl, '_blank');
+            } else {
+                alert('عذراً، نحن نعد رابط الدفع لهذا المنتج. يرجى الاتصال بنا.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オーダーメイドデザイン枡（ミニ） - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- ヘッダー -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-ja.html" class="text-obsidian hover:text-gold transition-colors">コレクションに戻る</a>
+                    <a href="index-ja.html" class="text-obsidian hover:text-gold transition-colors">ホーム</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 商品詳細 -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- パンくずリスト -->
+            <nav class="text-sm mb-8">
+                <a href="index-ja.html" class="text-obsidian/60 hover:text-gold">ホーム</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-ja.html" class="text-obsidian/60 hover:text-gold">MASUコレクション</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">オーダーメイドデザイン枡（ミニ）</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 左側：商品画像 -->
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-br from-gold/20 to-gold/40 rounded-xl h-96 flex items-center justify-center">
+                        <div class="w-24 h-24 bg-gold/60 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-obsidian font-bold text-sm">MINI</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-gold/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-gold/40 transition-colors">
+                            <div class="w-6 h-6 bg-gold/60 rounded"></div>
+                        </div>
+                        <div class="bg-gold/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-gold/40 transition-colors">
+                            <div class="w-6 h-6 bg-gold/60 rounded"></div>
+                        </div>
+                        <div class="bg-gold/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-gold/40 transition-colors">
+                            <div class="w-6 h-6 bg-gold/60 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：商品情報 -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">オーダーメイドデザイン枡（ミニ）</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            コンパクトサイズのオーダーメイド枡。お客様のご要望に合わせた完全カスタムデザインを、
+                            精密に彫刻いたします。記念品やギフトに最適なサイズです。
+                        </p>
+                    </div>
+
+                    <!-- 価格表示 -->
+                    <div class="bg-gold/10 rounded-lg p-6 border border-gold/30">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-semibold text-obsidian text-xl">ミニサイズ</h3>
+                            <span class="text-gold font-bold text-2xl">€35</span>
+                        </div>
+                        <div class="text-sm text-obsidian/70 space-y-1">
+                            <p>枡本体価格: €20</p>
+                            <p>デザイン料金: €15</p>
+                        </div>
+                    </div>
+
+                    <!-- 他サイズへのリンク -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">他のサイズをお探しですか？</h3>
+                        <a href="product-custom-masu-basic-ja.html" class="inline-flex items-center justify-between w-full p-4 border border-gold/30 rounded-lg cursor-pointer hover:bg-gold/5 transition-colors">
+                            <div>
+                                <span class="font-semibold text-obsidian">ベーシックサイズ</span>
+                                <p class="text-sm text-obsidian/60">€45（€30 + デザイン料 €15）</p>
+                            </div>
+                            <span class="text-gold">→</span>
+                        </a>
+                    </div>
+
+                    <!-- デザイン入稿 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">デザイン入稿</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">デザインファイル</label>
+                                <input type="file" accept="image/*,.pdf,.ai,.eps" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent">
+                                <p class="text-xs text-obsidian/60 mt-1">対応形式: JPG, PNG, PDF, AI, EPS</p>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">デザインの説明・要望</label>
+                                <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="デザインに関するご要望やメッセージをお書きください"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- サイズ詳細 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">サイズ詳細</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">桝の大きさ</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">外寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">底板<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内容量<br>(ml)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">ミニ枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">ベーシック枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- コーティング加工オプション -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">コーティング加工（オプション）</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">コーティングなし</span>
+                                        <p class="text-sm text-obsidian/60">自然な木の風合いをお楽しみください</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">コーティング加工あり</span>
+                                        <p class="text-sm text-obsidian/60">耐久性を向上させる特殊加工</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 数量選択 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">数量</h3>
+                        <div class="flex items-center space-x-4">
+                            <button onclick="decreaseQuantity()" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition-colors">-</button>
+                            <span id="quantity" class="text-xl font-semibold">1</span>
+                            <button onclick="increaseQuantity()" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition-colors">+</button>
+                        </div>
+                    </div>
+
+                    <!-- 商品特徴 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">商品特徴</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                コンパクトなミニサイズ
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                レーザー彫刻による精密なデザイン表現
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                日本産のヒノキ材を使用
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                完全オリジナルデザイン
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                製作期間：約2-3週間
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 購入ボタン -->
+                    <div class="space-y-4">
+                        <button onclick="addToCart()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            カートに追加 - <span id="total-price">€35</span>
+                        </button>
+                        <button onclick="buyNow()" class="w-full bg-obsidian text-gold px-8 py-4 rounded-lg font-semibold hover:bg-gold hover:text-obsidian transition-all duration-300 border-2 border-obsidian">
+                            今すぐ購入
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 製作プロセス -->
+            <div class="mt-20">
+                <h3 class="font-heading text-3xl font-light text-obsidian text-center mb-12">製作プロセス</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">1</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">デザイン確認</h4>
+                        <p class="text-sm text-obsidian/70">入稿いただいたデザインを確認し、製作可能な形に調整いたします</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">2</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">枡の製作</h4>
+                        <p class="text-sm text-obsidian/70">伝統工法により、厳選された檜で枡本体を製作いたします</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">3</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">デザイン彫刻</h4>
+                        <p class="text-sm text-obsidian/70">レーザー彫刻機により、精密にデザインを彫刻いたします</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">4</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">仕上げ・発送</h4>
+                        <p class="text-sm text-obsidian/70">最終仕上げを行い、丁寧に梱包してお客様にお届けいたします</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuantity = 1;
+        let basePrice = 35; // ミニ枡の価格（デザイン料込み）
+        let coatingPrice = 0; // コーティング料金
+
+        function increaseQuantity() {
+            currentQuantity++;
+            updateDisplay();
+        }
+
+        function decreaseQuantity() {
+            if (currentQuantity > 1) {
+                currentQuantity--;
+                updateDisplay();
+            }
+        }
+
+        function updateDisplay() {
+            document.getElementById('quantity').textContent = currentQuantity;
+            const itemPrice = basePrice + coatingPrice;
+            const totalPrice = itemPrice * currentQuantity;
+            document.getElementById('total-price').textContent = `€${totalPrice}`;
+        }
+
+        // コーティング変更時の価格更新
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+                updateDisplay();
+            }
+        });
+
+        function addToCart() {
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            const coatingText = selectedCoating === 'coating' ? '（コーティング加工付き）' : '';
+            
+            alert(`オーダーメイドデザイン枡（ミニ）${coatingText} ${currentQuantity}個をカートに追加しました`);
+        }
+
+        function buyNow() {
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            let productId = 'masu-custom-mini';
+            
+            // コーティング付きの場合はproduct idを調整
+            if (selectedCoating === 'coating') {
+                productId += '-coated';
+            }
+            
+            window.location.href = `checkout-ja.html?product=${productId}&quantity=${currentQuantity}`;
+        }
+    </script>
+</body>
+</html>

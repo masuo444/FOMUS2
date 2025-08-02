@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUS Masu Collection - Traditional Japanese Sake Cups</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                        warmGray: '#f5f5f4'
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif', 'serif'],
+                        body: ['Noto Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans', sans-serif; }
+        .font-heading { font-family: 'Noto Serif', serif; }
+        
+        .btn-primary {
+            @apply bg-gold text-obsidian px-6 py-3 font-semibold rounded-lg transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+        }
+        
+        .btn-secondary {
+            @apply bg-transparent text-gold px-6 py-3 font-semibold border-2 border-gold rounded-lg transition-all duration-300 hover:bg-gold hover:text-obsidian;
+        }
+        
+        .card-hover {
+            @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-2;
+        }
+        
+        .gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    
+    <!-- Language & Currency Switcher -->
+    <div class="bg-obsidian text-cream py-2">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
+            <div class="flex items-center space-x-4">
+                <span>🌐 Language:</span>
+                <select class="bg-transparent border border-gold rounded px-2 py-1 text-cream">
+                    <option value="en" selected>English</option>
+                    <option value="ja">日本語</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span>💰 Currency:</span>
+                <select class="bg-transparent border border-gold rounded px-2 py-1 text-cream">
+                    <option value="eur" selected>EUR (€)</option>
+                    <option value="usd">USD ($)</option>
+                    <option value="gbp">GBP (£)</option>
+                    <option value="jpy">JPY (¥)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                    <span class="ml-3 font-heading text-xl font-semibold text-obsidian">FOMUS</span>
+                </div>
+                
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Home</a>
+                    <a href="#collection" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Collection</a>
+                    <a href="#about" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">About</a>
+                    <a href="#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">Contact</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="text-obsidian hover:text-gold transition-colors" aria-label="Shopping Cart">
+                        🛒 <span class="bg-gold text-obsidian rounded-full w-5 h-5 text-xs flex items-center justify-center ml-1">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-obsidian via-obsidian/95 to-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="font-heading text-5xl md:text-7xl font-light mb-6">
+                <span class="gradient-gold">MASU</span>
+                <span class="block text-3xl md:text-5xl mt-4">Collection</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-cream/80 max-w-4xl mx-auto mb-8">
+                Discover the timeless elegance of traditional Japanese sake cups, 
+                crafted with 1300 years of heritage and modern sophistication.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary">Explore Collection</button>
+                <button class="btn-secondary">Learn About Masu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Standard Size Collection -->
+    <section id="collection" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-light text-obsidian mb-4">Standard Size Masu Collection</h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto">
+                    Our premium standard size collection, perfect for traditional sake ceremonies and sophisticated gifting.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Basic Masu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-hinoki/20 to-hinoki/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-hinoki/60 rounded-lg shadow-lg"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-obsidian mb-2">Basic Masu</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm">Traditional craftsmanship meets timeless elegance</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">€30</span>
+                            <span class="text-xs text-obsidian/60">Tax included</span>
+                        </div>
+                        <div class="space-y-2">
+                            <button class="btn-primary w-full text-sm">View Details</button>
+                            <button class="btn-secondary w-full text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Design Basic Masu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-gold/20 to-gold/40 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-gold/60 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-obsidian font-bold text-sm">CUSTOM</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-obsidian mb-2">Custom Design Basic Masu</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm">Personalized design with your logo or message</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">€45</span>
+                            <span class="text-xs text-obsidian/60">Tax included</span>
+                        </div>
+                        <div class="space-y-2">
+                            <button class="btn-primary w-full text-sm">View Details</button>
+                            <button class="btn-secondary w-full text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FOMUS Logo Basic Masu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-gold/30 to-hinoki/30 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-gold/50 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-obsidian font-bold text-sm">FOMUS</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading text-xl font-bold text-obsidian mb-2">FOMUS Logo Basic Masu</h3>
+                        <p class="text-obsidian/70 mb-4 text-sm">Exclusive branded edition for collectors</p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl font-bold text-gold">€40</span>
+                            <span class="text-xs text-obsidian/60">Tax included</span>
+                        </div>
+                        <div class="space-y-2">
+                            <button class="btn-primary w-full text-sm">View Details</button>
+                            <button class="btn-secondary w-full text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standard Size Comparison Table -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+                <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6 text-center">Standard Size Comparison</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Product</th>
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Size</th>
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Price</th>
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Design</th>
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4 font-medium">Basic Masu</td>
+                                <td class="py-3 px-4 text-obsidian/70">Standard</td>
+                                <td class="py-3 px-4 text-gold font-semibold">€30</td>
+                                <td class="py-3 px-4 text-obsidian/70">Traditional</td>
+                                <td class="py-3 px-4 text-obsidian/70">Sake ceremonies, daily use</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4 font-medium">Custom Design Basic</td>
+                                <td class="py-3 px-4 text-obsidian/70">Standard</td>
+                                <td class="py-3 px-4 text-gold font-semibold">€45</td>
+                                <td class="py-3 px-4 text-obsidian/70">Custom</td>
+                                <td class="py-3 px-4 text-obsidian/70">Corporate gifts, weddings</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium">FOMUS Logo Basic</td>
+                                <td class="py-3 px-4 text-obsidian/70">Standard</td>
+                                <td class="py-3 px-4 text-gold font-semibold">€40</td>
+                                <td class="py-3 px-4 text-obsidian/70">Branded</td>
+                                <td class="py-3 px-4 text-obsidian/70">Collectors, premium gifts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Masu Collection -->
+    <section class="py-20 bg-warmGray">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-light text-obsidian mb-4">Mini Masu Collection</h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto">
+                    Compact and charming, our mini collection is perfect for gifts, souvenirs, and intimate sake experiences.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- Mini Masu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-40 bg-gradient-to-br from-hinoki/20 to-hinoki/40 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-hinoki/60 rounded-lg shadow-lg"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-bold text-obsidian mb-2">Mini Masu</h3>
+                        <p class="text-obsidian/70 mb-3 text-xs">Perfect for intimate occasions</p>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xl font-bold text-gold">€20</span>
+                            <span class="text-xs text-obsidian/60">Tax included</span>
+                        </div>
+                        <div class="space-y-1">
+                            <button class="btn-primary w-full text-xs py-2">View Details</button>
+                            <button class="btn-secondary w-full text-xs py-2">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Design Mini Masu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-40 bg-gradient-to-br from-gold/20 to-gold/40 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-gold/60 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-obsidian font-bold text-xs">CUSTOM</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-bold text-obsidian mb-2">Custom Design Mini</h3>
+                        <p class="text-obsidian/70 mb-3 text-xs">Personalized mini masterpiece</p>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xl font-bold text-gold">€35</span>
+                            <span class="text-xs text-obsidian/60">Tax included</span>
+                        </div>
+                        <div class="space-y-1">
+                            <button class="btn-primary w-full text-xs py-2">View Details</button>
+                            <button class="btn-secondary w-full text-xs py-2">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FOMUS Original Mini Masu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-40 bg-gradient-to-br from-obsidian/20 to-obsidian/40 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-obsidian/60 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-cream font-bold text-xs">ORIG</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-bold text-obsidian mb-2">FOMUS Original Mini</h3>
+                        <p class="text-obsidian/70 mb-3 text-xs">Limited edition design</p>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xl font-bold text-gold">€25</span>
+                            <span class="text-xs text-obsidian/60">Tax included</span>
+                        </div>
+                        <div class="space-y-1">
+                            <button class="btn-primary w-full text-xs py-2">View Details</button>
+                            <button class="btn-secondary w-full text-xs py-2">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FOMUS Logo Mini Masu -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-40 bg-gradient-to-br from-gold/30 to-hinoki/30 flex items-center justify-center">
+                        <div class="w-12 h-12 bg-gold/50 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-obsidian font-bold text-xs">FOMUS</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-bold text-obsidian mb-2">FOMUS Logo Mini</h3>
+                        <p class="text-obsidian/70 mb-3 text-xs">Branded miniature collection</p>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xl font-bold text-gold">€30</span>
+                            <span class="text-xs text-obsidian/60">Tax included</span>
+                        </div>
+                        <div class="space-y-1">
+                            <button class="btn-primary w-full text-xs py-2">View Details</button>
+                            <button class="btn-secondary w-full text-xs py-2">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mini Size Comparison Table -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+                <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6 text-center">Mini Size Comparison</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Product</th>
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Size</th>
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Price</th>
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Design</th>
+                                <th class="text-left py-3 px-4 font-semibold text-obsidian">Best For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4 font-medium">Mini Masu</td>
+                                <td class="py-3 px-4 text-obsidian/70">Compact</td>
+                                <td class="py-3 px-4 text-gold font-semibold">€20</td>
+                                <td class="py-3 px-4 text-obsidian/70">Traditional</td>
+                                <td class="py-3 px-4 text-obsidian/70">Souvenirs, small gifts</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4 font-medium">Custom Design Mini</td>
+                                <td class="py-3 px-4 text-obsidian/70">Compact</td>
+                                <td class="py-3 px-4 text-gold font-semibold">€35</td>
+                                <td class="py-3 px-4 text-obsidian/70">Custom</td>
+                                <td class="py-3 px-4 text-obsidian/70">Personalized gifts</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4 font-medium">FOMUS Original Mini</td>
+                                <td class="py-3 px-4 text-obsidian/70">Compact</td>
+                                <td class="py-3 px-4 text-gold font-semibold">€25</td>
+                                <td class="py-3 px-4 text-obsidian/70">Limited</td>
+                                <td class="py-3 px-4 text-obsidian/70">Collectors, unique gifts</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium">FOMUS Logo Mini</td>
+                                <td class="py-3 px-4 text-obsidian/70">Compact</td>
+                                <td class="py-3 px-4 text-gold font-semibold">€30</td>
+                                <td class="py-3 px-4 text-obsidian/70">Branded</td>
+                                <td class="py-3 px-4 text-obsidian/70">Brand enthusiasts</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfect For Section -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-light text-obsidian mb-4">🎁 Perfect For</h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto">
+                    Discover the perfect occasion for our traditional Japanese masu collection
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Wedding Gifts -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">💒</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-3">Wedding Gifts</h3>
+                    <p class="text-obsidian/70 text-sm leading-relaxed">
+                        Celebrate love with traditional Japanese elegance. Perfect for the couple who appreciates authentic craftsmanship.
+                    </p>
+                </div>
+
+                <!-- Japanese Souvenirs -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🗾</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-3">Japanese Souvenirs</h3>
+                    <p class="text-obsidian/70 text-sm leading-relaxed">
+                        Take home a piece of Japanese culture. Authentic masu crafted using 1300-year-old techniques.
+                    </p>
+                </div>
+
+                <!-- Luxury Sake Experience -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🍶</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-3">Luxury Sake Experience</h3>
+                    <p class="text-obsidian/70 text-sm leading-relaxed">
+                        Elevate your sake tasting with traditional vessels. Experience sake the way it was meant to be enjoyed.
+                    </p>
+                </div>
+
+                <!-- Corporate Gifts -->
+                <div class="text-center p-6 bg-white rounded-xl shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-3xl">🏢</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-3">Corporate Gifts</h3>
+                    <p class="text-obsidian/70 text-sm leading-relaxed">
+                        Impress clients and partners with sophisticated Japanese craftsmanship. Custom branding available.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Information -->
+    <section class="py-16 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading text-3xl font-light mb-4">Order Information</h2>
+                <p class="text-cream/80 max-w-2xl mx-auto">
+                    Special pricing and services for bulk orders
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-cream/10 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-gold text-2xl">📦</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-3">Bulk Discount</h3>
+                    <p class="text-cream/80 mb-4">
+                        Order 20 or more pieces and receive special pricing. Perfect for events, restaurants, and retail.
+                    </p>
+                    <button class="btn-primary">Get Bulk Pricing</button>
+                </div>
+                
+                <div class="bg-cream/10 rounded-xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-gold text-2xl">📞</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold mb-3">Large Orders</h3>
+                    <p class="text-cream/80 mb-4">
+                        For orders of 100+ pieces, please contact us directly. We offer custom packaging and special rates.
+                    </p>
+                    <button class="btn-primary">Contact Us</button>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <div class="bg-cream/5 rounded-xl p-6">
+                    <h4 class="font-semibold text-cream mb-4">Shipping & Delivery</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-cream/80">
+                        <div>
+                            <strong>Europe:</strong> 3-5 business days<br>
+                            Free shipping over €100
+                        </div>
+                        <div>
+                            <strong>North America:</strong> 5-7 business days<br>
+                            Express shipping available
+                        </div>
+                        <div>
+                            <strong>Rest of World:</strong> 7-14 business days<br>
+                            Tracked & insured
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cream border-t border-hinoki py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+                        <span class="ml-2 font-heading text-lg font-semibold">FOMUS</span>
+                    </div>
+                    <p class="text-obsidian/70 text-sm">
+                        Bringing 1300 years of Japanese craftsmanship to the world.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-obsidian mb-4">Shop</h4>
+                    <ul class="space-y-2 text-sm text-obsidian/70">
+                        <li><a href="#" class="hover:text-gold">Standard Collection</a></li>
+                        <li><a href="#" class="hover:text-gold">Mini Collection</a></li>
+                        <li><a href="#" class="hover:text-gold">Custom Orders</a></li>
+                        <li><a href="#" class="hover:text-gold">Gift Sets</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-obsidian mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-obsidian/70">
+                        <li><a href="#" class="hover:text-gold">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-gold">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-gold">Returns</a></li>
+                        <li><a href="#" class="hover:text-gold">Care Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-obsidian mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm text-obsidian/70">
+                        <li><a href="#" class="hover:text-gold">Instagram</a></li>
+                        <li><a href="#" class="hover:text-gold">Facebook</a></li>
+                        <li><a href="#" class="hover:text-gold">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-gold">About FOMUS</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-hinoki pt-8 text-center">
+                <p class="text-obsidian/60 text-sm">
+                    © 2024 FOMUS. All rights reserved. | 
+                    <a href="#" class="hover:text-gold">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-gold">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 簡単なカート機能のプレースホルダー
+        let cart = [];
+        
+        function addToCart(productName, price) {
+            cart.push({name: productName, price: price});
+            updateCartDisplay();
+            alert(`${productName} added to cart!`);
+        }
+        
+        function updateCartDisplay() {
+            const cartCount = document.querySelector('.rounded-full');
+            if (cartCount) {
+                cartCount.textContent = cart.length;
+            }
+        }
+        
+        // 通貨切り替え機能のプレースホルダー
+        function switchCurrency(currency) {
+            console.log(`Switching to ${currency}`);
+            // 実装では全ての価格を変換
+        }
+        
+        // 言語切り替え機能のプレースホルダー
+        function switchLanguage(language) {
+            console.log(`Switching to ${language}`);
+            // 実装では適切な言語ファイルを読み込み
+        }
+        
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

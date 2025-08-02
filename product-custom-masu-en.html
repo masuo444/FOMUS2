@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Design Masu - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- Header -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-en.html" class="text-obsidian hover:text-gold transition-colors">Back to Collection</a>
+                    <a href="index-en.html" class="text-obsidian hover:text-gold transition-colors">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="text-sm mb-8">
+                <a href="index-en.html" class="text-obsidian/60 hover:text-gold">Home</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-en.html" class="text-obsidian/60 hover:text-gold">MASU Collection</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">Custom Design Masu</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left: Product Images -->
+                <div class="space-y-4">
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                        <img src="オーダーメイド２.JPG" alt="Custom Design Masu" class="w-full h-full object-cover">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-md cursor-pointer hover:shadow-lg transition-shadow">
+                            <img src="オーダーメイド.JPG" alt="Custom Design Masu Details" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-square rounded-lg overflow-hidden shadow-md cursor-pointer hover:shadow-lg transition-shadow">
+                            <img src="オーダーメイド３.jpg" alt="Custom Design Masu Variations" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Information -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">Custom Design Masu</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            Completely custom-designed masu tailored to your needs. Corporate logos, family crests, anniversary messages -
+                            we precisely engrave any design. Create your one-of-a-kind special masu.
+                        </p>
+                    </div>
+
+                    <!-- Design Pricing -->
+                    <div class="bg-gold/10 rounded-lg p-6 border border-gold/30">
+                        <h3 class="font-semibold text-obsidian mb-3">Design Pricing Structure</h3>
+                        <div class="space-y-2 text-sm text-obsidian/80">
+                            <div class="flex justify-between">
+                                <span>Design Additional Fee:</span>
+                                <span class="font-semibold text-gold">€60</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Production Cost (per piece):</span>
+                                <span class="font-semibold text-gold">€3</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-obsidian/60 mt-3">*Fees are added to the basic masu price</p>
+                    </div>
+
+                    <!-- Size Details -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Size Details</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Masu Size</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">External<br>L×W×H<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Internal<br>L×W×H<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Base<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Capacity<br>(ml)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">Mini Masu</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">Basic Masu</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Design Consultation -->
+                    <div class="bg-gold/10 rounded-lg shadow-lg p-6 border border-gold/30">
+                        <h3 class="font-semibold text-obsidian mb-4">About Design Consultation</h3>
+                        <p class="text-obsidian/80 mb-4">
+                            Custom design requires prior consultation. Please feel free to contact us about design details and specifications.
+                        </p>
+                        <div class="space-y-3">
+                            <a href="mailto:info@fomus.com" class="flex items-center justify-center w-full bg-obsidian text-cream px-6 py-3 rounded-lg font-semibold hover:bg-obsidian/80 transition-all duration-300">
+                                <span class="mr-2">📧</span>
+                                Contact by Email
+                            </a>
+                            <a href="https://www.instagram.com/fomus_official" target="_blank" class="flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                                <span class="mr-2">📱</span>
+                                Contact on Instagram
+                            </a>
+                        </div>
+                        <p class="text-xs text-obsidian/60 mt-3">
+                            *Pricing may vary depending on design complexity and production time
+                        </p>
+                    </div>
+
+                    <!-- Coating Option -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Coating Process (Optional)</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">No Coating</span>
+                                        <p class="text-sm text-obsidian/60">Enjoy the natural wood texture</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">With Coating</span>
+                                        <p class="text-sm text-obsidian/60">Special coating for enhanced durability</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Product Features -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Product Features</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Precise design expression by laser engraving
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Made from Japanese hinoki cypress
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Completely original design
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Production time: approximately 2-3 weeks
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Consultation Buttons -->
+                    <div class="space-y-4">
+                        <p class="text-center text-obsidian/70 text-sm">
+                            Custom product orders require prior consultation
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <a href="mailto:info@fomus.com" class="flex items-center justify-center bg-obsidian text-cream px-6 py-3 rounded-lg font-semibold hover:bg-obsidian/80 transition-all duration-300">
+                                <span class="mr-2">📧</span>
+                                Email Consultation
+                            </a>
+                            <a href="https://www.instagram.com/fomus_official" target="_blank" class="flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                                <span class="mr-2">📱</span>
+                                Instagram Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Production Process -->
+            <div class="mt-20">
+                <h3 class="font-heading text-3xl font-light text-obsidian text-center mb-12">Production Process</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">1</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">Design Confirmation</h4>
+                        <p class="text-sm text-obsidian/70">We confirm your design and adjust it to a producible form</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">2</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">Masu Production</h4>
+                        <p class="text-sm text-obsidian/70">We create the masu body using traditional methods with selected hinoki</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">3</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">Design Engraving</h4>
+                        <p class="text-sm text-obsidian/70">We precisely engrave your design using laser engraving machine</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold font-bold text-xl">4</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-2">Finishing & Shipping</h4>
+                        <p class="text-sm text-obsidian/70">We apply final finishing and carefully package for delivery to you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

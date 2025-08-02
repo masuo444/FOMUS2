@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>枡 - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- 头部导航 -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-zh.html" class="text-obsidian hover:text-gold transition-colors">返回系列</a>
+                    <a href="index-zh.html" class="text-obsidian hover:text-gold transition-colors">首页</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 产品详情 -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 面包屑导航 -->
+            <nav class="text-sm mb-8">
+                <a href="index-zh.html" class="text-obsidian/60 hover:text-gold">首页</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-zh.html" class="text-obsidian/60 hover:text-gold">MASU系列</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">枡</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 左侧：产品图片 -->
+                <div class="space-y-4">
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                        <img src="basic masu.JPG" alt="枡" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- 右侧：产品信息 -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">枡</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            拥有1300年历史的日本传统枡。采用日本桧木材料，运用传统工艺精心制作的正宗枡器。
+                            作为量米工具和庆祝场合的酒器，体现了日本文化的精髓。
+                        </p>
+                    </div>
+
+                    <!-- 尺寸详情 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">尺寸详情</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">枡大小</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">外寸<br>长×宽×高<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内寸<br>长×宽×高<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">底板<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">容量<br>(ml)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">价格</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">迷你枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">基础枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 涂装加工选项 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">涂装加工（可选）</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">无涂装</span>
+                                        <p class="text-sm text-obsidian/60">享受天然木材质感</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">涂装加工</span>
+                                        <p class="text-sm text-obsidian/60">提高耐久性的特殊加工</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 产品特色 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">产品特色</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                采用日本桧木材料
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                传统无钉接合技术
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                工匠手工完成
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 购买按钮 -->
+                    <div class="space-y-4">
+                        <button onclick="proceedToStripe()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            购买
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 产品详细信息 -->
+            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">产品规格</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">材质</span>
+                            <span class="text-obsidian font-semibold">日本桧木材</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">制作工艺</span>
+                            <span class="text-obsidian font-semibold">传统组木技术</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">表面处理</span>
+                            <span class="text-obsidian font-semibold">无涂装（自然表面）</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">用途</span>
+                            <span class="text-obsidian font-semibold">酒器・装饰品</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">保养方法</h3>
+                    <div class="space-y-4 text-obsidian/80">
+                        <p>1. 使用后请用中性洗涤剂轻柔清洗</p>
+                        <p>2. 完全干燥后再收纳</p>
+                        <p>3. 避免阳光直射保存</p>
+                        <p>4. 建议定期用植物油保养</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let basePrice = 20; // 迷你枡初始价格
+        let coatingPrice = 0; // 涂装费用
+        
+        function updateDisplay() {
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            const itemPrice = basePrice + coatingPrice;
+            const sizeText = selectedSize === 'mini' ? '迷你' : '基础';
+            const coatingText = selectedCoating === 'coating' ? '（含涂装加工）' : '';
+            
+            document.getElementById('total-price').textContent = `€${itemPrice}`;
+            document.getElementById('order-summary').textContent = `${sizeText}枡${coatingText}`;
+        }
+
+        // 尺寸・涂装变更时的价格更新
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'size') {
+                basePrice = e.target.value === 'mini' ? 20 : 30;
+                updateDisplay();
+                
+            }
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+                updateDisplay();
+                
+            }
+        });
+
+        function proceedToStripe() {
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            
+            // Stripe产品链接映射
+            const stripeLinks = {
+                'mini-none': 'https://buy.stripe.com/basic-masu-mini',
+                'mini-coating': 'https://buy.stripe.com/basic-masu-mini-coated',
+                'basic-none': 'https://buy.stripe.com/basic-masu-basic',
+                'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
+            };
+            
+            const productKey = `${selectedSize}-${selectedCoating}`;
+            const stripeUrl = stripeLinks[productKey];
+            
+            if (stripeUrl) {
+                // 添加数量参数（如果Stripe支持）
+                // 数量在Stripe端选择
+                window.open(stripeUrl, '_blank');
+            } else {
+                alert('抱歉，我们正在准备此产品的支付链接。请联系我们。');
+            }
+        }
+    </script>
+</body>
+</html>

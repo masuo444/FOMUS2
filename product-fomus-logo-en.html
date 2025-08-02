@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUS Logo Masu - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- Header -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-en.html" class="text-obsidian hover:text-gold transition-colors">Back to Collection</a>
+                    <a href="index-en.html" class="text-obsidian hover:text-gold transition-colors">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="text-sm mb-8">
+                <a href="index-en.html" class="text-obsidian/60 hover:text-gold">Home</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-en.html" class="text-obsidian/60 hover:text-gold">MASU Collection</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">FOMUS Logo Masu</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Left: Product Image -->
+                <div class="space-y-4">
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                        <img src="FOMUS枡.png" alt="FOMUS Logo Masu" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Right: Product Information -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">FOMUS Logo Masu</h1>
+                        <div id="product-price" class="text-3xl font-bold text-gold mb-4">€30</div>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            Special masu with beautifully carved FOMUS brand logo. Embodying brand identity,
+                            this is a valuable collector's item. Perfect for gifts and business settings.
+                        </p>
+                    </div>
+
+                    <!-- Size Details -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Size Details</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Masu Size</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">External<br>L×W×H<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Internal<br>L×W×H<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Base<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Capacity<br>(ml)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">Mini Masu</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€30</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">Basic Masu</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€40</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Coating Option -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Coating Process (Optional)</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3" onchange="updatePricing()">
+                                    <div>
+                                        <span class="font-semibold">No Coating</span>
+                                        <p class="text-sm text-obsidian/60">Enjoy the natural wood texture</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3" onchange="updatePricing()">
+                                    <div>
+                                        <span class="font-semibold">With Coating</span>
+                                        <p class="text-sm text-obsidian/60">Special coating for enhanced durability</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Product Features -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">Product Features</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Brand officially certified item
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Two sizes available
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                Perfect for gifts and business use
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Purchase Button -->
+                    <div class="space-y-4">
+                        <button onclick="proceedToStripe()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            Purchase
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Usage Scenarios -->
+            <div class="mt-20">
+                <h3 class="font-heading text-3xl font-light text-obsidian text-center mb-12">Various Usage Scenarios for FOMUS Logo Masu</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🎁</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-3">Special Gift</h4>
+                        <p class="text-sm text-obsidian/70">
+                            The perfect item for important business partners or special people, conveying the value of the FOMUS brand.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🏢</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-3">Business Scene</h4>
+                        <p class="text-sm text-obsidian/70">
+                            Use as corporate gifts or branding tools. A business item placed on executive desks 
+                            to show understanding of Japanese culture and sophistication.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-gold text-2xl">🍶</span>
+                        </div>
+                        <h4 class="font-semibold text-obsidian mb-3">Sake Cup</h4>
+                        <p class="text-sm text-obsidian/70">
+                            Fully functions as a traditional masu. Creates a special hospitality atmosphere 
+                            when enjoying sake as a special sake cup.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Story -->
+            <div class="mt-20 bg-gradient-to-br from-gold/10 to-hinoki/10 rounded-xl p-12">
+                <h3 class="font-heading text-3xl font-light text-obsidian text-center mb-8">About the FOMUS Brand</h3>
+                <div class="max-w-4xl mx-auto text-center">
+                    <p class="text-lg text-obsidian/80 leading-relaxed mb-6">
+                        FOMUS's mission is to revive the traditional Japanese craft "masu" with 1300 years of history.
+                        Beyond just traditional crafts, we provide cultural value that blends into modern lifestyles.
+                    </p>
+                    <p class="text-obsidian/70">
+                        This FOMUS Logo Masu is an item that most symbolically expresses such brand identity.
+                        The logo carved on your chosen size tells the story of the fusion of Japanese aesthetics and modern design.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedSize = 'mini';
+        let basePrice = 30; // Mini masu price
+        let coatingPrice = 0; // Coating fee
+        
+        function updateSizeSelection() {
+            const selectedSizeInput = document.querySelector('input[name="size"]:checked');
+            selectedSize = selectedSizeInput.value;
+            
+            // Update price
+            if (selectedSize === 'mini') {
+                basePrice = 30;
+            } else {
+                basePrice = 40;
+            }
+            
+            updatePricing();
+            updateBorderStyles();
+        }
+
+        function updateBorderStyles() {
+            const sizeInputs = document.querySelectorAll('input[name="size"]');
+            sizeInputs.forEach(input => {
+                const label = input.closest('label');
+                if (input.checked) {
+                    label.className = 'flex items-center justify-between p-4 border-2 border-gold rounded-lg bg-gold/5 cursor-pointer';
+                } else {
+                    label.className = 'flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50';
+                }
+            });
+        }
+
+        function updatePricing() {
+            const selectedCoating = document.querySelector('input[name="coating"]:checked');
+            coatingPrice = selectedCoating && selectedCoating.value === 'coating' ? 10 : 0;
+            
+            const itemPrice = basePrice + coatingPrice;
+            const sizeText = selectedSize === 'mini' ? 'Mini' : 'Basic';
+            const coatingText = selectedCoating && selectedCoating.value === 'coating' ? ' (With Coating)' : '';
+            
+            document.getElementById('product-price').textContent = `€${itemPrice}`;
+            if (document.getElementById('total-price')) {
+                document.getElementById('total-price').textContent = `€${itemPrice}`;
+            }
+            if (document.getElementById('order-summary')) {
+                document.getElementById('order-summary').textContent = `FOMUS Logo Masu (${sizeText})${coatingText}`;
+            }
+        }
+
+        function proceedToStripe() {
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            
+            // Stripe product link mapping
+            const stripeLinks = {
+                'mini-none': 'https://buy.stripe.com/fomus-logo-mini',
+                'mini-coating': 'https://buy.stripe.com/fomus-logo-mini-coated',
+                'basic-none': 'https://buy.stripe.com/fomus-logo-basic',
+                'basic-coating': 'https://buy.stripe.com/fomus-logo-basic-coated'
+            };
+            
+            const productKey = `${selectedSize}-${selectedCoating}`;
+            const stripeUrl = stripeLinks[productKey];
+            
+            if (stripeUrl) {
+                window.open(stripeUrl, '_blank');
+            } else {
+                alert('Sorry, we are preparing the payment link for this product. Please contact us.');
+            }
+        }
+
+        // Initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            updatePricing();
+        });
+    </script>
+</body>
+</html>

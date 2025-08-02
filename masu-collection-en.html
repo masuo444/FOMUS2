@@ -112,8 +112,8 @@
                                 <span class="text-gold">✓</span>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-obsidian mb-1">Century-Old Hinoki Selection</h3>
-                                <p class="text-sm text-obsidian/70">Using only hinoki cypress over 100 years old</p>
+                                <h3 class="font-semibold text-obsidian mb-1">Hinoki Wood Selection</h3>
+                                <p class="text-sm text-obsidian/70">Japanese Hinoki wood used</p>
                             </div>
                         </div>
                         <div class="flex items-start space-x-4">
@@ -137,124 +137,358 @@
                     </div>
                 </div>
                 
-                <div class="bg-gradient-to-br from-hinoki/30 to-gold/30 rounded-lg p-8 h-96 flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="w-32 h-32 bg-gold/20 rounded mx-auto mb-4"></div>
-                        <p class="text-obsidian/60 italic">MASU Collection Image</p>
+                <div class="aspect-square rounded-lg overflow-hidden shadow-lg">
+                    <img src="MASU collection.png" alt="MASU Collection" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Navigation -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mt-20">
+                <h3 class="font-heading text-3xl font-light text-obsidian text-center mb-12">Product Categories</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic MASU -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="document.getElementById('basic-masu-section').scrollIntoView({behavior: 'smooth'})">
+                        <div class="h-48 rounded-t-xl overflow-hidden">
+                            <img src="basic masu.JPG" alt="Basic MASU" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-heading text-xl font-semibold text-obsidian mb-3">Basic MASU</h4>
+                            <p class="text-obsidian/70 text-sm mb-4">
+                                Preserving 1300 years of tradition. Enjoy the simple and beautiful basic masu.
+                            </p>
+                            <span class="text-gold font-semibold">View Details →</span>
+                        </div>
+                    </div>
+
+                    <!-- FOMUS Brand Logo Masu -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="document.getElementById('fomus-logo-section').scrollIntoView({behavior: 'smooth'})">
+                        <div class="h-48 rounded-t-xl overflow-hidden">
+                            <img src="FOMUS枡.png" alt="FOMUS Brand Logo Masu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-heading text-xl font-semibold text-obsidian mb-3">FOMUS Brand Logo Masu</h4>
+                            <p class="text-obsidian/70 text-sm mb-4">
+                                A special masu embodying brand identity. A valuable collector's item.
+                            </p>
+                            <span class="text-gold font-semibold">View Details →</span>
+                        </div>
+                    </div>
+
+                    <!-- Custom Order Masu -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer" onclick="document.getElementById('custom-masu-section').scrollIntoView({behavior: 'smooth'})">
+                        <div class="h-48 rounded-t-xl overflow-hidden">
+                            <img src="オーダーメイド２.JPG" alt="Custom Order Masu" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="font-heading text-xl font-semibold text-obsidian mb-3">Custom Order Masu</h4>
+                            <p class="text-obsidian/70 text-sm mb-4">
+                                One-of-a-kind masu. We create completely custom-made masu according to your requirements.
+                            </p>
+                            <span class="text-gold font-semibold">View Details →</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Lineup -->
-    <section class="py-20 bg-gradient-fomus">
+    <!-- FOMUS Brand Logo Masu Section -->
+    <section id="fomus-logo-section" class="py-20 bg-gradient-to-br from-gold/10 to-gold/20">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-heading text-4xl font-light text-obsidian text-center mb-16">Product Lineup</h2>
+            <h2 class="font-heading text-4xl font-light text-center mb-16">
+                <span class="text-gradient-gold">FOMUS Brand Logo Masu</span>
+            </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Traditional Masu -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                    <div class="h-64 bg-gradient-to-br from-hinoki/20 to-hinoki/40 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-hinoki/40 rounded-lg"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">Traditional Masu</h3>
-                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
-                            Classic series faithfully recreating traditional forms. A timeless design carrying 1300 years of history into the modern era.
-                        </p>
-                        
-                        <!-- Size Options -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Size Selection</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-hinoki/20 text-obsidian text-xs rounded hover:bg-hinoki/30 transition-colors">Mini Masu</button>
-                                <button class="px-3 py-1 bg-hinoki/40 text-obsidian text-xs rounded font-semibold">Basic Masu</button>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h3 class="font-heading text-3xl font-light mb-6">Embody Brand Identity</h3>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        A special masu with FOMUS brand logo beautifully engraved. Embodying brand identity,
+                        this is a valuable collector's item. Perfect for gifts and business occasions.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">Precision Laser Engraving</h4>
+                                <p class="text-sm text-obsidian/70">Beautiful logo expression using latest technology</p>
                             </div>
                         </div>
                         
-                        <!-- Coating Options -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Coating</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded font-semibold">With</button>
-                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">Without</button>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">Two Size Options</h4>
+                                <p class="text-sm text-obsidian/70">Choose from Mini and Basic sizes</p>
                             </div>
                         </div>
                         
-                        <p class="text-gold font-bold text-lg mb-4">¥50,000~</p>
-                        <button class="btn-primary w-full">Customize & Order</button>
-                    </div>
-                </div>
-                
-                <!-- Custom Made Masu -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                    <div class="h-64 bg-gradient-to-br from-gold/20 to-gold/40 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-gold/40 rounded-lg"></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">Custom Made Masu</h3>
-                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
-                            Completely custom production tailored to customer requirements. All materials, sizes, and decorations made to order.
-                        </p>
-                        
-                        <!-- Size Options -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Size Selection</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded hover:bg-gold/30 transition-colors">Mini Masu</button>
-                                <button class="px-3 py-1 bg-gold/40 text-obsidian text-xs rounded font-semibold">Basic Masu</button>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">Coating Treatment (Optional)</h4>
+                                <p class="text-sm text-obsidian/70">Special coating for enhanced durability (+€10)</p>
                             </div>
                         </div>
-                        
-                        <!-- Coating Options -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Coating</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-gold/20 text-obsidian text-xs rounded font-semibold">With</button>
-                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">Without</button>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gold font-bold text-lg mb-4">¥200,000~</p>
-                        <button class="btn-primary w-full">Customize & Order</button>
                     </div>
                 </div>
                 
-                <!-- FOMUS Original Design Masu -->
-                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
-                    <div class="h-64 bg-gradient-to-br from-obsidian/20 to-obsidian/40 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-obsidian/40 rounded-lg"></div>
+                <div class="space-y-8">
+                    <!-- Product Image -->
+                    <div class="max-w-sm mx-auto">
+                        <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                            <img src="FOMUS枡.png" alt="FOMUS Brand Logo Masu" class="w-full h-full object-cover">
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-heading text-2xl font-semibold text-obsidian mb-3">FOMUS Original</h3>
-                        <p class="text-obsidian/70 mb-4 text-sm leading-relaxed">
-                            Innovative design series with contemporary interpretation. Unique art pieces where tradition and innovation merge.
-                        </p>
-                        
-                        <!-- Size Options -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Size Selection</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-obsidian/20 text-obsidian text-xs rounded hover:bg-obsidian/30 transition-colors">Mini Masu</button>
-                                <button class="px-3 py-1 bg-obsidian/40 text-cream text-xs rounded font-semibold">Basic Masu</button>
-                            </div>
-                        </div>
-                        
-                        <!-- Coating Options -->
-                        <div class="mb-4">
-                            <h4 class="text-obsidian font-semibold mb-2 text-sm">Coating</h4>
-                            <div class="flex gap-2">
-                                <button class="px-3 py-1 bg-obsidian/30 text-cream text-xs rounded font-semibold">With</button>
-                                <button class="px-3 py-1 bg-gray-200 text-obsidian text-xs rounded hover:bg-gray-300 transition-colors">Without</button>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gold font-bold text-lg mb-4">¥300,000~</p>
-                        <button class="btn-primary w-full">Customize & Order</button>
+                    
+                    <div class="text-center">
+                        <button onclick="window.location.href='product-fomus-logo-en.html'" class="bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            View Details
+                        </button>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Basic MASU Section -->
+    <section id="basic-masu-section" class="py-20 bg-gradient-to-br from-hinoki/10 to-hinoki/20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-center mb-16">
+                <span class="text-gradient-gold">Basic MASU</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h3 class="font-heading text-3xl font-light mb-6">Traditional Beauty As It Is</h3>
+                    <p class="text-lg text-obsidian/80 mb-8 leading-relaxed">
+                        The traditional Japanese masu with 1300 years of history. Basic MASU, with its simple yet perfect proportions,
+                        embodies the essence of Japanese culture. You can feel Japanese aesthetics in every scene from daily use to special occasions.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-hinoki/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">Selected Hinoki Material</h4>
+                                <p class="text-sm text-obsidian/70">Authentic specifications using Japanese Hinoki wood</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-hinoki/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">Traditional Nail-Free Construction</h4>
+                                <p class="text-sm text-obsidian/70">Carefully crafted using ancient joinery techniques</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-hinoki/30 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian mb-1">Two Size Options</h4>
+                                <p class="text-sm text-obsidian/70">Choose according to your needs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- Product Image -->
+                    <div class="max-w-sm mx-auto">
+                        <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                            <img src="basic masu.JPG" alt="Basic MASU" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button onclick="window.location.href='product-masu-en.html'" class="bg-hinoki text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-hinoki transition-all duration-300 border-2 border-hinoki">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order Masu Section -->
+    <section id="custom-masu-section" class="py-20 bg-obsidian text-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-center mb-16">
+                <span class="text-gradient-gold">Custom Order Masu</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h3 class="font-heading text-3xl font-light mb-6">One-of-a-Kind Masu</h3>
+                    <p class="text-lg text-cream/80 mb-8 leading-relaxed">
+                        We create completely custom-made masu according to your requirements.
+                        Corporate logos, family crests, anniversary messages - we precision-engrave any design.
+                        Delivered as a precious keepsake or special gift, your one-of-a-kind masu.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-cream mb-1">Choose Size</h4>
+                                <p class="text-sm text-cream/70">Select from Mini Masu or Basic Masu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-cream mb-1">Customize Design</h4>
+                                <p class="text-sm text-cream/70">Freely design logos, text, patterns, etc.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="text-gold">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-cream mb-1">Coating Treatment (Optional)</h4>
+                                <p class="text-sm text-cream/70">Special coating for enhanced durability (+€10)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- Product Image -->
+                    <div class="max-w-sm mx-auto">
+                        <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                            <img src="オーダーメイド２.JPG" alt="Custom Order Masu" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button onclick="window.location.href='product-custom-masu-en.html'" class="bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-cream hover:text-obsidian transition-all duration-300 border-2 border-gold">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOMUS Original Design Section -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-4xl font-light text-obsidian text-center mb-16">Product Lineup Summary</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Basic MASU -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-48 rounded-t-xl overflow-hidden">
+                        <img src="basic masu.JPG" alt="Basic MASU" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-semibold text-obsidian mb-2">Basic MASU</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">Mini Masu</span>
+                                <span class="text-gold font-semibold">€20</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">Basic Masu</span>
+                                <span class="text-gold font-semibold">€30</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='product-masu-en.html'" class="btn-primary w-full mt-4 text-sm py-2">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- FOMUS Logo MASU -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-48 rounded-t-xl overflow-hidden">
+                        <img src="FOMUS枡.png" alt="FOMUS Logo MASU" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-semibold text-obsidian mb-2">FOMUS Logo MASU</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">Mini Masu</span>
+                                <span class="text-gold font-semibold">€30</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">Basic Masu</span>
+                                <span class="text-gold font-semibold">€40</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='product-fomus-logo-en.html'" class="btn-primary w-full mt-4 text-sm py-2">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- FOMUS Original Design MASU -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-48 rounded-t-xl overflow-hidden">
+                        <img src="オーダーメイド３.jpg" alt="FOMUS Original Design MASU" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-semibold text-obsidian mb-2">FOMUS Original Design MASU</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">Mini Masu</span>
+                                <span class="text-gold font-semibold">€25</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">Basic Masu</span>
+                                <span class="text-gold font-semibold">€35</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='product-fomus-original-en.html'" class="btn-primary w-full mt-4 text-sm py-2">View Details</button>
+                    </div>
+                </div>
+                
+                <!-- Custom Order MASU -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500">
+                    <div class="h-48 rounded-t-xl overflow-hidden">
+                        <img src="オーダーメイド２.JPG" alt="Custom Order MASU" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-heading text-lg font-semibold text-obsidian mb-2">Custom Order MASU</h3>
+                        <div class="space-y-2 mb-3">
+                            <div class="text-xs text-obsidian/60">Starting from €93</div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">Mini Masu</span>
+                                <span class="text-gold font-semibold">€93</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-obsidian/70">Basic Masu</span>
+                                <span class="text-gold font-semibold">€103</span>
+                            </div>
+                        </div>
+                        <button onclick="window.location.href='product-custom-masu-en.html'" class="btn-primary w-full mt-4 text-sm py-2">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -326,13 +560,106 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-8">
-                <div class="flex items-center justify-center mb-4">
-                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+    <footer class="bg-gradient-to-br from-obsidian via-obsidian/95 to-obsidian/90 text-cream">
+        <!-- Main Footer Content -->
+        <div class="py-20">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
+                    <!-- Brand Information -->
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center mb-6">
+                            <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-10 mr-4">
+                            <span class="font-heading text-2xl font-light">FOMUS</span>
+                        </div>
+                        <p class="text-cream/80 text-lg leading-relaxed mb-6">
+                            Our mission is to revive the Japanese masu with 1300 years of history<br>
+                            and deliver the beauty of traditional crafts to the world.
+                        </p>
+                        <div class="flex space-x-6">
+                            <a href="#" class="text-cream/60 hover:text-gold transition-colors duration-300">
+                                <span class="text-2xl">📧</span>
+                            </a>
+                            <a href="#" class="text-cream/60 hover:text-gold transition-colors duration-300">
+                                <span class="text-2xl">📱</span>
+                            </a>
+                            <a href="#" class="text-cream/60 hover:text-gold transition-colors duration-300">
+                                <span class="text-2xl">🌐</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Categories -->
+                    <div>
+                        <h4 class="font-heading text-xl font-semibold text-gold mb-6">Product Categories</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#basic-masu-section" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>Basic MASU
+                            </a></li>
+                            <li><a href="#fomus-logo-section" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>FOMUS Brand Logo Masu
+                            </a></li>
+                            <li><a href="#custom-masu-section" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>Custom Order Masu
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Support -->
+                    <div>
+                        <h4 class="font-heading text-xl font-semibold text-gold mb-6">Support</h4>
+                        <ul class="space-y-3">
+                            <li><a href="#" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>Contact Us
+                            </a></li>
+                            <li><a href="#" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>Shipping Information
+                            </a></li>
+                            <li><a href="#" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>Returns & Exchanges
+                            </a></li>
+                            <li><a href="#" class="text-cream/70 hover:text-gold transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>FAQ
+                            </a></li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="text-cream/60 text-sm">© 2024 FOMUS. All rights reserved.</p>
+                
+                <!-- Related Brands -->
+                <div class="border-t border-cream/10 pt-16 mb-16">
+                    <h4 class="font-heading text-2xl font-light text-center text-gold mb-12">Related Brands</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-cream/5 rounded-xl p-6 hover:bg-cream/10 transition-all duration-300">
+                            <h5 class="font-heading text-lg font-semibold text-gold mb-3">FOMUS PARURE</h5>
+                            <p class="text-cream/70 text-sm mb-4">Exquisite jewelry collection inspired by masu forms</p>
+                            <a href="https://masu-jewelry.com" target="_blank" class="text-gold hover:text-cream transition-colors text-sm">
+                                Visit Site →
+                            </a>
+                        </div>
+                        <div class="bg-cream/5 rounded-xl p-6 hover:bg-cream/10 transition-all duration-300">
+                            <h5 class="font-heading text-lg font-semibold text-gold mb-3">MASUKAME</h5>
+                            <p class="text-cream/70 text-sm mb-4">Limited edition masterpiece series featuring turtle motifs</p>
+                            <a href="https://masukame.com" target="_blank" class="text-gold hover:text-cream transition-colors text-sm">
+                                Visit Site →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-cream/10 py-8">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-cream/60 text-sm mb-4 md:mb-0">
+                        © 2024 FOMUS. All rights reserved. Bridging 1300 years of Japanese craftsmanship to the world.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">Terms of Service</a>
+                        <a href="#" class="text-cream/60 hover:text-gold transition-colors">Commercial Law</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

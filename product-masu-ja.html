@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>枡 - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- ヘッダー -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-ja.html" class="text-obsidian hover:text-gold transition-colors">コレクションに戻る</a>
+                    <a href="index-ja.html" class="text-obsidian hover:text-gold transition-colors">ホーム</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 商品詳細 -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- パンくずリスト -->
+            <nav class="text-sm mb-8">
+                <a href="index-ja.html" class="text-obsidian/60 hover:text-gold">ホーム</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-ja.html" class="text-obsidian/60 hover:text-gold">MASUコレクション</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">枡</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 左側：商品画像 -->
+                <div class="space-y-4">
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg">
+                        <img src="basic masu.JPG" alt="枡" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- 右側：商品情報 -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">枡</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            1300年の歴史を持つ日本の伝統的な枡。日本産ヒノキ材を使用し、伝統工法で丁寧に製作された正統派の枡です。
+                            穀物を量る道具として、また祝いの席での酒器として、日本文化の本質を体現する逸品です。
+                        </p>
+                    </div>
+
+                    <!-- サイズ詳細 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">サイズ詳細</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">桝の大きさ</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">外寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">底板<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内容量<br>(ml)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">価格</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">ミニ枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">ベーシック枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- コーティング加工オプション -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">コーティング加工（オプション）</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">コーティングなし</span>
+                                        <p class="text-sm text-obsidian/60">自然な木の風合いをお楽しみください</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">コーティング加工あり</span>
+                                        <p class="text-sm text-obsidian/60">耐久性を向上させる特殊加工</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-- 商品特徴 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">商品特徴</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                日本産のヒノキ材を使用
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                釘を使わない伝統組み木技術
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                職人による手作業仕上げ
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 購入ボタン -->
+                    <div class="space-y-4">
+                        <button onclick="proceedToStripe()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            購入する
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品詳細情報 -->
+            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">商品仕様</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">素材</span>
+                            <span class="text-obsidian font-semibold">日本産ヒノキ材</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">製法</span>
+                            <span class="text-obsidian font-semibold">伝統組み木技術</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">仕上げ</span>
+                            <span class="text-obsidian font-semibold">無塗装（自然仕上げ）</span>
+                        </div>
+                        <div class="flex justify-between border-b border-gray-200 pb-2">
+                            <span class="text-obsidian/70">用途</span>
+                            <span class="text-obsidian font-semibold">酒器・装飾品</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">お手入れ方法</h3>
+                    <div class="space-y-4 text-obsidian/80">
+                        <p>1. 使用後は中性洗剤で優しく洗浄してください</p>
+                        <p>2. 完全に乾燥させてから保管してください</p>
+                        <p>3. 直射日光を避けて保管してください</p>
+                        <p>4. 定期的に植物性オイルで手入れすることをお勧めします</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let basePrice = 20; // ミニ枡の初期価格
+        let coatingPrice = 0; // コーティング料金
+        
+
+
+
+        function updateDisplay() {
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            const itemPrice = basePrice + coatingPrice;
+            const sizeText = selectedSize === 'mini' ? 'ミニ' : 'ベーシック';
+            const coatingText = selectedCoating === 'coating' ? '（コーティング加工付き）' : '';
+            
+            document.getElementById('total-price').textContent = `€${itemPrice}`;
+            document.getElementById('order-summary').textContent = `${sizeText}枡${coatingText}`;
+        }
+
+        // サイズ・コーティング変更時の価格更新
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'size') {
+                basePrice = e.target.value === 'mini' ? 20 : 30;
+                updateDisplay();
+                
+            }
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+                updateDisplay();
+                
+            }
+        });
+
+        function proceedToStripe() {
+            const selectedSize = document.querySelector('input[name="size"]:checked').value;
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            
+            // Stripe商品リンクマッピング
+            const stripeLinks = {
+                'mini-none': 'https://buy.stripe.com/basic-masu-mini',
+                'mini-coating': 'https://buy.stripe.com/basic-masu-mini-coated',
+                'basic-none': 'https://buy.stripe.com/basic-masu-basic',
+                'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
+            };
+            
+            const productKey = `${selectedSize}-${selectedCoating}`;
+            const stripeUrl = stripeLinks[productKey];
+            
+            if (stripeUrl) {
+                // 数量パラメータを追加（Stripeがサポートしている場合）
+                // 数量は Stripe側で選択
+                window.open(stripeUrl, '_blank');
+            } else {
+                alert('申し訳ございませんが、この商品の決済リンクを準備中です。お問い合わせください。');
+            }
+        }
+    </script>
+</body>
+</html>
