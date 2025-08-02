@@ -35,11 +35,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6 sm:h-8">
                 </div>
-                <div class="flex items-center space-x-4">
-                    <a href="masu-collection-ja.html" class="text-obsidian hover:text-gold transition-colors">コレクションに戻る</a>
-                    <a href="index-ja.html" class="text-obsidian hover:text-gold transition-colors">ホーム</a>
+                <div class="flex items-center space-x-2 sm:space-x-4">
+                    <a href="masu-collection-ja.html" class="text-obsidian hover:text-gold transition-colors text-sm sm:text-base">コレクションに戻る</a>
+                    <a href="index-ja.html" class="text-obsidian hover:text-gold transition-colors text-sm sm:text-base">ホーム</a>
                 </div>
             </div>
         </div>
@@ -49,21 +49,21 @@
     <div class="pt-20 pb-16 min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- パンくずリスト -->
-            <nav class="text-sm mb-8">
+            <nav class="text-xs sm:text-sm mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap">
                 <a href="index-ja.html" class="text-obsidian/60 hover:text-gold">ホーム</a>
-                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="mx-2 sm:mx-3 text-obsidian/40">/</span>
                 <a href="masu-collection-ja.html" class="text-obsidian/60 hover:text-gold">MASUコレクション</a>
-                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="mx-2 sm:mx-3 text-obsidian/40">/</span>
                 <span class="text-obsidian">ミニ枡</span>
             </nav>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
                 <!-- 左側：商品画像 -->
                 <div class="space-y-4">
-                    <div class="bg-gradient-to-br from-hinoki/20 to-hinoki/40 rounded-xl h-96 flex items-center justify-center">
+                    <div class="bg-gradient-to-br from-hinoki/20 to-hinoki/40 rounded-xl h-64 sm:h-80 lg:h-96 flex items-center justify-center">
                         <div class="w-24 h-24 bg-hinoki/60 rounded-lg shadow-lg"></div>
                     </div>
-                    <div class="grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-3 gap-2 sm:gap-4">
                         <div class="bg-hinoki/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-hinoki/40 transition-colors">
                             <div class="w-6 h-6 bg-hinoki/60 rounded"></div>
                         </div>
@@ -79,8 +79,8 @@
                 <!-- 右側：商品情報 -->
                 <div class="space-y-6">
                     <div>
-                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">ミニ枡</h1>
-                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                        <h1 class="font-heading text-2xl sm:text-3xl lg:text-4xl font-light text-obsidian mb-4">ミニ枡</h1>
+                        <p class="text-base sm:text-lg text-obsidian/80 leading-relaxed">
                             1300年の歴史を持つ日本の伝統的な枡をコンパクトサイズで製作。日本産ヒノキ材を使用し、伝統工法で丁寧に製作された正統派の枡です。
                             小さなサイズながら、日本文化の本質を体現する逸品です。
                         </p>
@@ -89,8 +89,8 @@
                     <!-- 価格表示 -->
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <div class="flex justify-between items-center mb-4">
-                            <h3 class="font-semibold text-obsidian text-xl">ミニ枡</h3>
-                            <span class="text-gold font-bold text-3xl">€20</span>
+                            <h3 class="font-semibold text-obsidian text-lg sm:text-xl">ミニ枡</h3>
+                            <span class="text-gold font-bold text-2xl sm:text-3xl">€20</span>
                         </div>
                         <p class="text-sm text-obsidian/60">コンパクトサイズで場所を取らず、ギフトにも最適</p>
                     </div>
@@ -111,30 +111,30 @@
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="font-semibold text-obsidian mb-4">サイズ詳細</h3>
                         <div class="overflow-x-auto">
-                            <table class="w-full text-sm">
+                            <table class="w-full text-xs sm:text-sm min-w-max">
                                 <thead>
                                     <tr class="border-b border-gray-200">
-                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">桝の大きさ</th>
-                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">外寸<br>縦×横×高さ<br>(mm)</th>
-                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内寸<br>縦×横×高さ<br>(mm)</th>
-                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">底板<br>(mm)</th>
-                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内容量<br>(ml)</th>
+                                        <th class="text-left py-2 px-2 sm:px-3 font-semibold text-obsidian whitespace-nowrap">桝の大きさ</th>
+                                        <th class="text-left py-2 px-2 sm:px-3 font-semibold text-obsidian whitespace-nowrap">外寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-2 sm:px-3 font-semibold text-obsidian whitespace-nowrap">内寸<br>縦×横×高さ<br>(mm)</th>
+                                        <th class="text-left py-2 px-2 sm:px-3 font-semibold text-obsidian whitespace-nowrap">底板<br>(mm)</th>
+                                        <th class="text-left py-2 px-2 sm:px-3 font-semibold text-obsidian whitespace-nowrap">内容量<br>(ml)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="border-b border-gray-100">
-                                        <td class="py-3 px-3 font-medium">ミニ枡</td>
-                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
-                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
-                                        <td class="py-3 px-3 text-obsidian/70">8</td>
-                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                        <td class="py-3 px-2 sm:px-3 font-medium whitespace-nowrap">ミニ枡</td>
+                                        <td class="py-3 px-2 sm:px-3 text-obsidian/70 whitespace-nowrap">56×56×39</td>
+                                        <td class="py-3 px-2 sm:px-3 text-obsidian/70 whitespace-nowrap">41×41×31</td>
+                                        <td class="py-3 px-2 sm:px-3 text-obsidian/70 whitespace-nowrap">8</td>
+                                        <td class="py-3 px-2 sm:px-3 text-obsidian/70 whitespace-nowrap">54</td>
                                     </tr>
                                     <tr>
-                                        <td class="py-3 px-3 font-medium">ベーシック枡</td>
-                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
-                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
-                                        <td class="py-3 px-3 text-obsidian/70">11</td>
-                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                        <td class="py-3 px-2 sm:px-3 font-medium whitespace-nowrap">ベーシック枡</td>
+                                        <td class="py-3 px-2 sm:px-3 text-obsidian/70 whitespace-nowrap">85×85×56</td>
+                                        <td class="py-3 px-2 sm:px-3 text-obsidian/70 whitespace-nowrap">63.5×63.5×45</td>
+                                        <td class="py-3 px-2 sm:px-3 text-obsidian/70 whitespace-nowrap">11</td>
+                                        <td class="py-3 px-2 sm:px-3 text-obsidian/70 whitespace-nowrap">180</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -145,25 +145,25 @@
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="font-semibold text-obsidian mb-4">コーティング加工（オプション）</h3>
                         <div class="space-y-3">
-                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                            <label class="flex items-center justify-between p-3 sm:p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
                                 <div class="flex items-center">
-                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3 w-4 h-4 sm:w-5 sm:h-5">
                                     <div>
-                                        <span class="font-semibold">コーティングなし</span>
-                                        <p class="text-sm text-obsidian/60">自然な木の風合いをお楽しみください</p>
+                                        <span class="font-semibold text-sm sm:text-base">コーティングなし</span>
+                                        <p class="text-xs sm:text-sm text-obsidian/60">自然な木の風合いをお楽しみください</p>
                                     </div>
                                 </div>
-                                <span class="text-obsidian font-semibold">€0</span>
+                                <span class="text-obsidian font-semibold text-sm sm:text-base">€0</span>
                             </label>
-                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                            <label class="flex items-center justify-between p-3 sm:p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
                                 <div class="flex items-center">
-                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <input type="radio" name="coating" value="coating" class="mr-3 w-4 h-4 sm:w-5 sm:h-5">
                                     <div>
-                                        <span class="font-semibold">コーティング加工あり</span>
-                                        <p class="text-sm text-obsidian/60">耐久性を向上させる特殊加工</p>
+                                        <span class="font-semibold text-sm sm:text-base">コーティング加工あり</span>
+                                        <p class="text-xs sm:text-sm text-obsidian/60">耐久性を向上させる特殊加工</p>
                                     </div>
                                 </div>
-                                <span class="text-gold font-semibold">+€10</span>
+                                <span class="text-gold font-semibold text-sm sm:text-base">+€10</span>
                             </label>
                         </div>
                     </div>
@@ -172,9 +172,9 @@
                     <div class="bg-white rounded-lg shadow-lg p-6">
                         <h3 class="font-semibold text-obsidian mb-4">数量</h3>
                         <div class="flex items-center space-x-4">
-                            <button onclick="decreaseQuantity()" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition-colors">-</button>
-                            <span id="quantity" class="text-xl font-semibold">1</span>
-                            <button onclick="increaseQuantity()" class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition-colors">+</button>
+                            <button onclick="decreaseQuantity()" class="w-12 h-12 sm:w-10 sm:h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition-colors text-lg sm:text-base">-</button>
+                            <span id="quantity" class="text-xl sm:text-xl font-semibold min-w-[2rem] text-center">1</span>
+                            <button onclick="increaseQuantity()" class="w-12 h-12 sm:w-10 sm:h-10 bg-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-300 transition-colors text-lg sm:text-base">+</button>
                         </div>
                     </div>
 
@@ -199,10 +199,10 @@
 
                     <!-- 購入ボタン -->
                     <div class="space-y-4">
-                        <button onclick="addToCart()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                        <button onclick="addToCart()" class="w-full bg-gold text-obsidian px-6 py-4 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold text-sm sm:text-base">
                             カートに追加 - <span id="total-price">€20</span>
                         </button>
-                        <button onclick="buyNow()" class="w-full bg-obsidian text-gold px-8 py-4 rounded-lg font-semibold hover:bg-gold hover:text-obsidian transition-all duration-300 border-2 border-obsidian">
+                        <button onclick="buyNow()" class="w-full bg-obsidian text-gold px-6 py-4 sm:px-8 sm:py-4 rounded-lg font-semibold hover:bg-gold hover:text-obsidian transition-all duration-300 border-2 border-obsidian text-sm sm:text-base">
                             今すぐ購入
                         </button>
                     </div>
@@ -210,41 +210,41 @@
             </div>
 
             <!-- 商品詳細情報 -->
-            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">商品仕様</h3>
+            <div class="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+                    <h3 class="font-heading text-xl sm:text-2xl font-semibold text-obsidian mb-4 sm:mb-6">商品仕様</h3>
                     <div class="space-y-4">
                         <div class="flex justify-between border-b border-gray-200 pb-2">
-                            <span class="text-obsidian/70">サイズ</span>
-                            <span class="text-obsidian font-semibold">ミニサイズ</span>
+                            <span class="text-obsidian/70 text-sm sm:text-base">サイズ</span>
+                            <span class="text-obsidian font-semibold text-sm sm:text-base">ミニサイズ</span>
                         </div>
                         <div class="flex justify-between border-b border-gray-200 pb-2">
-                            <span class="text-obsidian/70">素材</span>
-                            <span class="text-obsidian font-semibold">日本産ヒノキ材</span>
+                            <span class="text-obsidian/70 text-sm sm:text-base">素材</span>
+                            <span class="text-obsidian font-semibold text-sm sm:text-base">日本産ヒノキ材</span>
                         </div>
                         <div class="flex justify-between border-b border-gray-200 pb-2">
-                            <span class="text-obsidian/70">製法</span>
-                            <span class="text-obsidian font-semibold">伝統組み木技術</span>
+                            <span class="text-obsidian/70 text-sm sm:text-base">製法</span>
+                            <span class="text-obsidian font-semibold text-sm sm:text-base text-right">伝統組み木技術</span>
                         </div>
                         <div class="flex justify-between border-b border-gray-200 pb-2">
-                            <span class="text-obsidian/70">仕上げ</span>
-                            <span class="text-obsidian font-semibold">無塗装（自然仕上げ）</span>
+                            <span class="text-obsidian/70 text-sm sm:text-base">仕上げ</span>
+                            <span class="text-obsidian font-semibold text-sm sm:text-base text-right">無塗装（自然仕上げ）</span>
                         </div>
                         <div class="flex justify-between border-b border-gray-200 pb-2">
-                            <span class="text-obsidian/70">用途</span>
-                            <span class="text-obsidian font-semibold">酒器・装飾品・ギフト</span>
+                            <span class="text-obsidian/70 text-sm sm:text-base">用途</span>
+                            <span class="text-obsidian font-semibold text-sm sm:text-base text-right">酒器・装飾品・ギフト</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">お手入れ方法</h3>
-                    <div class="space-y-4 text-obsidian/80">
-                        <p>1. 使用後は中性洗剤で優しく洗浄してください</p>
-                        <p>2. 完全に乾燥させてから保管してください</p>
-                        <p>3. 直射日光を避けて保管してください</p>
-                        <p>4. 定期的に植物性オイルで手入れすることをお勧めします</p>
-                        <p class="text-sm italic text-obsidian/60">※ミニサイズのため、お手入れも簡単です</p>
+                <div class="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+                    <h3 class="font-heading text-xl sm:text-2xl font-semibold text-obsidian mb-4 sm:mb-6">お手入れ方法</h3>
+                    <div class="space-y-3 sm:space-y-4 text-obsidian/80">
+                        <p class="text-sm sm:text-base leading-relaxed">1. 使用後は中性洗剤で優しく洗浄してください</p>
+                        <p class="text-sm sm:text-base leading-relaxed">2. 完全に乾燥させてから保管してください</p>
+                        <p class="text-sm sm:text-base leading-relaxed">3. 直射日光を避けて保管してください</p>
+                        <p class="text-sm sm:text-base leading-relaxed">4. 定期的に植物性オイルで手入れすることをお勧めします</p>
+                        <p class="text-xs sm:text-sm italic text-obsidian/60">※ミニサイズのため、お手入れも簡単です</p>
                     </div>
                 </div>
             </div>

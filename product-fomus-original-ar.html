@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماسو التصميم الأصلي FOMUS - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Amiri', 'serif'],
+                        body: ['Noto Sans Arabic', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            font-family: 'Noto Sans Arabic', sans-serif; 
+            direction: rtl;
+        }
+        .font-heading { font-family: 'Amiri', serif; }
+        
+        /* RTL specific adjustments */
+        .rtl-flex-reverse { flex-direction: row-reverse; }
+        .rtl-text-left { text-align: right; }
+        .rtl-text-right { text-align: left; }
+        .rtl-ml-3 { margin-right: 0.75rem; margin-left: 0; }
+        .rtl-mr-3 { margin-left: 0.75rem; margin-right: 0; }
+        .rtl-space-x-reverse > * + * {
+            margin-right: 1rem;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- الرأس -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 rtl-flex-reverse">
+                <div class="flex items-center rtl-space-x-reverse space-x-4">
+                    <a href="masu-collection-ar.html" class="text-obsidian hover:text-gold transition-colors">العودة إلى المجموعة</a>
+                    <a href="index-ar.html" class="text-obsidian hover:text-gold transition-colors">الرئيسية</a>
+                </div>
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- تفاصيل المنتج -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- مسار التنقل -->
+            <nav class="text-sm mb-8">
+                <a href="index-ar.html" class="text-obsidian/60 hover:text-gold">الرئيسية</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-ar.html" class="text-obsidian/60 hover:text-gold">مجموعة MASU</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">ماسو التصميم الأصلي FOMUS</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- اليمين: صور المنتج -->
+                <div class="space-y-4 lg:order-2">
+                    <div class="bg-gradient-to-br from-obsidian/20 to-obsidian/40 rounded-xl h-96 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-obsidian/60 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-cream font-bold text-sm">ORIGINAL</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اليسار: معلومات المنتج -->
+                <div class="space-y-6 lg:order-1">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">ماسو التصميم الأصلي FOMUS</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            سلسلة تصاميم مبتكرة بتفسير عصري. عمل فني فريد يجمع بين التقليد والابتكار.
+                            الأنماط والموضوعات الأصلية التي أبدعها مصممو FOMUS تعبر عن إمكانيات جديدة للماسو.
+                        </p>
+                    </div>
+
+                    <!-- تنوع التصاميم -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">تنوع التصاميم</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-obsidian/20 to-obsidian/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">الهندسة الحديثة</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-gold/20 to-gold/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">مزج شرقي غربي</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-hinoki/20 to-hinoki/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">موضوعات طبيعية</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-cream/20 to-cream/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">فن تجريدي</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تفاصيل الأحجام -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">تفاصيل الأحجام</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">حجم الماسو</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">الأبعاد الخارجية<br>الطول×العرض×الارتفاع<br>(مم)</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">الأبعاد الداخلية<br>الطول×العرض×الارتفاع<br>(مم)</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">القاعدة<br>(مم)</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">السعة<br>(مل)</th>
+                                        <th class="text-right py-2 px-3 font-semibold text-obsidian">السعر</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">ماسو صغير</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€25</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">ماسو أساسي</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€35</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- خيارات الطلاء -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">معالجة الطلاء (اختياري)</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <span class="text-obsidian font-semibold">€0</span>
+                                <div class="flex items-center rtl-flex-reverse">
+                                    <div class="rtl-mr-3">
+                                        <span class="font-semibold">بدون طلاء</span>
+                                        <p class="text-sm text-obsidian/60">استمتع بملمس الخشب الطبيعي</p>
+                                    </div>
+                                    <input type="radio" name="coating" value="none" checked class="rtl-ml-3">
+                                </div>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <span class="text-gold font-semibold">+€10</span>
+                                <div class="flex items-center rtl-flex-reverse">
+                                    <div class="rtl-mr-3">
+                                        <span class="font-semibold">مع طلاء</span>
+                                        <p class="text-sm text-obsidian/60">معالجة خاصة تحسن المتانة</p>
+                                    </div>
+                                    <input type="radio" name="coating" value="coating" class="rtl-ml-3">
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- خصائص المنتج -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">خصائص المنتج</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center rtl-flex-reverse">
+                                <span class="w-2 h-2 bg-gold rounded-full rtl-ml-3"></span>
+                                تصميم أصلي من مصممي FOMUS الحصريين
+                            </li>
+                            <li class="flex items-center rtl-flex-reverse">
+                                <span class="w-2 h-2 bg-gold rounded-full rtl-ml-3"></span>
+                                دمج التقنيات التقليدية والفن الحديث
+                            </li>
+                            <li class="flex items-center rtl-flex-reverse">
+                                <span class="w-2 h-2 bg-gold rounded-full rtl-ml-3"></span>
+                                إنتاج محدود مع رقم تسلسلي
+                            </li>
+                            <li class="flex items-center rtl-flex-reverse">
+                                <span class="w-2 h-2 bg-gold rounded-full rtl-ml-3"></span>
+                                قطعة للمجموعين
+                            </li>
+                            <li class="flex items-center rtl-flex-reverse">
+                                <span class="w-2 h-2 bg-gold rounded-full rtl-ml-3"></span>
+                                خشب السرو الياباني (هينوكي)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- زر الشراء -->
+                    <div class="space-y-4">
+                        <button onclick="proceedToStripe()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            شراء
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مفهوم التصميم -->
+            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">مفهوم التصميم</h3>
+                    <div class="space-y-4 text-obsidian/80">
+                        <p>
+                            <strong>إعادة بناء التقليد:</strong>
+                            باتخاذ شكل الماسو ذي التاريخ العريق البالغ 1300 عام كأساس، نقترح جمالية جديدة تناسب نمط الحياة المعاصر.
+                        </p>
+                        <p>
+                            <strong>جسر ثقافي:</strong>
+                            بدمج الجماليات اليابانية مع الفن الحديث، نهدف إلى إنشاء أعمال محبوبة عبر الحدود.
+                        </p>
+                        <p>
+                            <strong>السعي وراء الجمال الوظيفي:</strong>
+                            نعبر عن الجمال الوظيفي الحقيقي الذي يجمع بين الجمال الزخرفي والعملية.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">معلومات الفنان</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 rtl-space-x-reverse">
+                            <div>
+                                <h4 class="font-semibold text-obsidian">فريق تصميم FOMUS</h4>
+                                <p class="text-sm text-obsidian/70 mb-2">مجموعة خبراء في الحرف التقليدية والفن الحديث</p>
+                                <p class="text-xs text-obsidian/60">
+                                    برسالة تتمثل في الجمع بين وراثة تقنيات الحرف التقليدية اليابانية وإبداع الفن الحديث،
+                                    يستمرون في إنتاج العديد من الأعمال المبتكرة.
+                                </p>
+                            </div>
+                            <div class="w-16 h-16 bg-obsidian/20 rounded-full flex-shrink-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let basePrice = 25; // السعر الأولي للماسو الصغير
+        let coatingPrice = 0; // رسوم الطلاء
+
+        function updateDisplay() {
+            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            const itemPrice = basePrice + coatingPrice;
+            const sizeText = selectedSize === 'mini' ? 'صغير' : 'أساسي';
+            const coatingText = selectedCoating === 'coating' ? ' (مع الطلاء)' : '';
+            
+            const totalPriceEl = document.getElementById('total-price');
+            const orderSummaryEl = document.getElementById('order-summary');
+            
+            if (totalPriceEl) totalPriceEl.textContent = `€${itemPrice}`;
+            if (orderSummaryEl) orderSummaryEl.textContent = `ماسو التصميم الأصلي FOMUS (${sizeText})${coatingText}`;
+        }
+
+        // تحديث السعر عند تغيير الحجم والطلاء
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'size') {
+                basePrice = e.target.value === 'mini' ? 25 : 35;
+                updateDisplay();
+            }
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+                updateDisplay();
+            }
+        });
+
+        function proceedToStripe() {
+            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            
+            // ربط روابط منتجات Stripe
+            const stripeLinks = {
+                'mini-none': 'https://buy.stripe.com/fomus-original-mini',
+                'mini-coating': 'https://buy.stripe.com/fomus-original-mini-coated',
+                'basic-none': 'https://buy.stripe.com/fomus-original-basic',
+                'basic-coating': 'https://buy.stripe.com/fomus-original-basic-coated'
+            };
+            
+            const productKey = `${selectedSize}-${selectedCoating}`;
+            const stripeUrl = stripeLinks[productKey];
+            
+            if (stripeUrl) {
+                window.open(stripeUrl, '_blank');
+            } else {
+                alert('عذراً، رابط الدفع لهذا المنتج قيد الإعداد. يرجى الاتصال بنا.');
+            }
+        }
+    </script>
+</body>
+</html>

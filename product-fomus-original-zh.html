@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUS原创设计方枡 - FOMUS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif SC', 'serif'],
+                        body: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        .font-heading { font-family: 'Noto Serif SC', serif; }
+    </style>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- 页眉 -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="masu-collection-zh.html" class="text-obsidian hover:text-gold transition-colors">返回收藏</a>
+                    <a href="index-zh.html" class="text-obsidian hover:text-gold transition-colors">首页</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 产品详情 -->
+    <div class="pt-20 pb-16 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 面包屑导航 -->
+            <nav class="text-sm mb-8">
+                <a href="index-zh.html" class="text-obsidian/60 hover:text-gold">首页</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <a href="masu-collection-zh.html" class="text-obsidian/60 hover:text-gold">MASU收藏</a>
+                <span class="mx-3 text-obsidian/40">/</span>
+                <span class="text-obsidian">FOMUS原创设计方枡</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 左侧：产品图片 -->
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-br from-obsidian/20 to-obsidian/40 rounded-xl h-96 flex items-center justify-center">
+                        <div class="w-32 h-32 bg-obsidian/60 rounded-lg shadow-lg flex items-center justify-center">
+                            <span class="text-cream font-bold text-sm">ORIGINAL</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                        <div class="bg-obsidian/30 rounded-lg h-24 flex items-center justify-center cursor-pointer hover:bg-obsidian/40 transition-colors">
+                            <div class="w-8 h-8 bg-obsidian/60 rounded"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：产品信息 -->
+                <div class="space-y-6">
+                    <div>
+                        <h1 class="font-heading text-4xl font-light text-obsidian mb-4">FOMUS原创设计方枡</h1>
+                        <p class="text-lg text-obsidian/80 leading-relaxed">
+                            现代诠释的创新设计系列。传统与创新融合的独一无二艺术作品。
+                            FOMUS设计师打造的独创图案和主题，展现了方枡的全新可能性。
+                        </p>
+                    </div>
+
+                    <!-- 设计变化 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">设计变化</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-obsidian/20 to-obsidian/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">现代几何</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-gold/20 to-gold/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">和洋折衷</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-hinoki/20 to-hinoki/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">自然主题</p>
+                            </div>
+                            <div class="border border-gray-200 rounded-lg p-3 cursor-pointer hover:border-gold transition-colors">
+                                <div class="w-full h-16 bg-gradient-to-br from-cream/20 to-cream/40 rounded mb-2"></div>
+                                <p class="text-xs text-center text-obsidian/70">抽象艺术</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 尺寸详情 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">尺寸详情</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">方枡大小</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">外尺寸<br>长×宽×高<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">内尺寸<br>长×宽×高<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">底板<br>(mm)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">容量<br>(ml)</th>
+                                        <th class="text-left py-2 px-3 font-semibold text-obsidian">价格</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-3 font-medium">迷你方枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">56×56×39</td>
+                                        <td class="py-3 px-3 text-obsidian/70">41×41×31</td>
+                                        <td class="py-3 px-3 text-obsidian/70">8</td>
+                                        <td class="py-3 px-3 text-obsidian/70">54</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€25</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-3 font-medium">基础方枡</td>
+                                        <td class="py-3 px-3 text-obsidian/70">85×85×56</td>
+                                        <td class="py-3 px-3 text-obsidian/70">63.5×63.5×45</td>
+                                        <td class="py-3 px-3 text-obsidian/70">11</td>
+                                        <td class="py-3 px-3 text-obsidian/70">180</td>
+                                        <td class="py-3 px-3 font-bold text-gold">€35</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 涂层加工选项 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">涂层加工（选配）</h3>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="none" checked class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">无涂层</span>
+                                        <p class="text-sm text-obsidian/60">享受天然木质纹理</p>
+                                    </div>
+                                </div>
+                                <span class="text-obsidian font-semibold">€0</span>
+                            </label>
+                            <label class="flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+                                <div class="flex items-center">
+                                    <input type="radio" name="coating" value="coating" class="mr-3">
+                                    <div>
+                                        <span class="font-semibold">涂层加工</span>
+                                        <p class="text-sm text-obsidian/60">提高耐久性的特殊加工</p>
+                                    </div>
+                                </div>
+                                <span class="text-gold font-semibold">+€10</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 产品特征 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="font-semibold text-obsidian mb-4">产品特征</h3>
+                        <ul class="space-y-2 text-obsidian/80">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                FOMUS专属设计师独创设计
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                传统技艺与现代艺术的融合
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                限量生产・附序列号
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                收藏品级别
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-gold rounded-full mr-3"></span>
+                                日本国产桧木材质
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 购买按钮 -->
+                    <div class="space-y-4">
+                        <button onclick="proceedToStripe()" class="w-full bg-gold text-obsidian px-8 py-4 rounded-lg font-semibold hover:bg-obsidian hover:text-gold transition-all duration-300 border-2 border-gold">
+                            购买
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 设计理念 -->
+            <div class="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">设计理念</h3>
+                    <div class="space-y-4 text-obsidian/80">
+                        <p>
+                            <strong>传统的重构：</strong>
+                            以拥有1300年历史的方枡形状为基轴，提出适合现代生活方式的新美学意识。
+                        </p>
+                        <p>
+                            <strong>文化的桥梁：</strong>
+                            融合日本美学意识与现代艺术，旨在创造跨越国界深受喜爱的作品。
+                        </p>
+                        <p>
+                            <strong>功能美的追求：</strong>
+                            不仅具有装饰性的美丽，更兼具实用性的真正功能美。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="font-heading text-2xl font-semibold text-obsidian mb-6">艺术家信息</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-16 h-16 bg-obsidian/20 rounded-full flex-shrink-0"></div>
+                            <div>
+                                <h4 class="font-semibold text-obsidian">FOMUS 设计团队</h4>
+                                <p class="text-sm text-obsidian/70 mb-2">传统工艺与现代艺术的专家集团</p>
+                                <p class="text-xs text-obsidian/60">
+                                    以传承日本传统工艺技术与现代艺术创造性并重为使命，
+                                    持续创造众多创新作品。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let basePrice = 25; // 迷你方枡的初始价格
+        let coatingPrice = 0; // 涂层费用
+
+        function updateDisplay() {
+            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            const itemPrice = basePrice + coatingPrice;
+            const sizeText = selectedSize === 'mini' ? '迷你' : '基础';
+            const coatingText = selectedCoating === 'coating' ? '（附涂层加工）' : '';
+            
+            const totalPriceEl = document.getElementById('total-price');
+            const orderSummaryEl = document.getElementById('order-summary');
+            
+            if (totalPriceEl) totalPriceEl.textContent = `€${itemPrice}`;
+            if (orderSummaryEl) orderSummaryEl.textContent = `FOMUS原创设计方枡（${sizeText}）${coatingText}`;
+        }
+
+        // 尺寸・涂层变更时的价格更新
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'size') {
+                basePrice = e.target.value === 'mini' ? 25 : 35;
+                updateDisplay();
+            }
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+                updateDisplay();
+            }
+        });
+
+        function proceedToStripe() {
+            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
+            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
+            
+            // Stripe产品链接映射
+            const stripeLinks = {
+                'mini-none': 'https://buy.stripe.com/fomus-original-mini',
+                'mini-coating': 'https://buy.stripe.com/fomus-original-mini-coated',
+                'basic-none': 'https://buy.stripe.com/fomus-original-basic',
+                'basic-coating': 'https://buy.stripe.com/fomus-original-basic-coated'
+            };
+            
+            const productKey = `${selectedSize}-${selectedCoating}`;
+            const stripeUrl = stripeLinks[productKey];
+            
+            if (stripeUrl) {
+                window.open(stripeUrl, '_blank');
+            } else {
+                alert('很抱歉，此产品的支付链接正在准备中。请联系我们。');
+            }
+        }
+    </script>
+</body>
+</html>
