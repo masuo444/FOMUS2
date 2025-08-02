@@ -252,37 +252,16 @@
     </div>
 
     <script>
-        let basePrice = 25; // 迷你方枡的初始价格
         let coatingPrice = 0; // 涂层费用
-
-        function updateDisplay() {
-            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? '迷你' : '基础';
-            const coatingText = selectedCoating === 'coating' ? '（附涂层加工）' : '';
-            
-            const totalPriceEl = document.getElementById('total-price');
-            const orderSummaryEl = document.getElementById('order-summary');
-            
-            if (totalPriceEl) totalPriceEl.textContent = `€${itemPrice}`;
-            if (orderSummaryEl) orderSummaryEl.textContent = `FOMUS原创设计方枡（${sizeText}）${coatingText}`;
-        }
-
-        // 尺寸・涂层变更时的价格更新
+        
+        // 涂层选择变化时更新价格
         document.addEventListener('change', function(e) {
-            if (e.target.name === 'size') {
-                basePrice = e.target.value === 'mini' ? 25 : 35;
-                updateDisplay();
-            }
             if (e.target.name === 'coating') {
                 coatingPrice = e.target.value === 'coating' ? 10 : 0;
-                updateDisplay();
             }
         });
 
         function proceedToStripe() {
-            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
             
             // Stripe产品链接映射
@@ -293,13 +272,16 @@
                 'basic-coating': 'https://buy.stripe.com/fomus-original-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('很抱歉，此产品的支付链接正在准备中。请联系我们。');
+            // 由于没有尺寸选择界面，提示将在Stripe端选择尺寸
+            const message = selectedCoating === 'coating' ? 
+                '您将被重定向到带涂装选项的FOMUS原创设计方枡产品页面。请在Stripe结账页面选择尺寸。' :
+                '您将被重定向到FOMUS原创设计方枡产品页面。请在Stripe结账页面选择尺寸。';
+                
+            if (confirm(message)) {
+                // 基础产品页面链接（尺寸将在Stripe端选择）
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
     </script>

@@ -252,37 +252,16 @@
     </div>
 
     <script>
-        let basePrice = 25; // Prix initial du masu mini
         let coatingPrice = 0; // Frais de revêtement
-
-        function updateDisplay() {
-            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? 'Mini' : 'Basique';
-            const coatingText = selectedCoating === 'coating' ? ' (avec revêtement)' : '';
-            
-            const totalPriceEl = document.getElementById('total-price');
-            const orderSummaryEl = document.getElementById('order-summary');
-            
-            if (totalPriceEl) totalPriceEl.textContent = `€${itemPrice}`;
-            if (orderSummaryEl) orderSummaryEl.textContent = `Masu Design Original FOMUS (${sizeText})${coatingText}`;
-        }
-
-        // Mise à jour du prix lors des changements de taille et revêtement
+        
+        // Mise à jour du prix lors du changement de revêtement
         document.addEventListener('change', function(e) {
-            if (e.target.name === 'size') {
-                basePrice = e.target.value === 'mini' ? 25 : 35;
-                updateDisplay();
-            }
             if (e.target.name === 'coating') {
                 coatingPrice = e.target.value === 'coating' ? 10 : 0;
-                updateDisplay();
             }
         });
 
         function proceedToStripe() {
-            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
             
             // Mapping des liens produits Stripe
@@ -293,13 +272,16 @@
                 'basic-coating': 'https://buy.stripe.com/fomus-original-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('Désolé, le lien de paiement pour ce produit est en préparation. Veuillez nous contacter.');
+            // Message d'alerte car l'interface de sélection de taille n'est pas présente
+            const message = selectedCoating === 'coating' ? 
+                'Vous serez redirigé vers la page produit Masu Design Original FOMUS avec option de revêtement. Veuillez sélectionner la taille sur la page de paiement Stripe.' :
+                'Vous serez redirigé vers la page produit Masu Design Original FOMUS. Veuillez sélectionner la taille sur la page de paiement Stripe.';
+                
+            if (confirm(message)) {
+                // Lien vers la page produit de base (la taille sera sélectionnée côté Stripe)
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
     </script>

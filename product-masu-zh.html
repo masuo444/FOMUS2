@@ -205,37 +205,16 @@
     </div>
 
     <script>
-        
-        let basePrice = 20; // 迷你枡初始价格
         let coatingPrice = 0; // 涂装费用
         
-        function updateDisplay() {
-            const selectedSize = document.querySelector('input[name="size"]:checked').value;
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? '迷你' : '基础';
-            const coatingText = selectedCoating === 'coating' ? '（含涂装加工）' : '';
-            
-            document.getElementById('total-price').textContent = `€${itemPrice}`;
-            document.getElementById('order-summary').textContent = `${sizeText}枡${coatingText}`;
-        }
-
-        // 尺寸・涂装变更时的价格更新
+        // 涂装变更时的价格更新
         document.addEventListener('change', function(e) {
-            if (e.target.name === 'size') {
-                basePrice = e.target.value === 'mini' ? 20 : 30;
-                updateDisplay();
-                
-            }
             if (e.target.name === 'coating') {
                 coatingPrice = e.target.value === 'coating' ? 10 : 0;
-                updateDisplay();
-                
             }
         });
 
         function proceedToStripe() {
-            const selectedSize = document.querySelector('input[name="size"]:checked').value;
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
             
             // Stripe产品链接映射
@@ -246,15 +225,16 @@
                 'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                // 添加数量参数（如果Stripe支持）
-                // 数量在Stripe端选择
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('抱歉，我们正在准备此产品的支付链接。请联系我们。');
+            // 由于没有尺寸选择界面，显示关于在Stripe上选择尺寸的提醒
+            const message = selectedCoating === 'coating' ? 
+                '您将被重定向到带涂装选项的枡产品页面。请在Stripe支付页面选择尺寸。' :
+                '您将被重定向到枡产品页面。请在Stripe支付页面选择尺寸。';
+                
+            if (confirm(message)) {
+                // 链接到基础产品页面（尺寸在Stripe端选择）
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
     </script>

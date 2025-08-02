@@ -225,50 +225,14 @@
     </div>
 
     <script>
-        let selectedSize = 'mini';
-        let basePrice = 30; // ミニ枡の価格
         let coatingPrice = 0; // コーティング料金
         
-        function updateSizeSelection() {
-            const selectedSizeInput = document.querySelector('input[name="size"]:checked');
-            selectedSize = selectedSizeInput.value;
-            
-            // 価格を更新
-            if (selectedSize === 'mini') {
-                basePrice = 30;
-            } else {
-                basePrice = 40;
+        // コーティング変更時の価格更新
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
             }
-            
-            updatePricing();
-            updateBorderStyles();
-        }
-
-        function updateBorderStyles() {
-            const sizeInputs = document.querySelectorAll('input[name="size"]');
-            sizeInputs.forEach(input => {
-                const label = input.closest('label');
-                if (input.checked) {
-                    label.className = 'flex items-center justify-between p-4 border-2 border-gold rounded-lg bg-gold/5 cursor-pointer';
-                } else {
-                    label.className = 'flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50';
-                }
-            });
-        }
-
-
-        function updatePricing() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked');
-            coatingPrice = selectedCoating && selectedCoating.value === 'coating' ? 10 : 0;
-            
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? 'ミニ' : 'ベーシック';
-            const coatingText = selectedCoating && selectedCoating.value === 'coating' ? '（コーティング加工付き）' : '';
-            
-            document.getElementById('product-price').textContent = `€${itemPrice}`;
-            document.getElementById('total-price').textContent = `€${itemPrice}`;
-            document.getElementById('order-summary').textContent = `FOMUSロゴ枡（${sizeText}）${coatingText}`;
-        }
+        });
 
         function proceedToStripe() {
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
@@ -281,20 +245,18 @@
                 'basic-coating': 'https://buy.stripe.com/fomus-logo-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('申し訳ございませんが、この商品の決済リンクを準備中です。お問い合わせください。');
+            // サイズ選択UIがないため、Stripe側で選択する旨をアラート表示
+            const message = selectedCoating === 'coating' ? 
+                'コーティング加工オプション付きのFOMUSロゴ枡商品ページに移動します。サイズはStripe決済ページで選択してください。' :
+                'FOMUSロゴ枡商品ページに移動します。サイズはStripe決済ページで選択してください。';
+                
+            if (confirm(message)) {
+                // 基本的な商品ページへのリンク（サイズはStripe側で選択）
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
-
-        // 初期化
-        document.addEventListener('DOMContentLoaded', function() {
-            updateSizeSelection();
-        });
     </script>
 </body>
 </html>

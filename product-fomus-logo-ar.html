@@ -224,20 +224,14 @@
     </div>
 
     <script>
-        let selectedSize = 'mini';
-        let basePrice = 30; // سعر الماسو المصغر
         let coatingPrice = 0; // رسوم الطلاء
         
-        function updatePricing() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked');
-            coatingPrice = selectedCoating && selectedCoating.value === 'coating' ? 10 : 0;
-            
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? 'مصغر' : 'أساسي';
-            const coatingText = selectedCoating && selectedCoating.value === 'coating' ? ' (مع الطلاء)' : '';
-            
-            document.getElementById('product-price').textContent = `€${itemPrice}`;
-        }
+        // تحديث السعر عند تغيير الطلاء
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
+            }
+        });
 
         function proceedToStripe() {
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
@@ -250,20 +244,18 @@
                 'basic-coating': 'https://buy.stripe.com/fomus-logo-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('عذراً، نحن نعد رابط الدفع لهذا المنتج. يرجى الاتصال بنا.');
+            // رسالة تنبيه نظراً لعدم وجود واجهة اختيار الحجم
+            const message = selectedCoating === 'coating' ? 
+                'ستتم إعادة توجيهك إلى صفحة منتج ماسو شعار FOMUS مع خيار الطلاء. يرجى اختيار الحجم في صفحة الدفع الخاصة بـ Stripe.' :
+                'ستتم إعادة توجيهك إلى صفحة منتج ماسو شعار FOMUS. يرجى اختيار الحجم في صفحة الدفع الخاصة بـ Stripe.';
+                
+            if (confirm(message)) {
+                // رابط صفحة المنتج الأساسية (سيتم اختيار الحجم من جانب Stripe)
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
-
-        // التهيئة
-        document.addEventListener('DOMContentLoaded', function() {
-            updatePricing();
-        });
     </script>
 </body>
 </html>

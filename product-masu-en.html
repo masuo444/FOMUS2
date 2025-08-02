@@ -205,37 +205,16 @@
     </div>
 
     <script>
-        
-        let basePrice = 20; // Mini masu initial price
         let coatingPrice = 0; // Coating fee
         
-        function updateDisplay() {
-            const selectedSize = document.querySelector('input[name="size"]:checked').value;
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? 'Mini' : 'Basic';
-            const coatingText = selectedCoating === 'coating' ? ' (With Coating)' : '';
-            
-            document.getElementById('total-price').textContent = `€${itemPrice}`;
-            document.getElementById('order-summary').textContent = `${sizeText} Masu${coatingText}`;
-        }
-
-        // Price update on size/coating change
+        // Update price when coating changes
         document.addEventListener('change', function(e) {
-            if (e.target.name === 'size') {
-                basePrice = e.target.value === 'mini' ? 20 : 30;
-                updateDisplay();
-                
-            }
             if (e.target.name === 'coating') {
                 coatingPrice = e.target.value === 'coating' ? 10 : 0;
-                updateDisplay();
-                
             }
         });
 
         function proceedToStripe() {
-            const selectedSize = document.querySelector('input[name="size"]:checked').value;
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
             
             // Stripe product link mapping
@@ -246,15 +225,16 @@
                 'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                // Add quantity parameter (if supported by Stripe)
-                // Quantity is selected on Stripe side
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('Sorry, we are preparing the payment link for this product. Please contact us.');
+            // Since there's no size selection UI, show alert about size selection on Stripe
+            const message = selectedCoating === 'coating' ? 
+                'You will be redirected to the masu product page with coating option. Please select size on the Stripe payment page.' :
+                'You will be redirected to the masu product page. Please select size on the Stripe payment page.';
+                
+            if (confirm(message)) {
+                // Link to basic product page (size to be selected on Stripe side)
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
     </script>

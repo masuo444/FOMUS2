@@ -205,37 +205,16 @@
     </div>
 
     <script>
-        
-        let basePrice = 20; // السعر الأولي للماسو المصغر
         let coatingPrice = 0; // رسوم الطلاء
         
-        function updateDisplay() {
-            const selectedSize = document.querySelector('input[name="size"]:checked').value;
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? 'مصغر' : 'أساسي';
-            const coatingText = selectedCoating === 'coating' ? ' (مع الطلاء)' : '';
-            
-            document.getElementById('total-price').textContent = `€${itemPrice}`;
-            document.getElementById('order-summary').textContent = `${sizeText} ماسو${coatingText}`;
-        }
-
-        // تحديث السعر عند تغيير الحجم/الطلاء
+        // تحديث السعر عند تغيير الطلاء
         document.addEventListener('change', function(e) {
-            if (e.target.name === 'size') {
-                basePrice = e.target.value === 'mini' ? 20 : 30;
-                updateDisplay();
-                
-            }
             if (e.target.name === 'coating') {
                 coatingPrice = e.target.value === 'coating' ? 10 : 0;
-                updateDisplay();
-                
             }
         });
 
         function proceedToStripe() {
-            const selectedSize = document.querySelector('input[name="size"]:checked').value;
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
             
             // خريطة روابط منتجات سترايب
@@ -246,15 +225,16 @@
                 'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                // إضافة معامل الكمية (إذا كان مدعوماً من سترايب)
-                // يتم اختيار الكمية من جانب سترايب
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('عذراً، نحن نعد رابط الدفع لهذا المنتج. يرجى الاتصال بنا.');
+            // بما أنه لا توجد واجهة اختيار الحجم، اعرض تنبيهاً حول اختيار الحجم في سترايب
+            const message = selectedCoating === 'coating' ? 
+                'سيتم توجيهك إلى صفحة منتج الماسو مع خيار الطلاء. يرجى اختيار الحجم في صفحة الدفع الخاصة بسترايب.' :
+                'سيتم توجيهك إلى صفحة منتج الماسو. يرجى اختيار الحجم في صفحة الدفع الخاصة بسترايب.';
+                
+            if (confirm(message)) {
+                // رابط إلى صفحة المنتج الأساسية (سيتم اختيار الحجم من جانب سترايب)
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
     </script>

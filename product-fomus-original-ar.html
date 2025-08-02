@@ -266,37 +266,16 @@
     </div>
 
     <script>
-        let basePrice = 25; // السعر الأولي للماسو الصغير
         let coatingPrice = 0; // رسوم الطلاء
-
-        function updateDisplay() {
-            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? 'صغير' : 'أساسي';
-            const coatingText = selectedCoating === 'coating' ? ' (مع الطلاء)' : '';
-            
-            const totalPriceEl = document.getElementById('total-price');
-            const orderSummaryEl = document.getElementById('order-summary');
-            
-            if (totalPriceEl) totalPriceEl.textContent = `€${itemPrice}`;
-            if (orderSummaryEl) orderSummaryEl.textContent = `ماسو التصميم الأصلي FOMUS (${sizeText})${coatingText}`;
-        }
-
-        // تحديث السعر عند تغيير الحجم والطلاء
+        
+        // تحديث السعر عند تغيير الطلاء
         document.addEventListener('change', function(e) {
-            if (e.target.name === 'size') {
-                basePrice = e.target.value === 'mini' ? 25 : 35;
-                updateDisplay();
-            }
             if (e.target.name === 'coating') {
                 coatingPrice = e.target.value === 'coating' ? 10 : 0;
-                updateDisplay();
             }
         });
 
         function proceedToStripe() {
-            const selectedSize = document.querySelector('input[name="size"]:checked')?.value || 'mini';
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
             
             // ربط روابط منتجات Stripe
@@ -307,13 +286,16 @@
                 'basic-coating': 'https://buy.stripe.com/fomus-original-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('عذراً، رابط الدفع لهذا المنتج قيد الإعداد. يرجى الاتصال بنا.');
+            // رسالة تنبيه نظراً لعدم وجود واجهة اختيار الحجم
+            const message = selectedCoating === 'coating' ? 
+                'ستتم إعادة توجيهك إلى صفحة منتج ماسو التصميم الأصلي FOMUS مع خيار الطلاء. يرجى اختيار الحجم في صفحة الدفع الخاصة بـ Stripe.' :
+                'ستتم إعادة توجيهك إلى صفحة منتج ماسو التصميم الأصلي FOMUS. يرجى اختيار الحجم في صفحة الدفع الخاصة بـ Stripe.';
+                
+            if (confirm(message)) {
+                // رابط صفحة المنتج الأساسية (سيتم اختيار الحجم من جانب Stripe)
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
     </script>

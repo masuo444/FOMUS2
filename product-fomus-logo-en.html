@@ -224,53 +224,14 @@
     </div>
 
     <script>
-        let selectedSize = 'mini';
-        let basePrice = 30; // Mini masu price
         let coatingPrice = 0; // Coating fee
         
-        function updateSizeSelection() {
-            const selectedSizeInput = document.querySelector('input[name="size"]:checked');
-            selectedSize = selectedSizeInput.value;
-            
-            // Update price
-            if (selectedSize === 'mini') {
-                basePrice = 30;
-            } else {
-                basePrice = 40;
+        // Price update when coating changes
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'coating') {
+                coatingPrice = e.target.value === 'coating' ? 10 : 0;
             }
-            
-            updatePricing();
-            updateBorderStyles();
-        }
-
-        function updateBorderStyles() {
-            const sizeInputs = document.querySelectorAll('input[name="size"]');
-            sizeInputs.forEach(input => {
-                const label = input.closest('label');
-                if (input.checked) {
-                    label.className = 'flex items-center justify-between p-4 border-2 border-gold rounded-lg bg-gold/5 cursor-pointer';
-                } else {
-                    label.className = 'flex items-center justify-between p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50';
-                }
-            });
-        }
-
-        function updatePricing() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked');
-            coatingPrice = selectedCoating && selectedCoating.value === 'coating' ? 10 : 0;
-            
-            const itemPrice = basePrice + coatingPrice;
-            const sizeText = selectedSize === 'mini' ? 'Mini' : 'Basic';
-            const coatingText = selectedCoating && selectedCoating.value === 'coating' ? ' (With Coating)' : '';
-            
-            document.getElementById('product-price').textContent = `€${itemPrice}`;
-            if (document.getElementById('total-price')) {
-                document.getElementById('total-price').textContent = `€${itemPrice}`;
-            }
-            if (document.getElementById('order-summary')) {
-                document.getElementById('order-summary').textContent = `FOMUS Logo Masu (${sizeText})${coatingText}`;
-            }
-        }
+        });
 
         function proceedToStripe() {
             const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
@@ -283,20 +244,18 @@
                 'basic-coating': 'https://buy.stripe.com/fomus-logo-basic-coated'
             };
             
-            const productKey = `${selectedSize}-${selectedCoating}`;
-            const stripeUrl = stripeLinks[productKey];
-            
-            if (stripeUrl) {
-                window.open(stripeUrl, '_blank');
-            } else {
-                alert('Sorry, we are preparing the payment link for this product. Please contact us.');
+            // Alert message since size selection UI is not present
+            const message = selectedCoating === 'coating' ? 
+                'You will be redirected to the FOMUS Logo Masu product page with coating option. Please select the size on the Stripe checkout page.' :
+                'You will be redirected to the FOMUS Logo Masu product page. Please select the size on the Stripe checkout page.';
+                
+            if (confirm(message)) {
+                // Basic product page link (size will be selected on Stripe side)
+                const baseUrl = selectedCoating === 'coating' ? 
+                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
+                window.open(baseUrl, '_blank');
             }
         }
-
-        // Initialization
-        document.addEventListener('DOMContentLoaded', function() {
-            updatePricing();
-        });
     </script>
 </body>
 </html>
