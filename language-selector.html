@@ -31,7 +31,6 @@
             font-family: 'Noto Sans', sans-serif; 
             background: linear-gradient(135deg, #141414 0%, #1f1f1f 50%, #141414 100%);
             min-height: 100vh;
-            overflow: hidden;
         }
         .language-card {
             position: relative;
@@ -126,61 +125,61 @@
         <div class="absolute top-1/2 left-1/4 w-32 h-32 border border-hinoki/20 rounded-full floating" style="animation-delay: 1.5s;"></div>
     </div>
     
-    <div class="relative z-10 max-w-6xl mx-auto px-4 py-12">
+    <div class="relative z-10 max-w-6xl mx-auto px-4 py-4 sm:py-12">
         <!-- Logo -->
-        <div class="text-center mb-12 fade-in">
-            <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-24 md:h-32 mx-auto mb-8">
-            <h1 class="text-4xl md:text-6xl font-light mb-4">
+        <div class="text-center mb-6 sm:mb-12 fade-in">
+            <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-16 sm:h-24 md:h-32 mx-auto mb-4 sm:mb-8">
+            <h1 class="text-2xl sm:text-4xl md:text-6xl font-light mb-2 sm:mb-4">
                 <span class="gold-gradient glow">Select Your Language</span>
             </h1>
-            <p class="text-lg md:text-xl text-cream/70 font-light">Experience Japanese culture in your preferred language</p>
+            <p class="text-sm sm:text-lg md:text-xl text-cream/70 font-light">Experience Japanese culture in your preferred language</p>
         </div>
         
         <!-- Language cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6 mb-6 sm:mb-12">
             <!-- Japanese -->
-            <a href="index.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.1s;">
+            <a href="index.html" class="language-card rounded-xl p-4 sm:p-8 text-center block slide-up" style="animation-delay: 0.1s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇯🇵</div>
-                <h2 class="text-2xl font-light mb-2 text-gold">日本語</h2>
-                <p class="text-cream/60 text-sm">Japanese</p>
+                <div class="text-3xl sm:text-5xl mb-2 sm:mb-4">🇯🇵</div>
+                <h2 class="text-lg sm:text-2xl font-light mb-1 sm:mb-2 text-gold">日本語</h2>
+                <p class="text-cream/60 text-xs sm:text-sm">Japanese</p>
             </a>
             
             <!-- English -->
-            <a href="index-en.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.2s;">
+            <a href="index-en.html" class="language-card rounded-xl p-4 sm:p-8 text-center block slide-up" style="animation-delay: 0.2s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇬🇧</div>
-                <h2 class="text-2xl font-light mb-2 text-gold">English</h2>
-                <p class="text-cream/60 text-sm">英語</p>
+                <div class="text-3xl sm:text-5xl mb-2 sm:mb-4">🇬🇧</div>
+                <h2 class="text-lg sm:text-2xl font-light mb-1 sm:mb-2 text-gold">English</h2>
+                <p class="text-cream/60 text-xs sm:text-sm">英語</p>
             </a>
             
             <!-- Arabic -->
-            <a href="index-ar.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.3s;">
+            <a href="index-ar.html" class="language-card rounded-xl p-4 sm:p-8 text-center block slide-up" style="animation-delay: 0.3s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇦🇪</div>
-                <h2 class="text-2xl font-arabic font-light mb-2 text-gold">العربية</h2>
-                <p class="text-cream/60 text-sm">Arabic</p>
+                <div class="text-3xl sm:text-5xl mb-2 sm:mb-4">🇦🇪</div>
+                <h2 class="text-lg sm:text-2xl font-arabic font-light mb-1 sm:mb-2 text-gold">العربية</h2>
+                <p class="text-cream/60 text-xs sm:text-sm">Arabic</p>
             </a>
             
             <!-- Chinese -->
-            <a href="index-zh.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.4s;">
+            <a href="index-zh.html" class="language-card rounded-xl p-4 sm:p-8 text-center block slide-up" style="animation-delay: 0.4s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇨🇳</div>
-                <h2 class="text-2xl font-chinese font-light mb-2 text-gold">中文</h2>
-                <p class="text-cream/60 text-sm">Chinese</p>
+                <div class="text-3xl sm:text-5xl mb-2 sm:mb-4">🇨🇳</div>
+                <h2 class="text-lg sm:text-2xl font-chinese font-light mb-1 sm:mb-2 text-gold">中文</h2>
+                <p class="text-cream/60 text-xs sm:text-sm">Chinese</p>
             </a>
             
             <!-- French -->
-            <a href="index-fr.html" class="language-card rounded-2xl p-8 text-center block slide-up" style="animation-delay: 0.5s;">
+            <a href="index-fr.html" class="language-card rounded-xl p-4 sm:p-8 text-center block slide-up" style="animation-delay: 0.5s;">
                 <div class="corner-decoration top-left"></div>
                 <div class="corner-decoration bottom-right"></div>
-                <div class="text-5xl mb-4">🇫🇷</div>
-                <h2 class="text-2xl font-light mb-2 text-gold">Français</h2>
-                <p class="text-cream/60 text-sm">French</p>
+                <div class="text-3xl sm:text-5xl mb-2 sm:mb-4">🇫🇷</div>
+                <h2 class="text-lg sm:text-2xl font-light mb-1 sm:mb-2 text-gold">Français</h2>
+                <p class="text-cream/60 text-xs sm:text-sm">French</p>
             </a>
         </div>
         
