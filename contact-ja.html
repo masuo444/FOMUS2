@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>お問い合わせ - FOMUS | 日本文化とプレミアムクラフトの融合</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="FOMUSへのお問い合わせページ。ビジネス提携、商品に関するご質問、メンバーシップサポート、メディア関係など、お気軽にお問い合わせください。迅速かつ丁寧にご対応いたします。">
+    <meta name="keywords" content="FOMUS, お問い合わせ, ビジネス提携, カスタマーサポート, メディア関係, 商品問い合わせ, メンバーシップ, contact">
+    <meta name="author" content="FOMUS Global FZ-LLC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fomus.com/contact-ja.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fomus.com/contact-ja.html">
+    <meta property="og:title" content="お問い合わせ - FOMUS">
+    <meta property="og:description" content="FOMUSへのお問い合わせページ。ビジネス提携、商品に関するご質問、メンバーシップサポートなど、お気軽にお問い合わせください。">
+    <meta property="og:image" content="https://fomus.com/FOMUSlogo_edited.png">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="FOMUS">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://fomus.com/contact-ja.html">
+    <meta name="twitter:title" content="お問い合わせ - FOMUS">
+    <meta name="twitter:description" content="FOMUSへのお問い合わせページ。ビジネス提携、商品に関するご質問など、お気軽にお問い合わせください。">
+    <meta name="twitter:image" content="https://fomus.com/FOMUSlogo_edited.png">
+    
+    <!-- Language alternates -->
+    <link rel="alternate" hreflang="ja" href="https://fomus.com/contact-ja.html">
+    <link rel="alternate" hreflang="en" href="https://fomus.com/contact-en.html">
+    <link rel="alternate" hreflang="zh" href="https://fomus.com/contact-zh.html">
+    <link rel="alternate" hreflang="fr" href="https://fomus.com/contact-fr.html">
+    <link rel="alternate" hreflang="ar" href="https://fomus.com/contact-ar.html">
+    <link rel="alternate" hreflang="x-default" href="https://fomus.com/contact-en.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            overflow-x: hidden;
+        }
+        html {
+            overflow-x: hidden;
+        }
+        .font-heading { font-family: 'Noto Serif JP', serif; }
+        
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .bg-gradient-fomus {
+            background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes fadeInUp {
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .stagger-animation {
+            animation-delay: var(--delay, 0s);
+        }
+        
+        .contact-card {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(199, 162, 83, 0.1);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            * {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .container, .max-w-7xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            localStorage.setItem('preferredLanguage', 'ja');
+        });
+    </script>
+    <script src="language-switcher.js"></script>
+</head>
+<body class="bg-cream text-obsidian">
+    <!-- ヘッダー -->
+    <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- ロゴ -->
+                <div class="flex items-center">
+                    <a href="index-ja.html">
+                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                    </a>
+                </div>
+                
+                <!-- ナビゲーション -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index-ja.html" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">ホーム</a>
+                    <a href="about-ja.html" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">私たちについて</a>
+                    <a href="masu-collection-ja.html" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">MASUコレクション</a>
+                    <a href="membership-ja.html" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">メンバーシップ</a>
+                    <a href="contact-ja.html" class="text-gold font-medium">お問い合わせ</a>
+                </div>
+                
+                <!-- 言語切り替え -->
+                <div class="flex items-center space-x-4">
+                    <a href="language-selector.html" class="text-sm text-obsidian/60 hover:text-gold transition-colors">JP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <section class="relative pt-24 pb-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in-up">
+                <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-obsidian mb-6">
+                    お問い合わせ
+                </h1>
+                <p class="text-xl md:text-2xl text-obsidian/70 font-light max-w-3xl mx-auto">
+                    ビジネス提携、商品に関するご質問、メディア関係など、<br>
+                    お気軽にお問い合わせください。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ種別セクション -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-heading text-3xl md:text-4xl font-light text-obsidian mb-6">
+                    お問い合わせ内容から選択
+                </h2>
+                <p class="text-lg text-obsidian/70 max-w-3xl mx-auto">
+                    お問い合わせの内容に応じて、最適な担当者が迅速にご対応いたします。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ビジネス提携 -->
+                <div class="contact-card bg-white rounded-lg shadow-lg p-8 text-center fade-in-up stagger-animation" style="--delay: 0.1s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-blue-500/30 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-2xl">🤝</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">ビジネス提携</h3>
+                    <p class="text-obsidian/70 mb-6 leading-relaxed">
+                        販売代理店、流通パートナー、コラボレーションなどのビジネス機会について
+                    </p>
+                    <a href="mailto:business@fomus.com?subject=ビジネス提携について" class="inline-block bg-blue-500 text-white px-6 py-3 font-semibold hover:bg-blue-600 transition-colors rounded-lg">
+                        ビジネス問い合わせ
+                    </a>
+                </div>
+                
+                <!-- 商品・サービス -->
+                <div class="contact-card bg-white rounded-lg shadow-lg p-8 text-center fade-in-up stagger-animation" style="--delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400/20 to-green-500/30 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-2xl">🛍️</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">商品・サービス</h3>
+                    <p class="text-obsidian/70 mb-6 leading-relaxed">
+                        商品の詳細、カスタマイズ、配送、メンバーシップサービスについて
+                    </p>
+                    <a href="mailto:support@fomus.com?subject=商品について" class="inline-block bg-green-500 text-white px-6 py-3 font-semibold hover:bg-green-600 transition-colors rounded-lg">
+                        商品問い合わせ
+                    </a>
+                </div>
+                
+                <!-- メディア関係 -->
+                <div class="contact-card bg-white rounded-lg shadow-lg p-8 text-center fade-in-up stagger-animation" style="--delay: 0.3s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-purple-500/30 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-2xl">📺</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-semibold text-obsidian mb-4">メディア関係</h3>
+                    <p class="text-obsidian/70 mb-6 leading-relaxed">
+                        取材依頼、プレスリリース、広報資料、インタビューについて
+                    </p>
+                    <a href="mailto:media@fomus.com?subject=メディア関係について" class="inline-block bg-purple-500 text-white px-6 py-3 font-semibold hover:bg-purple-600 transition-colors rounded-lg">
+                        メディア問い合わせ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせフォームセクション -->
+    <section class="py-20 bg-obsidian text-cream">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-light text-cream mb-6">
+                    お問い合わせフォーム
+                </h2>
+                <p class="text-xl text-cream/70 font-light">
+                    下記フォームからもお問い合わせいただけます。<br>24時間以内にご返信いたします。
+                </p>
+            </div>
+            
+            <div class="bg-cream/5 backdrop-blur-sm rounded-2xl p-8 border border-cream/10 fade-in-up" style="--delay: 0.2s;">
+                <form class="space-y-6" action="mailto:fomus.official@gmail.com" method="post" enctype="text/plain">
+                    <!-- 基本情報 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-cream font-medium mb-2">お名前 *</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="form-input w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-4 py-3 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-cream font-medium mb-2">メールアドレス *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="form-input w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-4 py-3 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="company" class="block text-cream font-medium mb-2">会社名・組織名</label>
+                            <input type="text" id="company" name="company" 
+                                   class="form-input w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-4 py-3 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-cream font-medium mb-2">電話番号</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="form-input w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-4 py-3 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20">
+                        </div>
+                    </div>
+                    
+                    <!-- お問い合わせ種別 -->
+                    <div>
+                        <label for="inquiry-type" class="block text-cream font-medium mb-2">お問い合わせ種別 *</label>
+                        <select id="inquiry-type" name="inquiry-type" required 
+                                class="form-input w-full bg-cream/10 border border-cream/30 text-cream px-4 py-3 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20">
+                            <option value="">選択してください</option>
+                            <option value="business">ビジネス提携・流通</option>
+                            <option value="product">商品・サービスについて</option>
+                            <option value="membership">メンバーシップについて</option>
+                            <option value="media">メディア・取材関係</option>
+                            <option value="technical">技術的なお問い合わせ</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 件名 -->
+                    <div>
+                        <label for="subject" class="block text-cream font-medium mb-2">件名 *</label>
+                        <input type="text" id="subject" name="subject" required 
+                               class="form-input w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-4 py-3 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
+                               placeholder="お問い合わせの件名を入力してください">
+                    </div>
+                    
+                    <!-- メッセージ -->
+                    <div>
+                        <label for="message" class="block text-cream font-medium mb-2">メッセージ *</label>
+                        <textarea id="message" name="message" rows="6" required 
+                                  class="form-input w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-4 py-3 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20"
+                                  placeholder="詳細な内容をお聞かせください"></textarea>
+                    </div>
+                    
+                    <!-- プライバシー同意 -->
+                    <div class="flex items-start space-x-3">
+                        <input id="privacy" name="privacy" type="checkbox" required 
+                               class="mt-1 h-4 w-4 text-gold focus:ring-gold border-cream/30 rounded">
+                        <label for="privacy" class="text-sm text-cream/80 leading-relaxed">
+                            <span class="text-cream">プライバシーポリシーに同意します *</span><br>
+                            個人情報の取り扱いについては、弊社のプライバシーポリシーをご確認ください。
+                        </label>
+                    </div>
+                    
+                    <!-- 送信ボタン -->
+                    <div class="text-center pt-6">
+                        <button type="submit" 
+                                class="bg-gold text-obsidian px-12 py-4 font-semibold hover:bg-cream transition-all duration-300 border-2 border-gold hover:border-cream rounded-lg text-lg transform hover:scale-105">
+                            送信する
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 連絡先情報セクション -->
+    <section class="py-20 bg-gradient-fomus">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- 直接連絡先 -->
+                <div class="fade-in-up">
+                    <h2 class="font-heading text-3xl md:text-4xl font-light text-obsidian mb-8">
+                        直接のご連絡先
+                    </h2>
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h3 class="font-heading text-xl font-semibold text-obsidian mb-4 flex items-center">
+                                <span class="text-2xl mr-3">📧</span>
+                                メールアドレス
+                            </h3>
+                            <div class="space-y-2">
+                                <p><strong>総合窓口:</strong> <a href="mailto:fomus.official@gmail.com" class="text-gold hover:underline">fomus.official@gmail.com</a></p>
+                                <p><strong>ビジネス:</strong> <a href="mailto:business@fomus.com" class="text-gold hover:underline">business@fomus.com</a></p>
+                                <p><strong>サポート:</strong> <a href="mailto:support@fomus.com" class="text-gold hover:underline">support@fomus.com</a></p>
+                                <p><strong>メディア:</strong> <a href="mailto:media@fomus.com" class="text-gold hover:underline">media@fomus.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h3 class="font-heading text-xl font-semibold text-obsidian mb-4 flex items-center">
+                                <span class="text-2xl mr-3">🏢</span>
+                                所在地
+                            </h3>
+                            <div class="space-y-2">
+                                <p><strong>法人名:</strong> FOMUS Global FZ-LLC</p>
+                                <p><strong>本社:</strong> United Arab Emirates</p>
+                                <p><strong>日本オフィス:</strong> 東京</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- よくある質問 -->
+                <div class="fade-in-up" style="--delay: 0.2s;">
+                    <h2 class="font-heading text-3xl md:text-4xl font-light text-obsidian mb-8">
+                        よくある質問
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h3 class="font-semibold text-obsidian mb-3">Q: 商品の配送にはどのくらいかかりますか？</h3>
+                            <p class="text-obsidian/70">A: 国内配送は3-5営業日、海外配送は7-14営業日を目安としています。詳細は商品ページをご確認ください。</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h3 class="font-semibold text-obsidian mb-3">Q: メンバーシップの特典について教えてください</h3>
+                            <p class="text-obsidian/70">A: レベルに応じて限定商品へのアクセス、特別イベントの招待、職人との交流機会などをご提供しています。</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h3 class="font-semibold text-obsidian mb-3">Q: カスタムオーダーは可能ですか？</h3>
+                            <p class="text-obsidian/70">A: 一部商品でカスタマイズを承っています。詳細はビジネス窓口までお問い合わせください。</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h3 class="font-semibold text-obsidian mb-3">Q: 返品・交換は可能ですか？</h3>
+                            <p class="text-obsidian/70">A: 商品到着後7日以内であれば、未使用品に限り返品・交換を承っています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-obsidian border-t border-cream/20 text-cream py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- ブランド -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center justify-center mb-6">
+                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-12">
+                    </div>
+                    <p class="text-center text-cream/60 text-sm leading-relaxed">
+                        More than a Product, It's a Cultural Experience.
+                    </p>
+                </div>
+                
+                <!-- クイックリンク -->
+                <div>
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-gold">クイックリンク</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index-ja.html" class="text-cream/80 hover:text-gold transition-colors text-sm">ホーム</a></li>
+                        <li><a href="about-ja.html" class="text-cream/80 hover:text-gold transition-colors text-sm">私たちについて</a></li>
+                        <li><a href="masu-collection-ja.html" class="text-cream/80 hover:text-gold transition-colors text-sm">MASUコレクション</a></li>
+                        <li><a href="membership-ja.html" class="text-cream/80 hover:text-gold transition-colors text-sm">メンバーシップ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- サポート -->
+                <div>
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-gold">サポート</h3>
+                    <ul class="space-y-2">
+                        <li><a href="contact-ja.html" class="text-cream/80 hover:text-gold transition-colors text-sm">お問い合わせ</a></li>
+                        <li><a href="#" class="text-cream/80 hover:text-gold transition-colors text-sm">プライバシーポリシー</a></li>
+                        <li><a href="#" class="text-cream/80 hover:text-gold transition-colors text-sm">利用規約</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 連絡先 -->
+                <div>
+                    <h3 class="font-heading text-lg font-semibold mb-4 text-gold">連絡先</h3>
+                    <ul class="space-y-2 text-sm text-cream/80">
+                        <li>fomus.official@gmail.com</li>
+                        <li>business@fomus.com</li>
+                        <li>support@fomus.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 下部 -->
+            <div class="border-t border-cream/20 pt-8 text-center">
+                <p class="text-cream/60 text-sm">© 2024 FOMUS Global FZ-LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Form enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const submitButton = form.querySelector('button[type="submit"]');
+            
+            form.addEventListener('submit', function(e) {
+                submitButton.textContent = '送信中...';
+                submitButton.disabled = true;
+                
+                // Re-enable after a delay (for demo purposes)
+                setTimeout(() => {
+                    submitButton.textContent = '送信する';
+                    submitButton.disabled = false;
+                }, 3000);
+            });
+            
+            // Animation observer
+            const elements = document.querySelectorAll('.fade-in-up');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            });
+            
+            elements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

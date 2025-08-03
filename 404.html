@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>Page Not Found - FOMUS | More than a Product, It's a Cultural Experience</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The page you're looking for doesn't exist. Return to FOMUS homepage to explore our premium Japanese cultural collections, MASU crafts, KUKU entertainment, and exclusive membership services.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Page Not Found - FOMUS">
+    <meta property="og:description" content="The page you're looking for doesn't exist. Explore FOMUS premium Japanese cultural collections.">
+    <meta property="og:image" content="https://fomus.com/FOMUSlogo_edited.png">
+    <meta property="og:url" content="https://fomus.com/404.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Page Not Found - FOMUS">
+    <meta name="twitter:description" content="The page you're looking for doesn't exist. Explore FOMUS premium collections.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hinoki: '#d0c5b1',
+                        gold: '#c7a253',
+                        obsidian: '#141414',
+                        cream: '#f8f6f0',
+                    },
+                    fontFamily: {
+                        heading: ['Noto Serif JP', 'serif'],
+                        body: ['Noto Sans', 'Noto Sans JP', 'sans-serif'],
+                        arabic: ['Noto Sans Arabic', 'sans-serif'],
+                        chinese: ['Noto Sans SC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            font-family: 'Noto Sans', sans-serif; 
+            background: linear-gradient(135deg, #141414 0%, #1f1f1f 50%, #141414 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes fadeInUp {
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .error-number {
+            background: linear-gradient(135deg, #c7a253 0%, #ffd700 50%, #c7a253 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(199, 162, 83, 0.3);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(199, 162, 83, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(199, 162, 83, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(199, 162, 83, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(199, 162, 83, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .floating {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-cream flex items-center justify-center min-h-screen">
+    <!-- Background decorations -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-20 w-64 h-64 border border-gold/10 rounded-full floating"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 border border-gold/10 rounded-full floating" style="animation-delay: 3s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-32 h-32 border border-hinoki/20 rounded-full floating" style="animation-delay: 1.5s;"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-12 text-center">
+        <!-- Logo -->
+        <div class="mb-8 fade-in-up">
+            <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-16 md:h-20 mx-auto mb-6">
+        </div>
+        
+        <!-- 404 Number -->
+        <div class="mb-8 fade-in-up" style="animation-delay: 0.2s;">
+            <h1 class="text-8xl md:text-9xl lg:text-[12rem] font-light error-number leading-none">
+                404
+            </h1>
+        </div>
+        
+        <!-- Error Message -->
+        <div class="mb-12 fade-in-up" style="animation-delay: 0.4s;">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-light mb-4 text-cream">
+                Page Not Found
+            </h2>
+            <p class="text-lg md:text-xl text-cream/70 font-light mb-6">
+                The page you're looking for doesn't exist or has been moved.
+            </p>
+            <p class="text-base md:text-lg text-cream/50 font-light">
+                Let's get you back to experiencing Japanese culture.
+            </p>
+        </div>
+        
+        <!-- Navigation Options -->
+        <div class="mb-12 fade-in-up" style="animation-delay: 0.6s;">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Homepage -->
+                <a href="/" class="glass-card rounded-xl p-6 block text-center">
+                    <div class="text-3xl mb-3">🏠</div>
+                    <h3 class="text-lg font-semibold text-cream mb-2">Homepage</h3>
+                    <p class="text-sm text-cream/60">Return to main site</p>
+                </a>
+                
+                <!-- MASU Collection -->
+                <a href="masu-collection-en.html" class="glass-card rounded-xl p-6 block text-center">
+                    <div class="text-3xl mb-3">🎨</div>
+                    <h3 class="text-lg font-semibold text-cream mb-2">MASU Collection</h3>
+                    <p class="text-sm text-cream/60">Explore our crafts</p>
+                </a>
+                
+                <!-- KUKU Characters -->
+                <a href="kuku-characters-ja.html" class="glass-card rounded-xl p-6 block text-center">
+                    <div class="text-3xl mb-3">🌸</div>
+                    <h3 class="text-lg font-semibold text-cream mb-2">KUKU Entertainment</h3>
+                    <p class="text-sm text-cream/60">Discover our stories</p>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Primary Actions -->
+        <div class="mb-8 fade-in-up" style="animation-delay: 0.8s;">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="/" class="bg-gold text-obsidian px-8 py-4 font-semibold hover:bg-cream transition-all duration-300 rounded-lg btn-glow">
+                    Return to Homepage
+                </a>
+                <a href="language-selector.html" class="bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian rounded-lg">
+                    Change Language
+                </a>
+            </div>
+        </div>
+        
+        <!-- Language Selection -->
+        <div class="fade-in-up" style="animation-delay: 1s;">
+            <p class="text-cream/50 text-sm mb-4">Choose your language:</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="index-ja.html" class="text-cream/60 hover:text-gold transition-colors text-sm px-3 py-1 rounded border border-cream/20 hover:border-gold/40">
+                    日本語
+                </a>
+                <a href="index-en.html" class="text-cream/60 hover:text-gold transition-colors text-sm px-3 py-1 rounded border border-cream/20 hover:border-gold/40">
+                    English
+                </a>
+                <a href="index-zh.html" class="text-cream/60 hover:text-gold transition-colors text-sm px-3 py-1 rounded border border-cream/20 hover:border-gold/40">
+                    中文
+                </a>
+                <a href="index-fr.html" class="text-cream/60 hover:text-gold transition-colors text-sm px-3 py-1 rounded border border-cream/20 hover:border-gold/40">
+                    Français
+                </a>
+                <a href="index-ar.html" class="text-cream/60 hover:text-gold transition-colors text-sm px-3 py-1 rounded border border-cream/20 hover:border-gold/40">
+                    العربية
+                </a>
+            </div>
+        </div>
+        
+        <!-- Footer Message -->
+        <div class="mt-12 fade-in-up" style="animation-delay: 1.2s;">
+            <p class="text-cream/40 text-xs">
+                More than a Product, It's a Cultural Experience.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-redirect based on browser language after some time
+        setTimeout(() => {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const savedLang = localStorage.getItem('preferredLanguage');
+            
+            if (savedLang) {
+                // If user has a saved preference, offer to redirect
+                if (confirm(`Would you like to return to your preferred language (${savedLang.toUpperCase()})?`)) {
+                    if (savedLang === 'ja') {
+                        window.location.href = 'index-ja.html';
+                    } else if (savedLang === 'zh') {
+                        window.location.href = 'index-zh.html';
+                    } else if (savedLang === 'fr') {
+                        window.location.href = 'index-fr.html';
+                    } else if (savedLang === 'ar') {
+                        window.location.href = 'index-ar.html';
+                    } else {
+                        window.location.href = 'index-en.html';
+                    }
+                }
+            }
+        }, 5000); // Show after 5 seconds
+        
+        // Track 404 events for analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                page_title: '404 Error',
+                page_location: window.location.href,
+                custom_map: {custom_parameter_1: 'error_page'}
+            });
+        }
+    </script>
+</body>
+</html>

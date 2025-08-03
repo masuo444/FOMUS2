@@ -1,0 +1,72 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://fomus.com/sitemap.xml
+
+# Allow all search engines to index content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Disallow access to temporary or sensitive files
+Disallow: /tmp/
+Disallow: /*.tmp$
+Disallow: /backup/
+Disallow: /test/
+Disallow: /dev/
+
+# Allow access to all main content areas
+Allow: /index*.html
+Allow: /masu-collection*.html
+Allow: /kuku-characters*.html
+Allow: /product*.html
+Allow: /membership*.html
+Allow: /checkout*.html
+Allow: /international-collection*.html
+
+# Allow access to assets
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+
+# Crawl delay (be respectful to servers)
+Crawl-delay: 1
+
+# Cache policy for better SEO
+# Allow search engines to cache pages
+User-agent: *
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Special instructions for Japanese content
+# Ensure proper indexing of multilingual content
+User-agent: Googlebot
+Allow: /*-ja.html
+Allow: /*-en.html
+Allow: /*-zh.html
+Allow: /*-fr.html
+Allow: /*-ar.html

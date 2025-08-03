@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Main Language Selector -->
+  <url>
+    <loc>https://fomus.com/</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Language Selector Page -->
+  <url>
+    <loc>https://fomus.com/language-selector.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Main Index Pages -->
+  <url>
+    <loc>https://fomus.com/index-ja.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/index-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fomus.com/index-en.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/index-en.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/index-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/index-zh.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/index-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/index-fr.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/index-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/index-ar.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/index-fr.html"/>
+  </url>
+
+  <!-- MASU Collection Pages -->
+  <url>
+    <loc>https://fomus.com/masu-collection-ja.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/masu-collection-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/masu-collection-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/masu-collection-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/masu-collection-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/masu-collection-en.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/masu-collection-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/masu-collection-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/masu-collection-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/masu-collection-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/masu-collection-zh.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/masu-collection-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/masu-collection-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/masu-collection-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/masu-collection-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/masu-collection-fr.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/masu-collection-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/masu-collection-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/masu-collection-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/masu-collection-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/masu-collection-ar.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/masu-collection-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/masu-collection-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/masu-collection-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/masu-collection-fr.html"/>
+  </url>
+
+  <!-- KUKU Characters Page -->
+  <url>
+    <loc>https://fomus.com/kuku-characters-ja.html</loc>
+    <lastmod>2024-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Membership Pages -->
+  <url>
+    <loc>https://fomus.com/membership-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/membership-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/membership-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/membership-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/membership-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/membership-en.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/membership-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/membership-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/membership-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/membership-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/membership-zh.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/membership-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/membership-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/membership-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/membership-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/membership-fr.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/membership-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/membership-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/membership-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/membership-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/membership-ar.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/membership-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/membership-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/membership-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/membership-fr.html"/>
+  </url>
+
+  <!-- Product Pages - Basic MASU -->
+  <url>
+    <loc>https://fomus.com/product-masu-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-masu-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-masu-en.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-masu-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-masu-zh.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-masu-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-masu-fr.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-masu-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-masu-ar.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-masu-fr.html"/>
+  </url>
+
+  <!-- Product Pages - FOMUS Logo MASU -->
+  <url>
+    <loc>https://fomus.com/product-fomus-logo-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-fomus-logo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-fomus-logo-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-fomus-logo-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-fomus-logo-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-logo-en.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-fomus-logo-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-fomus-logo-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-fomus-logo-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-fomus-logo-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-logo-zh.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-fomus-logo-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-fomus-logo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-fomus-logo-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-fomus-logo-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-logo-fr.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-fomus-logo-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-fomus-logo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-fomus-logo-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-fomus-logo-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-logo-ar.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-fomus-logo-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-fomus-logo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-fomus-logo-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-fomus-logo-fr.html"/>
+  </url>
+
+  <!-- Product Pages - Custom MASU -->
+  <url>
+    <loc>https://fomus.com/product-custom-masu-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-custom-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-custom-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-custom-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-custom-masu-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-custom-masu-en.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-custom-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-custom-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-custom-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-custom-masu-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-custom-masu-zh.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-custom-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-custom-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-custom-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-custom-masu-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-custom-masu-fr.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-custom-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-custom-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-custom-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-custom-masu-ar.html"/>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-custom-masu-ar.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-custom-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-custom-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-custom-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-custom-masu-fr.html"/>
+  </url>
+
+  <!-- Additional Product Pages -->
+  <url>
+    <loc>https://fomus.com/product-fomus-original-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-original-en.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-original-zh.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-original-fr.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-original-ar.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Size-specific Product Pages -->
+  <url>
+    <loc>https://fomus.com/product-masu-basic-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-masu-mini-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-logo-basic-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-logo-mini-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-custom-masu-basic-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-custom-masu-mini-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-original-basic-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-fomus-original-mini-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Uniform Products -->
+  <url>
+    <loc>https://fomus.com/product-uniform-l-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://fomus.com/product-uniform-m-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Checkout Page -->
+  <url>
+    <loc>https://fomus.com/checkout-ja.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- International Collection -->
+  <url>
+    <loc>https://fomus.com/international-collection-en.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>
