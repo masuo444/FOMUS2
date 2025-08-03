@@ -2,8 +2,38 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
     <title>MASUコレクション - FOMUS</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="1300年の歴史を持つ日本の枡を現代の美意識で再解釈。FOMUSのMASUコレクションは、伝統工芸の美しさを世界に届ける特別なアート作品です。">
+    <meta name="keywords" content="枡, MASU, FOMUS, 日本伝統工芸, 檜, ヒノキ, アート, コレクション, ジャパニーズクラフト">
+    <meta name="author" content="FOMUS">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fomus.com/masu-collection-ja.html">
+    <meta property="og:title" content="MASUコレクション - 1300年の伝統を現代に | FOMUS">
+    <meta property="og:description" content="日本の伝統的な枡を現代の美意識で再解釈したFOMUSのMASUコレクション。檜の香りと完璧なプロポーションが織りなす、世界に誇る日本文化の結晶。">
+    <meta property="og:image" content="https://fomus.com/FOMUSlogo_edited.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FOMUS - 日本の伝統工芸を世界に">
+    <meta property="og:site_name" content="FOMUS">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fomus.com/masu-collection-ja.html">
+    <meta name="twitter:title" content="MASUコレクション - 1300年の伝統を現代に | FOMUS">
+    <meta name="twitter:description" content="日本の伝統的な枡を現代の美意識で再解釈したFOMUSのMASUコレクション。檜の香りと完璧なプロポーションが織りなす、世界に誇る日本文化の結晶。">
+    <meta name="twitter:image" content="https://fomus.com/FOMUSlogo_edited.png">
+    <meta name="twitter:image:alt" content="FOMUS - 日本の伝統工芸を世界に">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Japanese">
+    <link rel="canonical" href="https://fomus.com/masu-collection-ja.html">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -25,13 +55,19 @@
         }
     </script>
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; }
+        body { 
+            font-family: 'Noto Sans JP', sans-serif; 
+            overflow-x: hidden;
+        }
+        html {
+            overflow-x: hidden;
+        }
         .font-heading { font-family: 'Noto Serif JP', serif; }
         .btn-primary {
-            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+            @apply bg-gold text-obsidian px-6 py-3 sm:px-8 sm:py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold min-h-[44px] flex items-center justify-center;
         }
         .btn-secondary {
-            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+            @apply bg-transparent text-gold px-6 py-3 sm:px-8 sm:py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian min-h-[44px] flex items-center justify-center;
         }
         .text-gradient-gold {
             background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
@@ -42,6 +78,94 @@
         .bg-gradient-fomus {
             background: linear-gradient(135deg, #f8f6f0 0%, #d0c5b1 100%);
         }
+        
+        /* Mobile Navigation */
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            * {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .container, .max-w-7xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            /* Touch target optimization */
+            .touch-target {
+                min-height: 44px;
+                min-width: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Improved mobile spacing */
+            section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            
+            .grid {
+                gap: 1.5rem;
+            }
+            
+            /* Better mobile buttons */
+            .btn-primary, .btn-secondary, button {
+                min-height: 48px;
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+            
+            /* Mobile-optimized cards */
+            .bg-white.rounded-xl {
+                border-radius: 0.75rem;
+                margin-bottom: 1rem;
+            }
+            
+            /* Improved mobile typography */
+            h2 {
+                font-size: 2rem !important;
+                line-height: 1.3;
+                margin-bottom: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.5rem !important;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+            }
+            
+            h4 {
+                font-size: 1.25rem !important;
+                line-height: 1.4;
+            }
+            
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* Improved typography for mobile */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            .hero-subtitle {
+                font-size: 1.5rem !important;
+                line-height: 1.3;
+            }
+        }
     </style>
 </head>
 <body class="bg-cream text-obsidian">
@@ -51,20 +175,50 @@
             <div class="flex justify-between items-center py-4">
                 <!-- ロゴ -->
                 <div class="flex items-center">
-                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6 sm:h-8">
                 </div>
                 
-                <!-- ナビゲーション -->
+                <!-- デスクトップナビゲーション -->
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index-ja.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">ホーム</a>
-                    <a href="index-ja.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">工芸</a>
-                    <a href="index-ja.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">ライフスタイル</a>
-                    <a href="index-ja.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">エンターテインメント</a>
-                    <a href="index-ja.html#membership" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">会員権</a>
-                    <a href="index-ja.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">お問い合わせ</a>
+                    <a href="index-ja.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">ホーム</a>
+                    <a href="index-ja.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">工芸</a>
+                    <a href="index-ja.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">ライフスタイル</a>
+                    <a href="index-ja.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">エンターテインメント</a>
+                    <a href="index-ja.html#membership" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">会員権</a>
+                    <a href="index-ja.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">お問い合わせ</a>
                 </div>
+                
+                <!-- モバイルメニューボタン -->
+                <button id="mobile-menu-button" class="lg:hidden touch-target" aria-label="メニューを開く">
+                    <svg class="w-6 h-6 text-obsidian" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
+        
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 left-0 w-64 bg-cream border-r border-hinoki z-40">
+            <div class="flex items-center justify-between p-4 border-b border-hinoki">
+                <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+                <button id="mobile-menu-close" class="touch-target" aria-label="メニューを閉じる">
+                    <svg class="w-6 h-6 text-obsidian" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="py-4">
+                <a href="index-ja.html#home" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">ホーム</a>
+                <a href="index-ja.html#craft" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">工芸</a>
+                <a href="index-ja.html#life" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">ライフスタイル</a>
+                <a href="index-ja.html#entertainment" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">エンターテインメント</a>
+                <a href="index-ja.html#membership" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">会員権</a>
+                <a href="index-ja.html#contact" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">お問い合わせ</a>
+            </div>
+        </div>
+        
+        <!-- モバイルメニュー背景オーバーレイ -->
+        <div id="mobile-menu-overlay" class="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30 hidden"></div>
     </nav>
 
     <!-- ヒーローセクション -->
@@ -79,12 +233,12 @@
                     <span class="text-cream">MASUコレクション</span>
                 </nav>
                 
-                <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-light mb-6">
+                <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-light mb-6 hero-title">
                     <span class="text-gradient-gold">MASU</span>
-                    <span class="block text-3xl md:text-5xl lg:text-6xl mt-4">コレクション</span>
+                    <span class="block text-3xl md:text-5xl lg:text-6xl mt-4 hero-subtitle">コレクション</span>
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-cream/80 max-w-3xl mx-auto">
+                <p class="text-lg sm:text-xl md:text-2xl text-cream/80 max-w-3xl mx-auto">
                     1300年の歴史を持つ日本の枡。<br>
                     その伝統的な形と機能を、現代の美意識で再解釈しました。
                 </p>
@@ -667,5 +821,104 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile Menu Functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileMenuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu on link click (for single page navigation)
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Smooth scrolling for category navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Optimize images for mobile (lazy loading)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Touch-friendly category card animations
+        const categoryCards = document.querySelectorAll('.grid .cursor-pointer');
+        categoryCards.forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            card.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Improved scroll performance
+        let ticking = false;
+        function updateHeader() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(248, 246, 240, 0.98)';
+                nav.style.backdropFilter = 'blur(12px)';
+            } else {
+                nav.style.background = 'rgba(248, 246, 240, 0.95)';
+                nav.style.backdropFilter = 'blur(8px)';
+            }
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+    </script>
 </body>
 </html>

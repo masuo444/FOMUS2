@@ -2,8 +2,37 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
     <title>مجموعة MASU - FOMUS</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="اكتشف مجموعة MASU من FOMUS، إعادة تفسير معاصرة للماسو الياباني التقليدي من خشب الهينوكي بتاريخ 1300 عام. الحرف اليابانية التقليدية الأصيلة، التراث الثقافي والفن الحديث.">
+    <meta name="keywords" content="MASU, الحرف اليابانية التقليدية, خشب الهينوكي, مجموعة فنية, FOMUS, الثقافة اليابانية, الفن الياباني, الجماليات اليابانية, الفن المعاصر">
+    <meta name="author" content="FOMUS">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Arabic">
+    <link rel="canonical" href="https://fomus.com/masu-collection-ar.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fomus.com/masu-collection-ar.html">
+    <meta property="og:title" content="مجموعة MASU - 1300 عام من التقاليد المعاد تصورها | FOMUS">
+    <meta property="og:description" content="تحول مجموعة MASU من FOMUS الماسو الياباني التقليدي البالغ 1300 عام إلى تحف فنية معاصرة. خشب الهينوكي المختار، تقنيات الربط القديمة والجماليات الحديثة لنقل التراث الثقافي الياباني إلى العالم.">
+    <meta property="og:image" content="https://fomus.com/FOMUSlogo_edited.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FOMUS - ربط الحرف اليابانية التقليدية بالعالم">
+    <meta property="og:site_name" content="FOMUS">
+    <meta property="og:locale" content="ar_AR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fomus.com/masu-collection-ar.html">
+    <meta name="twitter:title" content="مجموعة MASU - 1300 عام من التقاليد المعاد تصورها | FOMUS">
+    <meta name="twitter:description" content="تحول مجموعة MASU من FOMUS الماسو الياباني التقليدي البالغ 1300 عام إلى تحف فنية معاصرة. خشب الهينوكي المختار، تقنيات الربط القديمة والجماليات الحديثة لنقل التراث الثقافي الياباني إلى العالم.">
+    <meta name="twitter:image" content="https://fomus.com/FOMUSlogo_edited.png">
+    <meta name="twitter:image:alt" content="FOMUS - ربط الحرف اليابانية التقليدية بالعالم">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -28,13 +57,17 @@
         body { 
             font-family: 'Noto Sans Arabic', 'Noto Sans JP', sans-serif; 
             direction: rtl;
+            overflow-x: hidden;
+        }
+        html {
+            overflow-x: hidden;
         }
         .font-heading { font-family: 'Noto Serif JP', serif; }
         .btn-primary {
-            @apply bg-gold text-obsidian px-8 py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold;
+            @apply bg-gold text-obsidian px-6 py-3 sm:px-8 sm:py-4 font-semibold transition-all duration-300 hover:bg-obsidian hover:text-gold border-2 border-gold min-h-[44px] flex items-center justify-center;
         }
         .btn-secondary {
-            @apply bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian;
+            @apply bg-transparent text-gold px-6 py-3 sm:px-8 sm:py-4 font-semibold border-2 border-gold transition-all duration-300 hover:bg-gold hover:text-obsidian min-h-[44px] flex items-center justify-center;
         }
         .text-gradient-gold {
             background: linear-gradient(135deg, #c7a253 0%, #ffd700 100%);
@@ -49,6 +82,94 @@
         .rtl-flex-reverse { flex-direction: row-reverse; }
         .rtl-text-right { text-align: right; }
         .rtl-space-x-reverse > * + * { margin-right: var(--tw-space-x-reverse); margin-left: 0; }
+        
+        /* Mobile Navigation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            * {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .container, .max-w-7xl {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            /* Touch target optimization */
+            .touch-target {
+                min-height: 44px;
+                min-width: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            /* Improved mobile spacing */
+            section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+            
+            .grid {
+                gap: 1.5rem;
+            }
+            
+            /* Better mobile buttons */
+            .btn-primary, .btn-secondary, button {
+                min-height: 48px;
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+            
+            /* Mobile-optimized cards */
+            .bg-white.rounded-xl {
+                border-radius: 0.75rem;
+                margin-bottom: 1rem;
+            }
+            
+            /* Improved mobile typography */
+            h2 {
+                font-size: 2rem !important;
+                line-height: 1.3;
+                margin-bottom: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.5rem !important;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+            }
+            
+            h4 {
+                font-size: 1.25rem !important;
+                line-height: 1.4;
+            }
+            
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* Improved typography for mobile */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+            }
+            .hero-subtitle {
+                font-size: 1.5rem !important;
+                line-height: 1.3;
+            }
+        }
     </style>
 </head>
 <body class="bg-cream text-obsidian">
@@ -58,20 +179,50 @@
             <div class="flex justify-between items-center py-4">
                 <!-- الشعار -->
                 <div class="flex items-center">
-                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-8">
+                    <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6 sm:h-8">
                 </div>
                 
                 <!-- التنقل -->
                 <div class="hidden lg:flex items-center space-x-8 rtl-space-x-reverse">
-                    <a href="index-ar.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الرئيسية</a>
-                    <a href="index-ar.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الحرف اليدوية</a>
-                    <a href="index-ar.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">نمط الحياة</a>
-                    <a href="index-ar.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">الترفيه</a>
-                    <a href="index-ar.html#membership" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">العضوية</a>
-                    <a href="index-ar.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium">اتصل بنا</a>
+                    <a href="index-ar.html#home" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">الرئيسية</a>
+                    <a href="index-ar.html#craft" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">الحرف اليدوية</a>
+                    <a href="index-ar.html#life" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">نمط الحياة</a>
+                    <a href="index-ar.html#entertainment" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">الترفيه</a>
+                    <a href="index-ar.html#membership" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">العضوية</a>
+                    <a href="index-ar.html#contact" class="text-obsidian hover:text-gold transition-colors duration-200 font-medium touch-target">اتصل بنا</a>
                 </div>
+                
+                <!-- زر القائمة المحمولة -->
+                <button id="mobile-menu-button" class="lg:hidden touch-target" aria-label="فتح القائمة">
+                    <svg class="w-6 h-6 text-obsidian" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </div>
+        
+        <!-- القائمة المحمولة -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 right-0 w-64 bg-cream border-l border-hinoki z-40">
+            <div class="flex items-center justify-between p-4 border-b border-hinoki rtl-flex-reverse">
+                <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
+                <button id="mobile-menu-close" class="touch-target" aria-label="إغلاق القائمة">
+                    <svg class="w-6 h-6 text-obsidian" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="py-4">
+                <a href="index-ar.html#home" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">الرئيسية</a>
+                <a href="index-ar.html#craft" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">الحرف اليدوية</a>
+                <a href="index-ar.html#life" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">نمط الحياة</a>
+                <a href="index-ar.html#entertainment" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">الترفيه</a>
+                <a href="index-ar.html#membership" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">العضوية</a>
+                <a href="index-ar.html#contact" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">اتصل بنا</a>
+            </div>
+        </div>
+        
+        <!-- تراكب خلفية القائمة المحمولة -->
+        <div id="mobile-menu-overlay" class="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30 hidden"></div>
     </nav>
 
     <!-- القسم الرئيسي -->
@@ -86,12 +237,12 @@
                     <span class="text-cream">مجموعة MASU</span>
                 </nav>
                 
-                <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-light mb-6">
+                <h1 class="font-heading text-5xl md:text-7xl lg:text-8xl font-light mb-6 hero-title">
                     <span class="text-gradient-gold">MASU</span>
-                    <span class="block text-3xl md:text-5xl lg:text-6xl mt-4">مجموعة</span>
+                    <span class="block text-3xl md:text-5xl lg:text-6xl mt-4 hero-subtitle">مجموعة</span>
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-cream/80 max-w-3xl mx-auto">
+                <p class="text-lg sm:text-xl md:text-2xl text-cream/80 max-w-3xl mx-auto">
                     الماسو الياباني، بتاريخ يمتد 1300 عام.<br>
                     شكله ووظيفته التقليدية معاد تفسيرها بجماليات معاصرة.
                 </p>
@@ -673,5 +824,87 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile Menu Functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            mobileMenuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu on link click (for single page navigation)
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Smooth scrolling for category navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Touch-friendly category card animations
+        const categoryCards = document.querySelectorAll('.grid .cursor-pointer');
+        categoryCards.forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            card.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+
+        // Improved scroll performance
+        let ticking = false;
+        function updateHeader() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(248, 246, 240, 0.98)';
+                nav.style.backdropFilter = 'blur(12px)';
+            } else {
+                nav.style.background = 'rgba(248, 246, 240, 0.95)';
+                nav.style.backdropFilter = 'blur(8px)';
+            }
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+        
+        // Set language in localStorage
+        localStorage.setItem('preferred-language', 'ar');
+    </script>
 </body>
 </html>
