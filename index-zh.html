@@ -370,24 +370,22 @@
         </div>
         
         <!-- 手机菜单 -->
-        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-0 bg-white z-50">
-            <div class="flex flex-col items-center justify-center h-full space-y-8 pb-20">
-                <div class="text-center mb-8">
-                    <img src="fomus-premium-japanese-crafts-logo.png" alt="FOMUS" class="h-20 mx-auto mb-4">
-                </div>
-                <nav class="space-y-6 text-center">
-                    <a href="#home" class="block px-6 py-4 text-xl text-obsidian hover:text-gold transition-colors font-medium touch-target">首页</a>
-                    <a href="#craft" class="block px-6 py-4 text-xl text-obsidian hover:text-gold transition-colors font-medium touch-target">工艺</a>
-                    <a href="#life" class="block px-6 py-4 text-xl text-obsidian hover:text-gold transition-colors font-medium touch-target">生活方式</a>
-                    <a href="#entertainment" class="block px-6 py-4 text-xl text-obsidian hover:text-gold transition-colors font-medium touch-target">娱乐</a>
-                    <a href="#membership" class="block px-6 py-4 text-xl text-obsidian hover:text-gold transition-colors font-medium touch-target">会员</a>
-                    <a href="#contact" class="block px-6 py-4 text-xl text-obsidian hover:text-gold transition-colors font-medium touch-target">联系我们</a>
-                </nav>
-                <button id="mobile-menu-close" class="absolute top-8 right-8 touch-target" aria-label="关闭菜单">
-                    <svg class="w-8 h-8 text-obsidian" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 left-0 w-64 bg-white border-r border-hinoki shadow-xl z-40">
+            <div class="flex items-center justify-between p-4 border-b border-hinoki">
+                <img src="fomus-premium-japanese-crafts-logo.png" alt="FOMUS" class="h-6">
+                <button id="mobile-menu-close" class="touch-target" aria-label="关闭菜单">
+                    <svg class="w-6 h-6 text-obsidian" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
+            </div>
+            <div class="py-4">
+                <a href="#home" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">首页</a>
+                <a href="#craft" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">工艺</a>
+                <a href="#life" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">生活方式</a>
+                <a href="#entertainment" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">娱乐</a>
+                <a href="#membership" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">会员</a>
+                <a href="#contact" class="block px-4 py-3 text-obsidian hover:text-gold hover:bg-gold/10 transition-colors font-medium touch-target">联系我们</a>
             </div>
         </div>
         
