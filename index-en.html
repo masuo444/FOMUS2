@@ -247,10 +247,11 @@
                 padding-bottom: 2rem;
             }
             
-            /* Logo mobile sizing */
+            /* Logo mobile sizing - 5x scale */
             .hero-logo {
-                height: 6rem !important;
-                max-height: 6rem;
+                transform: scale(5);
+                transform-origin: center;
+                margin: 10rem 0;
             }
             
             /* Grid mobile optimization */
@@ -294,7 +295,9 @@
             }
             
             .hero-logo {
-                height: 4rem !important;
+                transform: scale(5);
+                transform-origin: center;
+                margin: 8rem 0;
             }
             
             section {
@@ -389,7 +392,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen w-full pt-20 pb-8">
+    <section id="home" class="relative min-h-screen w-full pt-20 pb-0">
         <!-- Background -->
         <div class="absolute inset-0">
             <div class="absolute inset-0 bg-cream"></div>
@@ -426,7 +429,7 @@
     </section>
 
     <!-- About FOMUS -->
-    <section id="about" class="py-6 sm:py-12 lg:py-16 bg-cream">
+    <section id="about" class="py-0 sm:py-8 lg:py-12 bg-cream">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Text Content -->
