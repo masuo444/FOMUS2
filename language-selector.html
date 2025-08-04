@@ -31,6 +31,9 @@
             font-family: 'Noto Sans', sans-serif; 
             background: linear-gradient(135deg, #141414 0%, #1f1f1f 50%, #141414 100%);
             min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
         .language-card {
             position: relative;
@@ -117,7 +120,7 @@
         }
     </style>
 </head>
-<body class="bg-obsidian text-cream flex items-center justify-center min-h-screen">
+<body class="bg-obsidian text-cream">
     <!-- Background decorations -->
     <div class="fixed inset-0 overflow-hidden pointer-events-none">
         <div class="absolute top-20 left-20 w-64 h-64 border border-gold/10 rounded-full floating"></div>
@@ -125,7 +128,7 @@
         <div class="absolute top-1/2 left-1/4 w-32 h-32 border border-hinoki/20 rounded-full floating" style="animation-delay: 1.5s;"></div>
     </div>
     
-    <div class="relative z-10 max-w-6xl mx-auto px-4 py-4 sm:py-12">
+    <div class="relative z-10 max-w-6xl mx-auto px-4 py-4 sm:py-12 min-h-screen flex flex-col justify-center">
         <!-- Logo -->
         <div class="text-center mb-6 sm:mb-12 fade-in">
             <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-16 sm:h-24 md:h-32 mx-auto mb-4 sm:mb-8">
