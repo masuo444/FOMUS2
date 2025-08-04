@@ -178,10 +178,13 @@
         .mobile-menu {
             transform: translateX(-100%);
             transition: transform 0.3s ease-in-out;
-            background-color: rgba(255, 255, 255, 1) !important;
+            background-color: #ffffff !important;
+            background: #ffffff !important;
         }
         .mobile-menu.open {
             transform: translateX(0);
+            background-color: #ffffff !important;
+            background: #ffffff !important;
         }
         
         /* Enhanced Mobile optimizations */
@@ -370,7 +373,7 @@
         </div>
         
         <!-- 手机菜单 -->
-        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 left-0 w-64 bg-white border-r border-hinoki shadow-xl z-50">
+        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 left-0 w-64 bg-white border-r border-hinoki shadow-xl z-50" style="background-color: #ffffff !important;">
             <div class="flex items-center justify-between p-4 border-b border-hinoki">
                 <img src="fomus-premium-japanese-crafts-logo.png" alt="FOMUS" class="h-6">
                 <button id="mobile-menu-close" class="touch-target" aria-label="关闭菜单">
