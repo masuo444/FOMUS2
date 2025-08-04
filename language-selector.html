@@ -27,6 +27,12 @@
         }
     </script>
     <style>
+        html {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+        }
+        
         body { 
             font-family: 'Noto Sans', sans-serif; 
             background: linear-gradient(135deg, #141414 0%, #1f1f1f 50%, #141414 100%);
@@ -34,6 +40,25 @@
             overflow-x: hidden;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
+            position: relative;
+            height: auto;
+        }
+        
+        /* Mobile scroll fix */
+        @media (max-width: 768px) {
+            html, body {
+                height: auto;
+                min-height: 100vh;
+                overflow-x: hidden;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                position: relative;
+            }
+            
+            .main-container {
+                min-height: 100vh;
+                height: auto;
+            }
         }
         .language-card {
             position: relative;
@@ -128,7 +153,7 @@
         <div class="absolute top-1/2 left-1/4 w-32 h-32 border border-hinoki/20 rounded-full floating" style="animation-delay: 1.5s;"></div>
     </div>
     
-    <div class="relative z-10 max-w-6xl mx-auto px-4 py-4 sm:py-12 min-h-screen flex flex-col justify-center">
+    <div class="main-container relative z-10 max-w-6xl mx-auto px-4 py-8 sm:py-12">
         <!-- Logo -->
         <div class="text-center mb-6 sm:mb-12 fade-in">
             <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-16 sm:h-24 md:h-32 mx-auto mb-4 sm:mb-8">
@@ -195,6 +220,45 @@
     </div>
     
     <script>
+        // Mobile scroll enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure mobile scrolling works properly
+            if (window.innerWidth <= 768) {
+                document.body.style.height = 'auto';
+                document.body.style.minHeight = '100vh';
+                document.documentElement.style.height = '100%';
+                
+                // Add touch scroll support
+                document.body.addEventListener('touchmove', function(e) {
+                    e.stopPropagation();
+                }, { passive: true });
+            }
+            
+            // Dynamic centering for desktop while allowing scroll on mobile
+            function adjustLayout() {
+                const container = document.querySelector('.main-container');
+                const windowHeight = window.innerHeight;
+                const contentHeight = container.scrollHeight;
+                
+                if (window.innerWidth > 768 && contentHeight < windowHeight) {
+                    // Desktop: center content if it fits
+                    container.style.display = 'flex';
+                    container.style.flexDirection = 'column';
+                    container.style.justifyContent = 'center';
+                    container.style.minHeight = '100vh';
+                } else {
+                    // Mobile or content overflow: allow natural flow
+                    container.style.display = 'block';
+                    container.style.minHeight = 'auto';
+                    container.style.paddingTop = '2rem';
+                    container.style.paddingBottom = '2rem';
+                }
+            }
+            
+            adjustLayout();
+            window.addEventListener('resize', adjustLayout);
+        });
+        
         // Save language preference
         document.querySelectorAll('.language-card').forEach(card => {
             card.addEventListener('click', function(e) {
