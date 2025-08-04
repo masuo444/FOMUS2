@@ -27,45 +27,21 @@
         }
     </script>
     <style>
-        html {
-            height: 100%;
-            overflow-x: hidden;
-            overflow-y: scroll;
+        * {
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: auto;
+            min-height: 100vh;
         }
         
         body { 
             font-family: 'Noto Sans', sans-serif; 
             background: linear-gradient(135deg, #141414 0%, #1f1f1f 50%, #141414 100%);
-            height: 100%;
-            overflow-x: hidden;
-            overflow-y: scroll;
-            -webkit-overflow-scrolling: touch;
-            position: relative;
-        }
-        
-        /* Force scroll on mobile */
-        @media (max-width: 768px) {
-            html {
-                height: 100%;
-                overflow-y: scroll !important;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            body {
-                height: auto !important;
-                min-height: 100vh;
-                overflow-y: scroll !important;
-                -webkit-overflow-scrolling: touch;
-                position: static;
-            }
-            
-            .main-container {
-                height: auto !important;
-                min-height: auto !important;
-                display: block !important;
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-            }
+            background-attachment: fixed;
         }
         .language-card {
             position: relative;
@@ -160,7 +136,7 @@
         <div class="absolute top-1/2 left-1/4 w-32 h-32 border border-hinoki/20 rounded-full floating" style="animation-delay: 1.5s;"></div>
     </div>
     
-    <div class="main-container relative z-10 max-w-6xl mx-auto px-4 py-8 sm:py-12 min-h-screen flex flex-col justify-center">
+    <div class="main-container relative z-10 max-w-6xl mx-auto px-4 py-8 sm:py-12">
         <!-- Logo -->
         <div class="text-center mb-6 sm:mb-12 fade-in">
             <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-16 sm:h-24 md:h-32 mx-auto mb-4 sm:mb-8">
@@ -227,24 +203,11 @@
     </div>
     
     <script>
-        // Simple mobile scroll fix
+        // Simple initialization
         document.addEventListener('DOMContentLoaded', function() {
-            // Force scroll on mobile devices
-            if (window.innerWidth <= 768) {
-                // Override any CSS that might prevent scrolling
-                document.documentElement.style.setProperty('overflow-y', 'scroll', 'important');
-                document.body.style.setProperty('overflow-y', 'scroll', 'important');
-                document.body.style.setProperty('height', 'auto', 'important');
-                document.body.style.setProperty('-webkit-overflow-scrolling', 'touch', 'important');
-                
-                // Ensure container doesn't block scrolling
-                const container = document.querySelector('.main-container');
-                if (container) {
-                    container.style.setProperty('height', 'auto', 'important');
-                    container.style.setProperty('min-height', 'auto', 'important');
-                    container.style.setProperty('display', 'block', 'important');
-                }
-            }
+            // Just ensure natural scrolling
+            document.body.style.height = 'auto';
+            document.body.style.minHeight = '100vh';
         });
         
         // Save language preference

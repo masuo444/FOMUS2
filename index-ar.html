@@ -371,7 +371,7 @@
         </div>
         
         <!-- القائمة المحمولة -->
-        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 right-0 w-64 bg-cream border-l border-hinoki z-40">
+        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 right-0 w-64 bg-cream/95 backdrop-blur-sm border-l border-hinoki shadow-xl z-40">
             <div class="flex items-center justify-between p-4 border-b border-hinoki rtl-flex-reverse">
                 <img src="FOMUSlogo_edited.png" alt="FOMUS" class="h-6">
                 <button id="mobile-menu-close" class="touch-target" aria-label="إغلاق القائمة">
@@ -407,7 +407,7 @@
                 <div class="hero-grid grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
                     <!-- اليسار: الشعار -->
                     <div class="flex justify-center lg:justify-center order-2 lg:order-2">
-                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="hero-logo h-32 sm:h-40 md:h-48 lg:h-64 xl:h-80 2xl:h-96 max-w-full">
+                        <img src="FOMUSlogo_edited.png" alt="FOMUS" class="hero-logo h-40 sm:h-48 md:h-56 lg:h-64 xl:h-80 2xl:h-96 max-w-full">
                     </div>
                     
                     <!-- اليمين: محتوى النص -->
@@ -969,27 +969,10 @@
                 </p>
             </div>
             
-            <div class="max-w-3xl mx-auto">
-                <form class="space-y-6" action="mailto:fomus.official@gmail.com" method="post" enctype="text/plain">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="الاسم" class="bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none text-right font-arabic">
-                        <input type="email" placeholder="البريد الإلكتروني" class="bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none text-right font-arabic">
-                    </div>
-                    <select class="w-full bg-cream/10 border border-cream/30 text-cream px-6 py-4 rounded-lg focus:border-gold focus:outline-none text-right font-arabic">
-                        <option value="">اختر نوع الاستفسار</option>
-                        <option value="business">شراكة تجارية</option>
-                        <option value="export">تصدير وتوزيع</option>
-                        <option value="media">علاقات إعلامية</option>
-                        <option value="membership">حول العضوية</option>
-                        <option value="other">أخرى</option>
-                    </select>
-                    <textarea placeholder="الرسالة" rows="6" class="w-full bg-cream/10 border border-cream/30 text-cream placeholder-cream/50 px-6 py-4 rounded-lg focus:border-gold focus:outline-none text-right font-arabic"></textarea>
-                    <div class="text-center">
-                        <button type="submit" class="bg-gold text-obsidian px-12 py-4 font-semibold hover:bg-cream transition-colors font-arabic">
-                            إرسال
-                        </button>
-                    </div>
-                </form>
+            <div class="text-center">
+                <a href="mailto:fomus.official@gmail.com" class="inline-block bg-gold text-obsidian px-12 py-4 font-semibold hover:bg-cream transition-colors border-2 border-gold hover:border-cream font-arabic">
+                    اتصل بنا
+                </a>
             </div>
         </div>
     </section>
