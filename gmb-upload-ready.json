@@ -1,0 +1,110 @@
+{
+  "timestamp": "2025-08-05T02:30:33.748766",
+  "business_info": {
+    "name": "FOMUS - Premium Japanese Crafts",
+    "category": "Handicraft Exporter",
+    "description": "FOMUS brings 1300 years of Japanese masu tradition to the world. Premium handcrafted wooden products made from hinoki cypress. Exclusive KUKU entertainment collection and membership services. Curated for discerning collectors worldwide.",
+    "shortDescription": "Premium Japanese crafts meets global entertainment. Traditional masu, KUKU characters, exclusive membership.",
+    "phone": "+971-XX-XXX-XXXX",
+    "website": "https://fomus.com",
+    "hours": {
+      "monday": "9:00 AM - 6:00 PM JST",
+      "tuesday": "9:00 AM - 6:00 PM JST",
+      "wednesday": "9:00 AM - 6:00 PM JST",
+      "thursday": "9:00 AM - 6:00 PM JST",
+      "friday": "9:00 AM - 6:00 PM JST",
+      "saturday": "10:00 AM - 4:00 PM JST",
+      "sunday": "Closed"
+    },
+    "attributes": [
+      "Online appointments",
+      "International shipping",
+      "Custom orders accepted",
+      "Gift wrapping available",
+      "Luxury products",
+      "Japanese owned"
+    ],
+    "languages": [
+      "Japanese",
+      "English",
+      "Chinese",
+      "French",
+      "Arabic"
+    ],
+    "paymentMethods": [
+      "Credit cards",
+      "Bank transfer",
+      "PayPal",
+      "Cryptocurrency"
+    ],
+    "serviceArea": "Worldwide"
+  },
+  "optimized_description": "FOMUS brings 1300 years of Japanese masu tradition to the world. Premium handcrafted wooden products made from hinoki cypress. Exclusive KUKU entertainment collection and membership services. Curated for discerning collectors worldwide. Keywords: Japanese traditional crafts, premium masu, hinoki cypress",
+  "posts": {
+    "seasonal": {
+      "spring": "🌸 Spring Collection: Cherry blossom-inspired masu designs now available",
+      "summer": "🎋 Summer Special: Bamboo-themed custom masu for festivals",
+      "autumn": "🍁 Autumn Crafts: Limited edition maple leaf engravings",
+      "winter": "❄️ Winter Gift Sets: Perfect Japanese crafts for special occasions"
+    },
+    "educational": [
+      "Did you know? The word 'masu' means both 'measuring cup' and 'to increase' in Japanese",
+      "Hinoki cypress has natural antibacterial properties, perfect for sake vessels",
+      "Each FOMUS masu takes 3 weeks to craft using traditional techniques"
+    ],
+    "product_updates": [
+      {
+        "type": "product",
+        "title": "New MASU Collection Launch",
+        "description": "Discover our premium hinoki cypress masu, handcrafted with 1300 years of tradition",
+        "cta": "LEARN_MORE",
+        "link": "https://fomus.com/masu-collection-en.html"
+      },
+      {
+        "type": "offer",
+        "title": "Exclusive Member Benefits",
+        "description": "Join FOMUS membership for special access to limited collections",
+        "cta": "SIGN_UP",
+        "link": "https://fomus.com/membership-en.html"
+      }
+    ]
+  },
+  "seo_checklist": {
+    "profile_completion": [
+      "✓ Business name with keywords",
+      "✓ Complete address (if applicable)",
+      "✓ Phone number with country code",
+      "✓ Website URL",
+      "✓ Business hours",
+      "✓ Category selection",
+      "✓ Business description (750 chars)",
+      "✓ Opening date",
+      "✓ Photos (minimum 10)",
+      "✓ Logo and cover photo"
+    ],
+    "ongoing_optimization": [
+      "Post weekly updates",
+      "Respond to reviews within 24 hours",
+      "Update holiday hours",
+      "Add new photos monthly",
+      "Create Google Posts for events",
+      "Monitor and respond to Q&A"
+    ],
+    "review_strategy": [
+      "Email template for review requests",
+      "QR code for easy review access",
+      "Review response templates",
+      "Monitor competitor reviews"
+    ]
+  },
+  "review_templates": {
+    "positive_review": {
+      "en": "Thank you for your wonderful review! We're delighted that you enjoyed our {product}. Your support helps us continue our 1300-year tradition of craftsmanship.",
+      "ja": "素晴らしいレビューをありがとうございます！{product}をお楽しみいただけて大変嬉しく思います。1300年の伝統を守り続けることができるのも、皆様のご支援のおかげです。"
+    },
+    "negative_review": {
+      "en": "Thank you for your feedback. We sincerely apologize for not meeting your expectations. Please contact us at fomus.official@gmail.com so we can make this right.",
+      "ja": "貴重なご意見をありがとうございます。ご期待に添えず申し訳ございません。fomus.official@gmail.comまでご連絡いただければ、適切に対応させていただきます。"
+    }
+  }
+}

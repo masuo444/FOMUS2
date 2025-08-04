@@ -1,0 +1,71 @@
+{
+  "businessInfo": {
+    "name": "FOMUS - Premium Japanese Crafts",
+    "category": "Handicraft Exporter",
+    "description": "FOMUS brings 1300 years of Japanese masu tradition to the world. Premium handcrafted wooden products made from hinoki cypress. Exclusive KUKU entertainment collection and membership services. Curated for discerning collectors worldwide.",
+    "shortDescription": "Premium Japanese crafts meets global entertainment. Traditional masu, KUKU characters, exclusive membership.",
+    "phone": "+971-XX-XXX-XXXX",
+    "website": "https://fomus.com",
+    "hours": {
+      "monday": "9:00 AM - 6:00 PM JST",
+      "tuesday": "9:00 AM - 6:00 PM JST",
+      "wednesday": "9:00 AM - 6:00 PM JST",
+      "thursday": "9:00 AM - 6:00 PM JST",
+      "friday": "9:00 AM - 6:00 PM JST",
+      "saturday": "10:00 AM - 4:00 PM JST",
+      "sunday": "Closed"
+    },
+    "attributes": [
+      "Online appointments",
+      "International shipping",
+      "Custom orders accepted",
+      "Gift wrapping available",
+      "Luxury products",
+      "Japanese owned"
+    ],
+    "languages": ["Japanese", "English", "Chinese", "French", "Arabic"],
+    "paymentMethods": ["Credit cards", "Bank transfer", "PayPal", "Cryptocurrency"],
+    "serviceArea": "Worldwide"
+  },
+  "photos": {
+    "logo": "fomus-premium-japanese-crafts-logo.png",
+    "cover": "masu-collection-premium-japanese-crafts.png",
+    "gallery": [
+      "fomus-traditional-masu-sake-cup.png",
+      "basic-hinoki-masu-japanese-sake-cup.jpg",
+      "custom-masu-personalized-japanese-crafts.jpg",
+      "japanese-craftsman-traditional-woodworking.jpg",
+      "masu-display-wall-japanese-interior-design.png"
+    ]
+  },
+  "posts": [
+    {
+      "type": "product",
+      "title": "New MASU Collection Launch",
+      "description": "Discover our premium hinoki cypress masu, handcrafted with 1300 years of tradition",
+      "cta": "LEARN_MORE",
+      "link": "https://fomus.com/masu-collection-en.html"
+    },
+    {
+      "type": "offer",
+      "title": "Exclusive Member Benefits",
+      "description": "Join FOMUS membership for special access to limited collections",
+      "cta": "SIGN_UP",
+      "link": "https://fomus.com/membership-en.html"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is a Japanese masu?",
+      "answer": "A masu is a traditional Japanese wooden measuring cup used for drinking sake, with over 1300 years of history. FOMUS creates premium masu from selected hinoki cypress wood."
+    },
+    {
+      "question": "Do you ship internationally?",
+      "answer": "Yes, we ship worldwide. All products are carefully packaged using traditional Japanese methods to ensure safe delivery."
+    },
+    {
+      "question": "Can I create custom designs?",
+      "answer": "Absolutely! We offer fully customized masu with your logo, text, or design. Minimum order quantities apply."
+    }
+  ]
+}
