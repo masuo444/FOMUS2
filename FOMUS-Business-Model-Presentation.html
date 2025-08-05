@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOMUS ビジネスモデル プレゼンテーション</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Meiryo', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .slide {
+            width: 1200px;
+            min-height: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 60px;
+            page-break-after: always;
+            position: relative;
+        }
+        
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #FFD700;
+        }
+        
+        h1 {
+            font-size: 48px;
+            color: #1a1a1a;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        h3 {
+            font-size: 24px;
+            color: #34495e;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 60px;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            border-radius: 5px;
+        }
+        
+        .main-diagram {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .flow-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+        }
+        
+        .flow-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        
+        .flow-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .flow-arrow {
+            font-size: 30px;
+            color: #FFD700;
+            margin: 0 20px;
+        }
+        
+        .revenue-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .revenue-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .revenue-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.1);
+            transform: rotate(45deg);
+        }
+        
+        .revenue-item h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        
+        .revenue-item .price {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .membership-tiers {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+        
+        .tier {
+            flex: 1;
+            margin: 0 15px;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        
+        .tier.silver {
+            background: linear-gradient(135deg, #C0C0C0 0%, #868686 100%);
+            color: white;
+        }
+        
+        .tier.gold {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #333;
+            transform: scale(1.05);
+        }
+        
+        .tier.platinum {
+            background: linear-gradient(135deg, #E5E4E2 0%, #BCC6CC 100%);
+            color: #333;
+        }
+        
+        .tier:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .tier h4 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .tier .tier-price {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .tier ul {
+            list-style: none;
+            text-align: left;
+            padding: 0 20px;
+        }
+        
+        .tier li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .tier li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .kpi-item {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s;
+        }
+        
+        .kpi-item:hover {
+            border-color: #FFD700;
+            transform: translateY(-5px);
+        }
+        
+        .kpi-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #FFD700;
+            margin: 10px 0;
+        }
+        
+        .kpi-label {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .chart-container {
+            margin: 40px 0;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+        }
+        
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            height: 300px;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        
+        .bar {
+            width: 120px;
+            background: linear-gradient(180deg, #FFD700 0%, #FFA500 100%);
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .bar:hover {
+            transform: scaleY(1.05);
+        }
+        
+        .bar-label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .bar-value {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .timeline {
+            margin: 40px 0;
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #FFD700;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            width: 45%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            margin-left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            margin-left: 55%;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #FFD700;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -12.5%;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12.5%;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 20px rgba(255,215,0,0.3);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
+            color: #666;
+        }
+        
+        @media print {
+            .slide {
+                break-inside: avoid;
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- スライド1: タイトルページ -->
+    <div class="slide">
+        <div class="slide-header">
+            <h1>FOMUS ビジネスモデル</h1>
+            <div class="logo">FOMUS</div>
+        </div>
+        
+        <div class="highlight-box">
+            "More than a Product, It's a Cultural Experience"<br>
+            日本の伝統と革新が融合する文化体験プラットフォーム
+        </div>
+        
+        <div class="main-diagram">
+            <h2 style="text-align: center; margin-bottom: 40px;">ビジネスコンセプト</h2>
+            <div class="flow-chart">
+                <div class="flow-item">
+                    <h3>伝統工芸</h3>
+                    <p>1300年の歴史<br>檜製MASU</p>
+                </div>
+                <span class="flow-arrow">×</span>
+                <div class="flow-item">
+                    <h3>エンターテイメント</h3>
+                    <p>KUKU IP<br>アニメ・キャラクター</p>
+                </div>
+                <span class="flow-arrow">×</span>
+                <div class="flow-item">
+                    <h3>グローバル展開</h3>
+                    <p>5言語対応<br>世界市場</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>FOMUS Global FZ-LLC © 2025 | Premium Japanese Crafts & Entertainment</p>
+        </div>
+    </div>
+    
+    <!-- スライド2: 4つの収益源 -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>4つの収益源モデル</h2>
+            <div class="logo">FOMUS</div>
+        </div>
+        
+        <div class="revenue-box">
+            <div class="revenue-item" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);">
+                <h3>MASU コレクション</h3>
+                <p class="price">$500 - $1,000+</p>
+                <p>伝統工芸品販売<br>
+                • ベーシックMASU<br>
+                • FOMUSロゴMASU<br>
+                • カスタムMASU</p>
+            </div>
+            
+            <div class="revenue-item" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);">
+                <h3>VIP会員システム</h3>
+                <p class="price">¥50,000 - ¥300,000</p>
+                <p>継続収益モデル<br>
+                • 限定商品アクセス<br>
+                • VIPイベント<br>
+                • 個別コンサルティング</p>
+            </div>
+            
+            <div class="revenue-item" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);">
+                <h3>KUKU IP事業</h3>
+                <p class="price">ライセンス収益</p>
+                <p>エンターテイメント<br>
+                • アニメーション<br>
+                • マーチャンダイズ<br>
+                • NFT・デジタル</p>
+            </div>
+            
+            <div class="revenue-item" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);">
+                <h3>ライフスタイル体験</h3>
+                <p class="price">$50 - $500/人</p>
+                <p>体験型サービス<br>
+                • FOMUSカフェ<br>
+                • ワークショップ<br>
+                • 文化ツアー</p>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h3>収益構成（目標）</h3>
+            <div class="bar-chart">
+                <div class="bar" style="height: 40%;">
+                    <span class="bar-value">40%</span>
+                    <span class="bar-label">MASU販売</span>
+                </div>
+                <div class="bar" style="height: 30%; background: linear-gradient(180deg, #4ECDC4 0%, #44A08D 100%);">
+                    <span class="bar-value">30%</span>
+                    <span class="bar-label">メンバーシップ</span>
+                </div>
+                <div class="bar" style="height: 20%; background: linear-gradient(180deg, #FF6B6B 0%, #FF8E53 100%);">
+                    <span class="bar-value">20%</span>
+                    <span class="bar-label">KUKU IP</span>
+                </div>
+                <div class="bar" style="height: 10%; background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);">
+                    <span class="bar-value">10%</span>
+                    <span class="bar-label">体験・その他</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- スライド3: メンバーシップ詳細 -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>VIPメンバーシップ階層</h2>
+            <div class="logo">FOMUS</div>
+        </div>
+        
+        <div class="membership-tiers">
+            <div class="tier silver">
+                <h4>SILVER</h4>
+                <p class="tier-price">¥50,000/年</p>
+                <ul>
+                    <li>限定商品10%OFF</li>
+                    <li>会員限定商品アクセス</li>
+                    <li>月次ニュースレター</li>
+                    <li>優先カスタマーサポート</li>
+                </ul>
+            </div>
+            
+            <div class="tier gold">
+                <h4>GOLD</h4>
+                <p class="tier-price">¥100,000/年</p>
+                <ul>
+                    <li>限定商品20%OFF</li>
+                    <li>VIPイベント招待</li>
+                    <li>優先カスタム注文</li>
+                    <li>限定NFTアクセス</li>
+                    <li>年2回の特別ギフト</li>
+                </ul>
+            </div>
+            
+            <div class="tier platinum">
+                <h4>PLATINUM</h4>
+                <p class="tier-price">¥300,000/年</p>
+                <ul>
+                    <li>限定商品30%OFF</li>
+                    <li>1対1コンサルティング</li>
+                    <li>限定NFT優先権</li>
+                    <li>プライベートイベント</li>
+                    <li>年4回の限定品</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="highlight-box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            継続的な顧客エンゲージメントによる<br>
+            安定した収益基盤の構築
+        </div>
+    </div>
+    
+    <!-- スライド4: グローバル展開 -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>グローバル市場戦略</h2>
+            <div class="logo">FOMUS</div>
+        </div>
+        
+        <div class="main-diagram">
+            <h3 style="text-align: center;">地域別売上構成</h3>
+            <div class="bar-chart" style="height: 250px;">
+                <div class="bar" style="height: 35%; background: linear-gradient(180deg, #8B0000 0%, #DC143C 100%);">
+                    <span class="bar-value">35%</span>
+                    <span class="bar-label">中東</span>
+                </div>
+                <div class="bar" style="height: 30%; background: linear-gradient(180deg, #000080 0%, #4169E1 100%);">
+                    <span class="bar-value">30%</span>
+                    <span class="bar-label">北米</span>
+                </div>
+                <div class="bar" style="height: 25%; background: linear-gradient(180deg, #006400 0%, #228B22 100%);">
+                    <span class="bar-value">25%</span>
+                    <span class="bar-label">欧州</span>
+                </div>
+                <div class="bar" style="height: 10%; background: linear-gradient(180deg, #FFD700 0%, #FFA500 100%);">
+                    <span class="bar-value">10%</span>
+                    <span class="bar-label">アジア太平洋</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flow-chart" style="margin-top: 50px;">
+            <div class="flow-item">
+                <h3>5言語対応</h3>
+                <p>日本語・英語・中国語<br>フランス語・アラビア語</p>
+            </div>
+            <div class="flow-item">
+                <h3>文化的配慮</h3>
+                <p>各地域の文化に<br>適応したコンテンツ</p>
+            </div>
+            <div class="flow-item">
+                <h3>現地パートナー</h3>
+                <p>各地域での<br>戦略的提携</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- スライド5: KPI -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>主要業績評価指標（KPI）</h2>
+            <div class="logo">FOMUS</div>
+        </div>
+        
+        <div class="kpi-grid">
+            <div class="kpi-item">
+                <div class="kpi-label">年間売上成長率</div>
+                <div class="kpi-value">30%+</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-label">会員数（3年目標）</div>
+                <div class="kpi-value">10,000人</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-label">顧客単価</div>
+                <div class="kpi-value">$2,000/年</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-label">リピート率</div>
+                <div class="kpi-value">70%+</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-label">NPS（推奨度）</div>
+                <div class="kpi-value">80+</div>
+            </div>
+            <div class="kpi-item">
+                <div class="kpi-label">KUKU認知度</div>
+                <div class="kpi-value">1億人</div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <h3>顧客獲得コスト vs 顧客生涯価値</h3>
+            <div style="display: flex; justify-content: space-around; margin-top: 30px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 48px; color: #FF6B6B; font-weight: bold;">$500</div>
+                    <p>顧客獲得コスト（CAC）</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 48px; color: #4ECDC4; font-weight: bold;">$5,000</div>
+                    <p>顧客生涯価値（LTV）</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 48px; color: #FFD700; font-weight: bold;">10x</div>
+                    <p>LTV/CAC比率</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- スライド6: ロードマップ -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>成長ロードマップ</h2>
+            <div class="logo">FOMUS</div>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Phase 1（現在-1年）</h3>
+                    <p>• Eコマース最適化<br>
+                    • 会員基盤構築<br>
+                    • KUKUコンテンツ制作</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Phase 2（1-3年）</h3>
+                    <p>• 実店舗展開（Dubai, Tokyo, NYC）<br>
+                    • KUKUアニメシリーズ<br>
+                    • NFTマーケットプレイス</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Phase 3（3-5年）</h3>
+                    <p>• グローバルフランチャイズ<br>
+                    • メタバース進出<br>
+                    • 文化教育プラットフォーム</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            伝統と革新の融合により<br>
+            次世代の文化ビジネスモデルを創造
+        </div>
+    </div>
+    
+    <!-- スライド7: 競争優位性 -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>持続的競争優位性</h2>
+            <div class="logo">FOMUS</div>
+        </div>
+        
+        <div class="main-diagram">
+            <div class="flow-chart">
+                <div class="flow-item" style="background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%); color: white;">
+                    <h3>1300年の歴史</h3>
+                    <p>他社が模倣できない<br>本物の伝統技術</p>
+                </div>
+                <div class="flow-item" style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); color: white;">
+                    <h3>独自IP開発</h3>
+                    <p>KUKUキャラクター<br>オリジナルコンテンツ</p>
+                </div>
+                <div class="flow-item" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%); color: white;">
+                    <h3>グローバルコミュニティ</h3>
+                    <p>世界中のファンベース<br>文化的つながり</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 50px;">
+            <h3>価値創造サイクル</h3>
+            <div class="flow-chart">
+                <div class="flow-item">
+                    <p><strong>伝統技術</strong><br>職人の技術継承</p>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">
+                    <p><strong>ブランド価値</strong><br>プレミアム化</p>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">
+                    <p><strong>顧客体験</strong><br>満足とロイヤルティ</p>
+                </div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">
+                    <p><strong>再投資</strong><br>継続的改善</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>FOMUS - 日本文化の新しい形を世界に</p>
+        </div>
+    </div>
+</body>
+</html>
