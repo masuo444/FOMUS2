@@ -4,485 +4,485 @@
 
   <!-- Main Language Selector -->
   <url>
-    <loc>https://fomus.com/</loc>
-    <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://masuo444.github.io/FOMUS2/</loc>
+    <lastmod>2025-08-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Language Selector Page -->
   <url>
-    <loc>https://fomus.com/language-selector.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/language-selector.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Main Index Pages -->
   <url>
-    <loc>https://fomus.com/index-ja.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/index-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/index-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/index-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/index-ar.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://fomus.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/index-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://masuo444.github.io/FOMUS2/index-en.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/index-en.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/index-en.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/index-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/index-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/index-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/index-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/index-zh.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/index-zh.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/index-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/index-en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/index-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/index-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/index-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/index-fr.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/index-fr.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/index-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/index-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/index-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/index-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/index-ar.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/index-ar.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/index-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/index-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/index-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/index-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/index-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/index-fr.html"/>
   </url>
 
   <!-- MASU Collection Pages -->
   <url>
-    <loc>https://fomus.com/masu-collection-ja.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/masu-collection-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/masu-collection-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/masu-collection-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/masu-collection-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/masu-collection-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/masu-collection-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/masu-collection-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/masu-collection-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/masu-collection-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/masu-collection-en.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/masu-collection-en.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/masu-collection-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/masu-collection-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/masu-collection-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/masu-collection-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/masu-collection-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/masu-collection-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/masu-collection-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/masu-collection-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/masu-collection-zh.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/masu-collection-zh.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/masu-collection-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/masu-collection-en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/masu-collection-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/masu-collection-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/masu-collection-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/masu-collection-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/masu-collection-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/masu-collection-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/masu-collection-fr.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/masu-collection-fr.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/masu-collection-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/masu-collection-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/masu-collection-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/masu-collection-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/masu-collection-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/masu-collection-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/masu-collection-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/masu-collection-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/masu-collection-ar.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/masu-collection-ar.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/masu-collection-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/masu-collection-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/masu-collection-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/masu-collection-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/masu-collection-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/masu-collection-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/masu-collection-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/masu-collection-fr.html"/>
   </url>
 
   <!-- KUKU Characters Page -->
   <url>
-    <loc>https://fomus.com/kuku-characters-ja.html</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/kuku-characters-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Membership Pages -->
   <url>
-    <loc>https://fomus.com/membership-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/membership-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/membership-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/membership-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/membership-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/membership-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/membership-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/membership-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/membership-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/membership-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/membership-en.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/membership-en.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/membership-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/membership-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/membership-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/membership-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/membership-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/membership-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/membership-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/membership-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/membership-zh.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/membership-zh.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/membership-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/membership-en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/membership-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/membership-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/membership-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/membership-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/membership-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/membership-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/membership-fr.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/membership-fr.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/membership-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/membership-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/membership-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/membership-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/membership-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/membership-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/membership-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/membership-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/membership-ar.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/membership-ar.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/membership-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/membership-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/membership-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/membership-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/membership-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/membership-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/membership-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/membership-fr.html"/>
   </url>
 
   <!-- Product Pages - Basic MASU -->
   <url>
-    <loc>https://fomus.com/product-masu-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-masu-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-masu-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-masu-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-masu-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-masu-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-masu-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-masu-en.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-masu-en.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-masu-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-masu-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-masu-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-masu-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-masu-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-masu-zh.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-masu-zh.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-masu-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-masu-en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-masu-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-masu-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-masu-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-masu-fr.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-masu-fr.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-masu-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-masu-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-masu-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-masu-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-masu-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-masu-ar.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-masu-ar.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-masu-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-masu-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-masu-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-masu-fr.html"/>
   </url>
 
   <!-- Product Pages - FOMUS Logo MASU -->
   <url>
-    <loc>https://fomus.com/product-fomus-logo-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-logo-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-fomus-logo-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-fomus-logo-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-fomus-logo-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-fomus-logo-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-logo-en.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-logo-en.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-fomus-logo-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-fomus-logo-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-fomus-logo-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-fomus-logo-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-logo-zh.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-logo-zh.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-fomus-logo-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-fomus-logo-en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-fomus-logo-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-fomus-logo-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-logo-fr.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-logo-fr.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-fomus-logo-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-fomus-logo-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-fomus-logo-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-fomus-logo-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-logo-ar.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-logo-ar.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-fomus-logo-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-fomus-logo-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-fomus-logo-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-fomus-logo-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-fomus-logo-fr.html"/>
   </url>
 
   <!-- Product Pages - Custom MASU -->
   <url>
-    <loc>https://fomus.com/product-custom-masu-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-custom-masu-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-custom-masu-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-custom-masu-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-custom-masu-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-custom-masu-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-custom-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-custom-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-custom-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-custom-masu-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-custom-masu-en.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-custom-masu-en.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-custom-masu-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-custom-masu-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-custom-masu-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-custom-masu-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-custom-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-custom-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-custom-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-custom-masu-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-custom-masu-zh.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-custom-masu-zh.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-custom-masu-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-custom-masu-en.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-custom-masu-fr.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-custom-masu-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-custom-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-custom-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-custom-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-custom-masu-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-custom-masu-fr.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-custom-masu-fr.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-custom-masu-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-custom-masu-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-custom-masu-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://fomus.com/product-custom-masu-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-custom-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-custom-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-custom-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://masuo444.github.io/FOMUS2/product-custom-masu-ar.html"/>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-custom-masu-ar.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-custom-masu-ar.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://fomus.com/product-custom-masu-ja.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fomus.com/product-custom-masu-en.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://fomus.com/product-custom-masu-zh.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://fomus.com/product-custom-masu-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://masuo444.github.io/FOMUS2/product-custom-masu-ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://masuo444.github.io/FOMUS2/product-custom-masu-en.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://masuo444.github.io/FOMUS2/product-custom-masu-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://masuo444.github.io/FOMUS2/product-custom-masu-fr.html"/>
   </url>
 
   <!-- Additional Product Pages -->
   <url>
-    <loc>https://fomus.com/product-fomus-original-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-original-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-original-en.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-original-en.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-original-zh.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-original-zh.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-original-fr.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-original-fr.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-original-ar.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-original-ar.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <!-- Size-specific Product Pages -->
   <url>
-    <loc>https://fomus.com/product-masu-basic-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-masu-basic-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-masu-mini-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-masu-mini-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-logo-basic-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-logo-basic-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-logo-mini-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-logo-mini-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-custom-masu-basic-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-custom-masu-basic-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-custom-masu-mini-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-custom-masu-mini-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-original-basic-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-original-basic-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-fomus-original-mini-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-fomus-original-mini-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <!-- Uniform Products -->
   <url>
-    <loc>https://fomus.com/product-uniform-l-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-uniform-l-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://fomus.com/product-uniform-m-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/product-uniform-m-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <!-- Checkout Page -->
   <url>
-    <loc>https://fomus.com/checkout-ja.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/checkout-ja.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- International Collection -->
   <url>
-    <loc>https://fomus.com/international-collection-en.html</loc>
-    <lastmod>2024-11-01</lastmod>
+    <loc>https://masuo444.github.io/FOMUS2/international-collection-en.html</loc>
+    <lastmod>2025-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
