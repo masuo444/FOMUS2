@@ -55,7 +55,48 @@
     <!-- DNS Prefetch for performance -->
     <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Tag Manager -->
+    <script>
+      // Google Tag Manager - Replace GTM-PLACEHOLDER with actual GTM ID
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PLACEHOLDER');
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA4-PLACEHOLDER"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      // Enhanced configuration for Japanese Traditional Crafts
+      gtag('config', 'GA4-PLACEHOLDER', {
+        'custom_map': {
+          'custom_parameter_1': 'craft_type',
+          'custom_parameter_2': 'product_category',
+          'custom_parameter_3': 'language_preference'
+        },
+        'content_group1': 'Japanese Traditional Crafts',
+        'content_group2': 'FOMUS Premium Collection'
+      });
+      
+      // Track initial page view with enhanced data
+      gtag('event', 'page_view', {
+        'page_title': document.title,
+        'page_location': window.location.href,
+        'content_group1': 'Traditional Crafts',
+        'content_group2': 'Homepage',
+        'craft_type': 'MASU Collection',
+        'language_preference': 'English'
+      });
+    </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -386,6 +427,13 @@
     <script src="language-switcher.js"></script>
 </head>
 <body class="bg-cream text-obsidian">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLACEHOLDER" 
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <!-- Header -->
     <nav class="bg-cream/95 backdrop-blur-sm border-b border-hinoki fixed w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

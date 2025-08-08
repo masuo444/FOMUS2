@@ -134,6 +134,48 @@
     }
     </script>
     
+    <!-- Enhanced Ecommerce Tracking for Product Page -->
+    <script>
+      // Product page enhanced ecommerce tracking
+      window.dataLayer = window.dataLayer || [];
+      
+      // Product detail view
+      window.dataLayer.push({
+        'event': 'view_item',
+        'ecommerce': {
+          'items': [{
+            'item_id': 'masu-traditional-hinoki-001',
+            'item_name': 'Traditional Japanese MASU Sake Cup',
+            'item_category': 'Traditional Crafts',
+            'item_category2': 'MASU Collection',
+            'item_category3': 'Sake Accessories',
+            'item_brand': 'FOMUS',
+            'price': 45.00,
+            'currency': 'USD',
+            'item_variant': 'Hinoki Cypress',
+            'custom_parameters': {
+              'craft_type': 'Traditional Japanese Woodwork',
+              'artisan_made': 'Master Craftsman',
+              'material': 'Hinoki Cypress Wood',
+              'cultural_significance': '1300 Years History'
+            }
+          }]
+        }
+      });
+      
+      // Track product interest interactions
+      function trackProductInteraction(action) {
+        window.dataLayer.push({
+          'event': 'product_interaction',
+          'event_action': action,
+          'item_id': 'masu-traditional-hinoki-001',
+          'item_name': 'Traditional Japanese MASU Sake Cup',
+          'value': 45.00,
+          'currency': 'USD'
+        });
+      }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
