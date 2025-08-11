@@ -318,73 +318,191 @@
     <section class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 text-cream relative overflow-hidden" id="membership-levels">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
+                <div class="inline-flex items-center bg-gold/20 text-gold px-6 py-2 rounded-full text-sm font-medium mb-6">
+                    <span class="w-2 h-2 bg-gold rounded-full mr-2 animate-pulse"></span>
+                    Recrutement 2024: Places limitées disponibles
+                </div>
                 <h2 class="font-heading text-4xl md:text-6xl font-light text-cream mb-8">Adhésion</h2>
-                <p class="text-lg text-cream/70 max-w-3xl mx-auto">
+                <p class="text-lg text-cream/70 max-w-3xl mx-auto mb-8">
                     Nous offrons trois adhésions pour s'adapter à votre style.
                 </p>
-            </div>
-            
-            <!-- Tableau d'adhésion -->
-            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <div class="overflow-x-auto">
-                    <table class="w-full">
-                        <thead class="bg-gradient-to-r from-obsidian to-obsidian/90 text-cream">
-                            <tr>
-                                <th class="px-6 py-6 text-left font-heading text-xl">Type d'adhésion</th>
-                                <th class="px-6 py-6 text-left font-heading text-xl">Cotisation annuelle (TTC)</th>
-                                <th class="px-6 py-6 text-left font-heading text-xl">Aperçu des avantages</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-hinoki/20">
-                            <tr class="hover:bg-hinoki/10 transition-colors">
-                                <td class="px-6 py-6">
-                                    <div class="font-heading text-xl font-semibold text-obsidian">Membre Standard</div>
-                                </td>
-                                <td class="px-6 py-6">
-                                    <div class="text-gold font-bold text-xl">€650</div>
-                                </td>
-                                <td class="px-6 py-6">
-                                    <div class="text-obsidian">Contenu exclusif en ligne, droits d'achat masu nu (jusqu'à 3 par an)</div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-hinoki/10 transition-colors">
-                                <td class="px-6 py-6">
-                                    <div class="font-heading text-xl font-semibold text-obsidian">Membre VIP</div>
-                                </td>
-                                <td class="px-6 py-6">
-                                    <div class="text-gold font-bold text-xl">€6,500</div>
-                                </td>
-                                <td class="px-6 py-6">
-                                    <div class="text-obsidian">Quota d'achat produits spéciaux, droits de participation projet, droits d'achat masu nu (jusqu'à 5 par an), expériences culturelles japonaises spéciales même pour les Japonais</div>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-hinoki/10 transition-colors">
-                                <td class="px-6 py-6">
-                                    <div class="font-heading text-xl font-semibold text-obsidian">Membre VVIP</div>
-                                </td>
-                                <td class="px-6 py-6">
-                                    <div class="text-gold font-bold text-xl">€65,000</div>
-                                </td>
-                                <td class="px-6 py-6">
-                                    <div class="text-obsidian">Support commande, collaboration artisan, droits d'achat masu nu (jusqu'à 5 par an), expériences culturelles japonaises spéciales même pour les Japonais, support Japon, etc.</div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="inline-flex items-center text-emerald-300 text-sm">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                    </svg>
+                    Garantie de remboursement inconditionnel de 30 jours
                 </div>
             </div>
             
-            <!-- Boutons d'achat -->
-            <div class="flex flex-col sm:flex-row gap-6 justify-center mt-12">
-                <button onclick="purchaseMembership('standard')" class="bg-gold text-obsidian px-8 py-4 font-semibold hover:bg-emerald-100 transition-all duration-300 border-2 border-gold hover:border-emerald-100 rounded-lg">
-                    Devenir membre Standard
-                </button>
-                <button onclick="purchaseMembership('vip')" class="bg-transparent text-gold px-8 py-4 font-semibold border-2 border-gold hover:bg-gold hover:text-obsidian transition-all duration-300 rounded-lg">
-                    Devenir membre VIP
-                </button>
-                <button onclick="purchaseMembership('vvip')" class="bg-transparent text-emerald-400 px-8 py-4 font-semibold border-2 border-emerald-400 hover:bg-emerald-400 hover:text-obsidian transition-all duration-300 rounded-lg">
-                    Devenir membre VVIP
-                </button>
+            <!-- Cartes de plan d'adhésion -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Membre Standard -->
+                <div class="relative bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 border border-gold/20">
+                    <div class="absolute top-0 right-0 bg-gold text-obsidian px-4 py-2 text-sm font-bold rounded-bl-xl">
+                        Populaire
+                    </div>
+                    <div class="p-8">
+                        <div class="text-center mb-6">
+                            <h3 class="font-heading text-2xl font-bold text-obsidian mb-2">Membre Standard</h3>
+                            <div class="text-4xl font-bold text-gold mb-2">€650</div>
+                            <div class="text-sm text-obsidian/60">/année</div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-obsidian/80">Contenu exclusif en ligne</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-obsidian/80">Droits d'achat de masu nature (3/an)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-obsidian/80">Carte de membre NFC</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-obsidian/80">Accès communautaire</span>
+                            </div>
+                        </div>
+                        
+                        <button onclick="purchaseMembership('standard')" class="w-full bg-gold text-obsidian py-3 rounded-lg font-semibold hover:bg-gold/80 transition-colors">
+                            Rejoindre maintenant
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Membre VIP -->
+                <div class="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 border-2 border-gold">
+                    <div class="absolute top-0 right-0 bg-gradient-to-r from-gold to-yellow-400 text-obsidian px-4 py-2 text-sm font-bold rounded-bl-xl">
+                        Recommandé
+                    </div>
+                    <div class="p-8 text-cream">
+                        <div class="text-center mb-6">
+                            <h3 class="font-heading text-2xl font-bold mb-2">Membre VIP</h3>
+                            <div class="text-4xl font-bold text-gold mb-2">€6,500</div>
+                            <div class="text-sm text-cream/60">/année</div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Contenu exclusif en ligne</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Droits d'achat de masu nature (5/an)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Carte de membre NFC</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-gold mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Accès communautaire</span>
+                            </div>
+                        </div>
+                        
+                        <button onclick="purchaseMembership('vip')" class="w-full bg-gold text-obsidian py-3 rounded-lg font-semibold hover:bg-gold/80 transition-colors">
+                            Rejoindre maintenant
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Membre VVIP -->
+                <div class="relative bg-gradient-to-br from-emerald-900 to-slate-900 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 border-2 border-emerald-400">
+                    <div class="absolute top-0 right-0 bg-gradient-to-r from-emerald-400 to-emerald-300 text-obsidian px-4 py-2 text-sm font-bold rounded-bl-xl">
+                        Premium
+                    </div>
+                    <div class="p-8 text-cream">
+                        <div class="text-center mb-6">
+                            <h3 class="font-heading text-2xl font-bold mb-2">Membre VVIP</h3>
+                            <div class="text-4xl font-bold text-emerald-400 mb-2">€65,000</div>
+                            <div class="text-sm text-cream/60">/année</div>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-emerald-400 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Contenu exclusif en ligne</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-emerald-400 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Droits d'achat de masu nature (5/an)</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-emerald-400 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Carte de membre NFC</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-emerald-400 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Accès communautaire</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 text-emerald-400 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-cream/90">Support de commande</span>
+                            </div>
+                        </div>
+                        
+                        <button onclick="purchaseMembership('vvip')" class="w-full bg-emerald-400 text-obsidian py-3 rounded-lg font-semibold hover:bg-emerald-300 transition-colors">
+                            Rejoindre maintenant
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Offres spéciales limitées -->
+            <div class="text-center mt-12">
+                <div class="bg-gradient-to-r from-gold/20 to-emerald-300/20 rounded-2xl p-8 border border-gold/30">
+                    <h3 class="font-heading text-2xl font-semibold text-cream mb-4">🎁 Offres à durée limitée</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-cream/90">
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">🎌</div>
+                            <div class="font-semibold mb-1">Contenu exclusif première fois</div>
+                            <div class="text-sm opacity-80">Collection exclusive d'interviews d'artisans pour nouveaux membres</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">🎫</div>
+                            <div class="font-semibold mb-1">Invitation spéciale</div>
+                            <div class="text-sm opacity-80">Invitation gratuite aux événements spéciaux 2024</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl mb-2">🎁</div>
+                            <div class="font-semibold mb-1">Articles originaux</div>
+                            <div class="text-sm opacity-80">Articles originaux exclusifs FOMUS en cadeau</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-sm text-cream/70">
+                        * Limité aux nouveaux membres adhérant avant fin décembre 2024
+                    </div>
+                </div>
             </div>
         </div>
     </section>
