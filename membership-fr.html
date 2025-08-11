@@ -640,25 +640,14 @@
         const stripe = Stripe('pk_test_51234567890abcdef');
         
         function purchaseMembership(type) {
-            const prices = {
-                standard: 65000, // €650 in cents
-                vip: 650000, // €6,500 in cents
-                vvip: 6500000 // €65,000 in cents
+            const checkoutUrls = {
+                standard: 'https://buy.stripe.com/eVq28s5MVaw59WkgiD4ko0r',
+                vip: 'https://buy.stripe.com/cNifZi4IReMl8Sgd6r4ko0s',
+                vvip: 'https://buy.stripe.com/dRmaEYa3beMlb0o9Uf4ko0t'
             };
             
-            const names = {
-                standard: 'Adhésion Standard',
-                vip: 'Adhésion VIP',
-                vvip: 'Adhésion VVIP'
-            };
-            
-            // Store membership selection
-            localStorage.setItem('selectedMembership', JSON.stringify({
-                type: type,
-                price: prices[type],
-                name: names[type],
-                language: 'fr'
-            }));
+            // Direct to the provided Stripe checkout URL
+            window.location.href = checkoutUrls[type];
             
             // Redirect to checkout or handle payment
             stripe.redirectToCheckout({
