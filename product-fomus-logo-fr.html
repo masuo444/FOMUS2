@@ -235,27 +235,8 @@
         });
 
         function proceedToStripe() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            
-            // Mappage des liens produits Stripe
-            const stripeLinks = {
-                'mini-none': 'https://buy.stripe.com/fomus-logo-mini',
-                'mini-coating': 'https://buy.stripe.com/fomus-logo-mini-coated',
-                'basic-none': 'https://buy.stripe.com/fomus-logo-basic',
-                'basic-coating': 'https://buy.stripe.com/fomus-logo-basic-coated'
-            };
-            
-            // Message d'alerte car l'interface de sélection de taille n'est pas présente
-            const message = selectedCoating === 'coating' ? 
-                'Vous serez redirigé vers la page produit FOMUS Logo Masu avec option de revêtement. Veuillez sélectionner la taille sur la page de paiement Stripe.' :
-                'Vous serez redirigé vers la page produit FOMUS Logo Masu. Veuillez sélectionner la taille sur la page de paiement Stripe.';
-                
-            if (confirm(message)) {
-                // Lien vers la page produit de base (la taille sera sélectionnée côté Stripe)
-                const baseUrl = selectedCoating === 'coating' ? 
-                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
-                window.open(baseUrl, '_blank');
-            }
+            // Direct to the provided Stripe checkout URL
+            window.location.href = 'https://buy.stripe.com/eVqfZiejraw58Sg7M74ko0q';
         }
     </script>
 </body>

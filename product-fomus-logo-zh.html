@@ -235,27 +235,8 @@
         });
 
         function proceedToStripe() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            
-            // Stripe产品链接映射
-            const stripeLinks = {
-                'mini-none': 'https://buy.stripe.com/fomus-logo-mini',
-                'mini-coating': 'https://buy.stripe.com/fomus-logo-mini-coated',
-                'basic-none': 'https://buy.stripe.com/fomus-logo-basic',
-                'basic-coating': 'https://buy.stripe.com/fomus-logo-basic-coated'
-            };
-            
-            // 由于没有尺寸选择界面，提示将在Stripe端选择尺寸
-            const message = selectedCoating === 'coating' ? 
-                '您将被重定向到带涂装选项的FOMUS标志枡产品页面。请在Stripe结账页面选择尺寸。' :
-                '您将被重定向到FOMUS标志枡产品页面。请在Stripe结账页面选择尺寸。';
-                
-            if (confirm(message)) {
-                // 基础产品页面链接（尺寸将在Stripe端选择）
-                const baseUrl = selectedCoating === 'coating' ? 
-                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
-                window.open(baseUrl, '_blank');
-            }
+            // Direct to the provided Stripe checkout URL
+            window.location.href = 'https://buy.stripe.com/eVqfZiejraw58Sg7M74ko0q';
         }
     </script>
 </body>

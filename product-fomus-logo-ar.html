@@ -235,27 +235,8 @@
         });
 
         function proceedToStripe() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            
-            // خريطة روابط منتجات سترايب
-            const stripeLinks = {
-                'mini-none': 'https://buy.stripe.com/fomus-logo-mini',
-                'mini-coating': 'https://buy.stripe.com/fomus-logo-mini-coated',
-                'basic-none': 'https://buy.stripe.com/fomus-logo-basic',
-                'basic-coating': 'https://buy.stripe.com/fomus-logo-basic-coated'
-            };
-            
-            // رسالة تنبيه نظراً لعدم وجود واجهة اختيار الحجم
-            const message = selectedCoating === 'coating' ? 
-                'ستتم إعادة توجيهك إلى صفحة منتج ماسو شعار FOMUS مع خيار الطلاء. يرجى اختيار الحجم في صفحة الدفع الخاصة بـ Stripe.' :
-                'ستتم إعادة توجيهك إلى صفحة منتج ماسو شعار FOMUS. يرجى اختيار الحجم في صفحة الدفع الخاصة بـ Stripe.';
-                
-            if (confirm(message)) {
-                // رابط صفحة المنتج الأساسية (سيتم اختيار الحجم من جانب Stripe)
-                const baseUrl = selectedCoating === 'coating' ? 
-                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
-                window.open(baseUrl, '_blank');
-            }
+            // Direct to the provided Stripe checkout URL
+            window.location.href = 'https://buy.stripe.com/eVqfZiejraw58Sg7M74ko0q';
         }
     </script>
 </body>
