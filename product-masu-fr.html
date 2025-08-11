@@ -216,27 +216,8 @@
         });
 
         function proceedToStripe() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            
-            // Mappage des liens produits Stripe
-            const stripeLinks = {
-                'mini-none': 'https://buy.stripe.com/basic-masu-mini',
-                'mini-coating': 'https://buy.stripe.com/basic-masu-mini-coated',
-                'basic-none': 'https://buy.stripe.com/basic-masu-basic',
-                'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
-            };
-            
-            // Puisqu'il n'y a pas d'interface de sélection de taille, afficher une alerte concernant la sélection de taille sur Stripe
-            const message = selectedCoating === 'coating' ? 
-                'Vous serez redirigé vers la page produit masu avec option de revêtement. Veuillez sélectionner la taille sur la page de paiement Stripe.' :
-                'Vous serez redirigé vers la page produit masu. Veuillez sélectionner la taille sur la page de paiement Stripe.';
-                
-            if (confirm(message)) {
-                // Lien vers la page produit de base (taille à sélectionner côté Stripe)
-                const baseUrl = selectedCoating === 'coating' ? 
-                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
-                window.open(baseUrl, '_blank');
-            }
+            // Direct to the provided Stripe checkout URL
+            window.location.href = 'https://buy.stripe.com/3cIdRaejr1Zz3xW1nJ4ko0o';
         }
     </script>
 </body>

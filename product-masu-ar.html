@@ -216,27 +216,8 @@
         });
 
         function proceedToStripe() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            
-            // خريطة روابط منتجات سترايب
-            const stripeLinks = {
-                'mini-none': 'https://buy.stripe.com/basic-masu-mini',
-                'mini-coating': 'https://buy.stripe.com/basic-masu-mini-coated',
-                'basic-none': 'https://buy.stripe.com/basic-masu-basic',
-                'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
-            };
-            
-            // بما أنه لا توجد واجهة اختيار الحجم، اعرض تنبيهاً حول اختيار الحجم في سترايب
-            const message = selectedCoating === 'coating' ? 
-                'سيتم توجيهك إلى صفحة منتج الماسو مع خيار الطلاء. يرجى اختيار الحجم في صفحة الدفع الخاصة بسترايب.' :
-                'سيتم توجيهك إلى صفحة منتج الماسو. يرجى اختيار الحجم في صفحة الدفع الخاصة بسترايب.';
-                
-            if (confirm(message)) {
-                // رابط إلى صفحة المنتج الأساسية (سيتم اختيار الحجم من جانب سترايب)
-                const baseUrl = selectedCoating === 'coating' ? 
-                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
-                window.open(baseUrl, '_blank');
-            }
+            // Direct to the provided Stripe checkout URL
+            window.location.href = 'https://buy.stripe.com/3cIdRaejr1Zz3xW1nJ4ko0o';
         }
     </script>
 </body>

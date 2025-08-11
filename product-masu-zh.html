@@ -216,27 +216,8 @@
         });
 
         function proceedToStripe() {
-            const selectedCoating = document.querySelector('input[name="coating"]:checked').value;
-            
-            // Stripe产品链接映射
-            const stripeLinks = {
-                'mini-none': 'https://buy.stripe.com/basic-masu-mini',
-                'mini-coating': 'https://buy.stripe.com/basic-masu-mini-coated',
-                'basic-none': 'https://buy.stripe.com/basic-masu-basic',
-                'basic-coating': 'https://buy.stripe.com/basic-masu-basic-coated'
-            };
-            
-            // 由于没有尺寸选择界面，显示关于在Stripe上选择尺寸的提醒
-            const message = selectedCoating === 'coating' ? 
-                '您将被重定向到带涂装选项的枡产品页面。请在Stripe支付页面选择尺寸。' :
-                '您将被重定向到枡产品页面。请在Stripe支付页面选择尺寸。';
-                
-            if (confirm(message)) {
-                // 链接到基础产品页面（尺寸在Stripe端选择）
-                const baseUrl = selectedCoating === 'coating' ? 
-                    stripeLinks['mini-coating'] : stripeLinks['mini-none'];
-                window.open(baseUrl, '_blank');
-            }
+            // Direct to the provided Stripe checkout URL
+            window.location.href = 'https://buy.stripe.com/3cIdRaejr1Zz3xW1nJ4ko0o';
         }
     </script>
 </body>
